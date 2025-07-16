@@ -5,93 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PDC Aesthetics | Enhancing Natural Beauty</title>
   <meta name="description" content="PDC Aesthetics specialises in B12 injections, lip filler, Botox, microneedling, and more. Explore our expert-led aesthetic treatments.">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0d0a1f;
-      color: #f7f7f7;
-    }
-    header {
-      background: #1a1336;
-      text-align: center;
-      padding: 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header img {
-      max-height: 80px;
-      margin-bottom: 10px;
-    }
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9f9ff;
+    color: #222;
+  }
+
+  header {
+    background-color: #101030;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 26px;
+  }
+
+  .menu-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ffffff;
+    color: #101030;
+    border: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+
+  .dropdown-menu a {
+    display: block;
+    padding: 12px 16px;
+    color: #101030;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: #f0f0f0;
+  }
+
+  .section {
+    background-color: #ede4ff;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }
+
+  .section h2 {
+    margin-top: 0;
+    color: #101030;
+  }
+
+  .menu-cta {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #06b6d4;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
     header h1 {
-      font-size: 26px;
-      color: #e0dfff;
-      margin: 5px 0;
+      font-size: 22px;
     }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      background: #241a42;
-      padding: 10px;
+
+    .menu-button {
+      font-size: 14px;
+      padding: 8px 14px;
     }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 8px 12px;
-      font-weight: bold;
-      padding: 8px 12px;
-      border-radius: 6px;
-      background: rgba(255, 255, 255, 0.1);
-      transition: 0.3s ease;
-    }
-    nav a:hover {
-      background: #06b6d4;
-      color: #000;
-    }
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-    }
-    .hero h2 {
-      font-size: 34px;
-      margin-bottom: 20px;
-      color: #fff;
-    }
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 18px;
-      line-height: 1.6;
-      color: #dcdcdc;
-    }
+
     .section {
-      background: #191433;
-      margin: 30px auto;
-      border-radius: 16px;
-      padding: 30px 20px;
-      max-width: 1000px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.03);
+      margin: 15px;
+      padding: 18px;
     }
-    .section h3 {
-      color: #f2f2f2;
-      font-size: 24px;
-      margin-bottom: 15px;
+
+    .menu-cta {
+      width: 100%;
+      text-align: center;
     }
-    .section p {
-      color: #d0cfe6;
-      line-height: 1.8;
-      font-size: 17px;
-    }
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px auto;
-      }
-    }
-  </style>
+  }
+</style>
+
 </head>
 <body>
 
@@ -100,16 +118,21 @@
     <h1>PDC Aesthetics</h1>
   </header>
 
-  <nav>
-    <a href="#b12">B12 Injections</a>
-    <a href="#lip">Lip Filler</a>
-    <a href="#fat">Fat Dissolving</a>
-    <a href="#botox">Botox</a>
-    <a href="#micro">Microneedling</a>
-    <a href="#derma">Dermaplaning</a>
-    <a href="#peel">Skin Peel</a>
-    <a href="#booster">Skin Booster</a>
-  </nav>
+<header>
+  <h1>PDC Aesthetics</h1>
+  <button class="menu-button" onclick="toggleMenu()">Menu</button>
+  <div id="dropdown" class="dropdown-menu">
+    <a href="#b12,html">B12 Injections</a>
+    <a href="#lip.html">Lip Filler</a>
+    <a href="#fat.html">Fat Dissolving</a>
+    <a href="#botox.html">Botox</a>
+    <a href="#micro.html">Microneedling</a>
+    <a href="#derma.html">Dermaplaning</a>
+    <a href="#peel.html">Skin Peel</a>
+    <a href="#booster,html">Skin Booster</a>
+  </div>
+</header>
+
 
   <div class="hero">
     <h2>Enhance Your Natural Beauty With PDC Aesthetics</h2>
@@ -181,4 +204,19 @@
   <p>This website does not offer medical advice. Treatments carried out by qualified aesthetic practitioners.</p>
 </footer>
 </body>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("dropdown");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+
+  window.addEventListener("click", function(e) {
+    const menu = document.getElementById("dropdown");
+    const button = document.querySelector(".menu-button");
+    if (!menu.contains(e.target) && !button.contains(e.target)) {
+      menu.style.display = "none";
+    }
+  });
+</script>
+
 </html>
