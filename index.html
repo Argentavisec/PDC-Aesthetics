@@ -15,6 +15,31 @@
       text-align: center;
     }
 
+    .dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #1a153d;
+  text-align: center;
+  transition: max-height 0.4s ease;
+}
+
+.dropdown-menu.show {
+  max-height: 1000px; /* enough space for all menu links */
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.dropdown-menu a:hover {
+  background-color: #302860;
+}
+
+
     header {
       background: #0e0a2b;
       color: white;
@@ -243,6 +268,23 @@
       }
     });
   </script>
+
+  <script>
+  function toggleMenu() {
+    const menu = document.getElementById("dropdown");
+    menu.classList.toggle("show");
+  }
+
+  window.addEventListener("click", function(e) {
+    const menu = document.getElementById("dropdown");
+    const button = document.querySelector(".menu-button");
+
+    if (!menu.contains(e.target) && !button.contains(e.target)) {
+      menu.classList.remove("show");
+    }
+  });
+</script>
+
 
 </body>
 </html>
