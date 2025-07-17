@@ -50,17 +50,14 @@
   .dropdown-wrapper {
     width: 100%;
     background-color: #1a153d;
+    text-align: center;
     overflow: hidden;
-    transition: max-height 0.4s ease;
     max-height: 0;
+    transition: max-height 0.4s ease;
   }
 
   .dropdown-wrapper.show {
-    max-height: 1000px; /* enough height for menu links */
-  }
-
-  .dropdown-menu {
-    padding: 15px 0;
+    max-height: 500px;
   }
 
   .dropdown-menu a {
@@ -141,8 +138,9 @@
     <h1>PDC Aesthetics</h1>
   </header>
 
-  <button class="menu-button" onclick="toggleMenu()">Menu</button>
-  <div id="dropdown" class="dropdown-menu">
+<button class="menu-button" onclick="toggleMenu()">Menu</button>
+<div id="dropdown" class="dropdown-wrapper">
+  <div class="dropdown-menu">
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="b12.html">B12 Injections</a>
@@ -156,6 +154,8 @@
     <a href="areas-we-cover.html">Areas We Cover</a>
     <a href="privacy-policy.html">Privacy Policy</a>
   </div>
+</div>
+
 
   <div class="section" id="welcome">
     <h2>Welcome to PDC Aesthetics – Where Experience Meets Excellence</h2>
@@ -252,22 +252,21 @@
     });
   </script>
 
-  <script>
+<script>
   function toggleMenu() {
-    const menu = document.getElementById("dropdown");
-    menu.classList.toggle("show");
+    const dropdown = document.getElementById("dropdown");
+    dropdown.classList.toggle("show");
   }
 
-  window.addEventListener("click", function(e) {
-    const menu = document.getElementById("dropdown");
+  window.addEventListener("click", function (e) {
+    const dropdown = document.getElementById("dropdown");
     const button = document.querySelector(".menu-button");
 
-    if (!menu.contains(e.target) && !button.contains(e.target)) {
-      menu.classList.remove("show");
+    if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+      dropdown.classList.remove("show");
     }
   });
 </script>
-
 
 </body>
 </html>
