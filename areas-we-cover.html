@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Check if PDC Aesthetics covers your local area. We serve clients within a 15-mile radius of Stone, Stoke-on-Trent."/>
   <title>Areas We Cover | PDC Aesthetics</title>
+  <meta name="description" content="Check if PDC Aesthetics covers your area. We serve a 15-mile radius of Stone, Stoke-on-Trent. See if your location is listed.">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -16,28 +16,27 @@
     }
 
     header {
-      background: #1b0033;
+      background: #0e0a2b;
       color: white;
       padding: 30px 20px 10px;
-      position: relative;
     }
 
     header img {
-      width: 130px;
+      width: 145px;
       height: auto;
       margin-bottom: 10px;
     }
 
     header h1 {
       margin: 5px 0;
-      font-size: 26px;
+      font-size: 28px;
     }
 
     .menu-button {
       margin: 20px auto;
       display: block;
       background-color: white;
-      color: #1b0033;
+      color: #0e0a2b;
       border: none;
       border-radius: 8px;
       padding: 10px 18px;
@@ -46,22 +45,48 @@
       font-size: 16px;
     }
 
-    #dropdown {
-      position: absolute;
-      top: 120px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 999;
+    .dropdown-container {
       display: none;
-      width: 90%;
-      max-width: 400px;
+      background-color: #1a153d;
+      text-align: center;
+      padding: 15px 0;
     }
 
-    .menu-content {
-      background: #e5d4ff;
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    .dropdown-container a {
+      display: block;
+      padding: 12px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .dropdown-container a:hover {
+      background-color: #302860;
+    }
+
+    .section {
+      background: #dcd1f8;
+      margin: 25px auto;
+      padding: 25px;
+      border-radius: 20px;
+      max-width: 800px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+      text-align: left;
+      color: #1a1a1a;
+    }
+
+    .section h2 {
+      color: #2e1065;
+      margin-top: 0;
+    }
+
+    .area-search input {
+      width: 90%;
+      max-width: 400px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #999;
     }
 
     .area-button {
@@ -82,55 +107,24 @@
       background-color: #d1b3ff;
     }
 
-    .section {
-      background: #e5d4ff;
-      margin: 25px auto;
-      padding: 30px 20px;
-      border-radius: 20px;
-      max-width: 800px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      color: #1a1a1a;
-      text-align: left;
-    }
-
-    .section h2 {
-      text-align: center;
-      color: #29005f;
-      margin-top: 0;
-    }
-
-    .area-search {
-      margin: 20px 0;
-      text-align: center;
-    }
-
-    .area-search input {
-      width: 90%;
-      max-width: 400px;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 8px;
-      border: 1px solid #999;
-    }
-
     .cta-button {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #29005f;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #3b0764;
       color: #fff;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 8px;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
     }
 
     .cta-button:hover {
-      background-color: #4500a3;
+      background-color: #5b21b6;
     }
 
     footer {
-      background: #1b0033;
+      background: #0e0a2b;
       color: white;
       padding: 20px;
       font-size: 14px;
@@ -152,15 +146,6 @@
         padding: 20px;
         margin: 15px 10px;
       }
-
-      .area-button {
-        width: 90%;
-        max-width: none;
-      }
-
-      #dropdown {
-        top: 115px;
-      }
     }
   </style>
 </head>
@@ -169,34 +154,30 @@
   <header>
     <img src="logo.png" alt="PDC Aesthetics Logo" />
     <h1>PDC Aesthetics</h1>
-    <button class="menu-button" onclick="toggleMenu()">Menu</button>
   </header>
 
-  <div id="dropdown">
-    <div class="menu-content">
-      <a href="index.html" class="area-button">Home</a>
-      <a href="about.html" class="area-button">About</a>
-      <a href="b12.html" class="area-button">B12 Injections</a>
-      <a href="lip-filler.html" class="area-button">Lip Filler</a>
-      <a href="fat-dissolving.html" class="area-button">Fat Dissolving</a>
-      <a href="botox.html" class="area-button">Botox</a>
-      <a href="microneedling.html" class="area-button">Microneedling</a>
-      <a href="dermaplaning.html" class="area-button">Dermaplaning</a>
-      <a href="skin-peel.html" class="area-button">Skin Peel</a>
-      <a href="skin-booster.html" class="area-button">Skin Booster</a>
-      <a href="areas-we-cover.html" class="area-button">Areas We Cover</a>
-      <a href="privacy-policy.html" class="area-button">Privacy Policy</a>
-    </div>
+  <button class="menu-button" onclick="toggleDropdown()">Menu</button>
+  <div id="dropdown" class="dropdown-container">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="b12.html">B12 Injections</a>
+    <a href="lip-filler.html">Lip Filler</a>
+    <a href="fat-dissolving.html">Fat Dissolving</a>
+    <a href="botox.html">Botox</a>
+    <a href="microneedling.html">Microneedling</a>
+    <a href="dermaplaning.html">Dermaplaning</a>
+    <a href="skin-peels.html">Skin Peel</a>
+    <a href="skin-boosters.html">Skin Booster</a>
+    <a href="areas-we-cover.html">Areas We Cover</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
   </div>
 
   <div class="section">
     <h2>Find Out if We Cover Your Area</h2>
-    <p>We proudly serve clients within a <strong>15-mile radius</strong> of Stone, Stoke-on-Trent. Start typing below to check if your location is listed:</p>
-    
+    <p>We serve clients within a <strong>15-mile radius</strong> of Stone, Stoke-on-Trent. Type below to check if your location is included:</p>
     <div class="area-search">
       <input type="text" id="searchBox" placeholder="Start typing your area...">
     </div>
-
     <div id="areaList">
       <a href="#" class="area-button">Stone</a>
       <a href="#" class="area-button">Stoke-on-Trent</a>
@@ -215,29 +196,27 @@
   </div>
 
   <div class="section">
-    <h2>We Are Expanding Our Coverage</h2>
-    <p>Due to high demand, <strong>PDC Aesthetics</strong> is now exploring new areas beyond our 15-mile service zone around Stone, Stoke-on-Trent. If you're located just outside our current area, please get in touch — we may be able to accommodate you!</p>
-    <p>Your comfort, confidence, and convenience are at the heart of what we do. We're excited to bring our expert treatments to even more people who value clinical care and natural results.</p>
+    <h2>We Are Expanding</h2>
+    <p>If you live just outside our normal radius, don’t hesitate to get in touch. We’re happy to consider nearby locations depending on availability.</p>
     <a href="contact.html" class="cta-button">Contact Us About Your Area</a>
   </div>
 
   <footer>
     <p>© 2025 PDC Aesthetics. All rights reserved.</p>
-    <p>This website is for informational purposes only. Treatments are delivered by a qualified nurse with 29+ years of experience.</p>
+    <p>This website does not offer medical advice. Treatments are delivered by qualified practitioners with over 29 years of clinical experience.</p>
   </footer>
 
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("dropdown");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    function toggleDropdown() {
+      const dropdown = document.getElementById("dropdown");
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
     }
 
-    // Hide menu if clicking outside
-    document.addEventListener("click", function(e) {
-      const menu = document.getElementById("dropdown");
+    window.addEventListener("click", function(e) {
+      const dropdown = document.getElementById("dropdown");
       const button = document.querySelector(".menu-button");
-      if (!menu.contains(e.target) && !button.contains(e.target)) {
-        menu.style.display = "none";
+      if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+        dropdown.style.display = "none";
       }
     });
 
