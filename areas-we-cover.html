@@ -1,1 +1,230 @@
-<!DOCTYPE html><html><head><title>Areas We Cover</title></head><body><h1>Areas We Cover</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Areas We Cover | PDC Aesthetics</title>
+  <meta name="description" content="PDC Aesthetics provides expert treatments across Staffordshire. See if we serve your town – search by location.">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f3f0ff;
+      color: #1a1a1a;
+      text-align: center;
+    }
+
+    header {
+      background: #3b0764;
+      color: white;
+      padding: 25px 20px 10px;
+    }
+
+    header img {
+      width: 120px;
+      height: auto;
+    }
+
+    header h1 {
+      margin: 10px 0 5px;
+      font-size: 26px;
+    }
+
+    .menu-button {
+      margin: 15px auto;
+      display: block;
+      background-color: white;
+      color: #3b0764;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 18px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .dropdown-wrapper {
+      background-color: #5b21b6;
+      text-align: center;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.4s ease;
+    }
+
+    .dropdown-wrapper.show {
+      max-height: 500px;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 12px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #4c1d95;
+    }
+
+    .section {
+      background: #ede4ff;
+      margin: 25px auto;
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 750px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.15);
+      text-align: left;
+    }
+
+    .section h2 {
+      color: #3b0764;
+      margin-top: 0;
+    }
+
+    #searchBox {
+      width: 90%;
+      max-width: 400px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .area-list button {
+      display: block;
+      width: 90%;
+      max-width: 400px;
+      margin: 8px auto;
+      padding: 10px;
+      background-color: white;
+      color: #3b0764;
+      border: 2px solid #3b0764;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .area-list button:hover {
+      background-color: #3b0764;
+      color: white;
+    }
+
+    footer {
+      background: #3b0764;
+      color: white;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+      header h1 {
+        font-size: 22px;
+      }
+
+      .menu-button {
+        font-size: 14px;
+      }
+
+      .section {
+        padding: 20px;
+        margin: 15px 10px;
+      }
+
+      .area-list button {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="PDC Aesthetics Logo" />
+  <h1>PDC Aesthetics</h1>
+</header>
+
+<button class="menu-button" onclick="toggleMenu()">Menu</button>
+<div id="dropdown" class="dropdown-wrapper">
+  <div class="dropdown-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="b12.html">B12 Injections</a>
+    <a href="lip-filler.html">Lip Filler</a>
+    <a href="fat-dissolving.html">Fat Dissolving</a>
+    <a href="botox.html">Botox</a>
+    <a href="microneedling.html">Microneedling</a>
+    <a href="dermaplaning.html">Dermaplaning</a>
+    <a href="skin-peels.html">Skin Peel</a>
+    <a href="skin-boosters.html">Skin Booster</a>
+    <a href="areas-we-cover.html">Areas We Cover</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Find Out if We Cover Your Area</h2>
+  <p>We proudly serve clients within a 15-mile radius of Stone, Stoke-on-Trent. Start typing below to check if your location is listed:</p>
+  <input type="text" id="searchBox" onkeyup="filterAreas()" placeholder="Start typing your area..." />
+  <div class="area-list" id="areaList">
+    <button>Stoke-on-Trent</button>
+    <button>Stafford</button>
+    <button>Uttoxeter</button>
+    <button>Newcastle-under-Lyme</button>
+    <button>Cheadle</button>
+    <button>Eccleshall</button>
+    <button>Blythe Bridge</button>
+    <button>Trentham</button>
+    <button>Penkridge</button>
+    <button>Barlaston</button>
+    <button>Madeley</button>
+    <button>Alsager</button>
+    <button>Leek</button>
+    <button>Rugeley</button>
+    <button>Gnosall</button>
+    <button>Tunstall</button>
+    <button>Kidsgrove</button>
+  </div>
+</div>
+
+<div class="section" style="text-align:center;">
+  <h2>We’re Expanding</h2>
+  <p>Even if you don’t see your location, feel free to contact us. We’re always expanding and may still be able to help you.</p>
+  <a href="contact.html" class="menu-button">Contact Us</a>
+</div>
+
+<footer>
+  <p>© 2025 PDC Aesthetics. All rights reserved.</p>
+  <p>This website does not offer medical advice. Treatments are provided by a qualified nurse with 29+ years experience.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const dropdown = document.getElementById("dropdown");
+    dropdown.classList.toggle("show");
+  }
+
+  function filterAreas() {
+    const input = document.getElementById("searchBox").value.toLowerCase();
+    const buttons = document.getElementById("areaList").getElementsByTagName("button");
+    for (let i = 0; i < buttons.length; i++) {
+      const txtValue = buttons[i].textContent || buttons[i].innerText;
+      buttons[i].style.display = txtValue.toLowerCase().includes(input) ? "" : "none";
+    }
+  }
+
+  window.addEventListener("click", function(e) {
+    const dropdown = document.getElementById("dropdown");
+    const button = document.querySelector(".menu-button");
+    if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+      dropdown.classList.remove("show");
+    }
+  });
+</script>
+
+</body>
+</html>
