@@ -19,6 +19,7 @@
       background: #1b0033;
       color: white;
       padding: 30px 20px 10px;
+      position: relative;
     }
 
     header img {
@@ -43,6 +44,42 @@
       cursor: pointer;
       font-weight: bold;
       font-size: 16px;
+    }
+
+    #dropdown {
+      position: absolute;
+      top: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      display: none;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .menu-content {
+      background: #e5d4ff;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    .area-button {
+      display: block;
+      margin: 10px auto;
+      padding: 12px 18px;
+      background-color: #fff;
+      color: #1b0033;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      max-width: 300px;
+      border: 2px solid #1b0033;
+      transition: background 0.2s;
+    }
+
+    .area-button:hover {
+      background-color: #d1b3ff;
     }
 
     .section {
@@ -76,38 +113,20 @@
       border: 1px solid #999;
     }
 
-    .area-button {
-      display: block;
-      margin: 10px auto;
-      padding: 12px 18px;
-      background-color: #fff;
-      color: #1b0033;
-      border-radius: 8px;
+    .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #29005f;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
-      max-width: 300px;
-      border: 2px solid #1b0033;
-      transition: background 0.2s;
+      border-radius: 8px;
+      transition: background 0.3s;
     }
 
-    .cta-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: #29005f;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background 0.3s;
-}
-.cta-button:hover {
-  background-color: #4500a3;
-}
-
-
-    .area-button:hover {
-      background-color: #d1b3ff;
+    .cta-button:hover {
+      background-color: #4500a3;
     }
 
     footer {
@@ -138,6 +157,10 @@
         width: 90%;
         max-width: none;
       }
+
+      #dropdown {
+        top: 115px;
+      }
     }
   </style>
 </head>
@@ -149,8 +172,8 @@
     <button class="menu-button" onclick="toggleMenu()">Menu</button>
   </header>
 
-  <div id="dropdown" style="display: none;">
-    <div class="section">
+  <div id="dropdown">
+    <div class="menu-content">
       <a href="index.html" class="area-button">Home</a>
       <a href="about.html" class="area-button">About</a>
       <a href="b12.html" class="area-button">B12 Injections</a>
@@ -192,12 +215,11 @@
   </div>
 
   <div class="section">
-  <h2>We Are Expanding Our Coverage</h2>
-  <p>Due to high demand, <strong>PDC Aesthetics</strong> is now exploring new areas beyond our 15-mile service zone around Stone, Stoke-on-Trent. If you're located just outside our current area, please get in touch — we may be able to accommodate you!</p>
-  <p>Your comfort, confidence, and convenience are at the heart of what we do. We're excited to bring our expert treatments to even more people who value clinical care and natural results.</p>
-  <a href="contact.html" class="cta-button">Contact Us About Your Area</a>
-</div>
-
+    <h2>We Are Expanding Our Coverage</h2>
+    <p>Due to high demand, <strong>PDC Aesthetics</strong> is now exploring new areas beyond our 15-mile service zone around Stone, Stoke-on-Trent. If you're located just outside our current area, please get in touch — we may be able to accommodate you!</p>
+    <p>Your comfort, confidence, and convenience are at the heart of what we do. We're excited to bring our expert treatments to even more people who value clinical care and natural results.</p>
+    <a href="contact.html" class="cta-button">Contact Us About Your Area</a>
+  </div>
 
   <footer>
     <p>© 2025 PDC Aesthetics. All rights reserved.</p>
@@ -210,11 +232,20 @@
       menu.style.display = menu.style.display === "block" ? "none" : "block";
     }
 
+    // Hide menu if clicking outside
+    document.addEventListener("click", function(e) {
+      const menu = document.getElementById("dropdown");
+      const button = document.querySelector(".menu-button");
+      if (!menu.contains(e.target) && !button.contains(e.target)) {
+        menu.style.display = "none";
+      }
+    });
+
     const searchBox = document.getElementById("searchBox");
     const areaList = document.getElementById("areaList");
     const areaButtons = areaList.getElementsByClassName("area-button");
 
-    searchBox.addEventListener("keyup", function() {
+    searchBox.addEventListener("keyup", function () {
       const filter = searchBox.value.toLowerCase();
       for (let i = 0; i < areaButtons.length; i++) {
         const txt = areaButtons[i].textContent.toLowerCase();
