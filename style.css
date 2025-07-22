@@ -109,6 +109,47 @@ header h1 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+.menu-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.menu-button {
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.dropdown-slide {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background-color: #1a083d;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.dropdown-slide.show {
+  max-height: 500px; /* enough to reveal all links */
+}
+
+.dropdown-slide a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dropdown-slide a:hover {
+  background-color: #310e78;
+}
+
+
 .section h2 {
   color: #2e0066;
   margin-bottom: 15px;
