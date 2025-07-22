@@ -4,150 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Areas We Cover | PDC Aesthetics</title>
-  <meta name="description" content="Check if PDC Aesthetics covers your area. We serve a 15-mile radius of Stone, Stoke-on-Trent. See if your location is listed.">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #2b2b2b;
-      color: #fff;
-      text-align: center;
-    }
-
-    header {
-      background: #0e0a2b;
-      color: white;
-      padding: 30px 20px 10px;
-    }
-
-    header img {
-      width: 145px;
-      height: auto;
-      margin-bottom: 10px;
-    }
-
-    header h1 {
-      margin: 5px 0;
-      font-size: 28px;
-    }
-
-    .menu-button {
-      margin: 20px auto;
-      display: block;
-      background-color: white;
-      color: #0e0a2b;
-      border: none;
-      border-radius: 8px;
-      padding: 10px 18px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .dropdown-container {
-      display: none;
-      background-color: #1a153d;
-      text-align: center;
-      padding: 15px 0;
-    }
-
-    .dropdown-container a {
-      display: block;
-      padding: 12px;
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .dropdown-container a:hover {
-      background-color: #302860;
-    }
-
-    .section {
-      background: #dcd1f8;
-      margin: 25px auto;
-      padding: 25px;
-      border-radius: 20px;
-      max-width: 800px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
-      text-align: left;
-      color: #1a1a1a;
-    }
-
-    .section h2 {
-      color: #2e1065;
-      margin-top: 0;
-    }
-
-    .area-search input {
-      width: 90%;
-      max-width: 400px;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 8px;
-      border: 1px solid #999;
-    }
-
-    .area-button {
-      display: block;
-      margin: 10px auto;
-      padding: 12px 18px;
-      background-color: #fff;
-      color: #1b0033;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      max-width: 300px;
-      border: 2px solid #1b0033;
-      transition: background 0.2s;
-    }
-
-    .area-button:hover {
-      background-color: #d1b3ff;
-    }
-
-    .cta-button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #3b0764;
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #5b21b6;
-    }
-
-    footer {
-      background: #0e0a2b;
-      color: white;
-      padding: 20px;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-
-    @media screen and (max-width: 768px) {
-      header h1 {
-        font-size: 22px;
-      }
-
-      .menu-button {
-        font-size: 14px;
-        padding: 10px 14px;
-        margin: 15px auto;
-      }
-
-      .section {
-        padding: 20px;
-        margin: 15px 10px;
-      }
-    }
-  </style>
+  <meta name="description" content="Discover all the areas PDC Aesthetics covers, including Stone, Stafford, Barlaston, and more. Fully mobile aesthetic services by a qualified nurse.">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -156,81 +14,116 @@
     <h1>PDC Aesthetics</h1>
   </header>
 
-  <button class="menu-button" onclick="toggleDropdown()">Menu</button>
-  <div id="dropdown" class="dropdown-container">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="b12.html">B12 Injections</a>
-    <a href="lip-filler.html">Lip Filler</a>
-    <a href="fat-dissolving.html">Fat Dissolving</a>
-    <a href="botox.html">Botox</a>
-    <a href="microneedling.html">Microneedling</a>
-    <a href="dermaplaning.html">Dermaplaning</a>
-    <a href="skin-peels.html">Skin Peel</a>
-    <a href="skin-boosters.html">Skin Booster</a>
-    <a href="areas-we-cover.html">Areas We Cover</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
+  <!-- Menu loads here -->
+  <div id="menu-placeholder"></div>
+
+  <!-- EXPANSION BANNER -->
+  <div class="section" style="background: #e3d5ff; border: 2px solid #9c4dff; text-align: center;">
+    <strong>We're Expanding!</strong> We are growing our mobile aesthetic services to cover even more towns and villages across Staffordshire. Book now to secure a home visit!
   </div>
 
+  <!-- Main Coverage Info -->
   <div class="section">
-    <h2>Find Out if We Cover Your Area</h2>
-    <p>We serve clients within a <strong>15-mile radius</strong> of Stone, Stoke-on-Trent. Type below to check if your location is included:</p>
-    <div class="area-search">
-      <input type="text" id="searchBox" placeholder="Start typing your area...">
-    </div>
-    <div id="areaList">
-      <a href="#" class="area-button">Stone</a>
-      <a href="#" class="area-button">Stoke-on-Trent</a>
-      <a href="#" class="area-button">Stafford</a>
-      <a href="#" class="area-button">Newcastle-under-Lyme</a>
-      <a href="#" class="area-button">Cheadle</a>
-      <a href="#" class="area-button">Uttoxeter</a>
-      <a href="#" class="area-button">Eccleshall</a>
-      <a href="#" class="area-button">Blythe Bridge</a>
-      <a href="#" class="area-button">Trentham</a>
-      <a href="#" class="area-button">Barlaston</a>
-      <a href="#" class="area-button">Hixon</a>
-      <a href="#" class="area-button">Longton</a>
-      <a href="#" class="area-button">Penkridge</a>
-    </div>
+    <h2>Areas We Cover – Mobile Aesthetic Treatments Across Staffordshire</h2>
+    <p>At <strong>PDC Aesthetics</strong>, we provide professional aesthetic treatments in the comfort of your own home. We’re based in Stone, Staffordshire and serve clients within a 15-mile radius — covering a wide range of local towns and villages.</p>
+    <p>Below is a list of some of the main areas we currently cover. If you’re nearby but not listed, feel free to <a href="contact.html">contact us</a> — we may still be able to travel to you.</p>
   </div>
 
+  <!-- List of Areas with Links -->
   <div class="section">
-    <h2>We Are Expanding</h2>
-    <p>If you live just outside our normal radius, don’t hesitate to get in touch. We’re happy to consider nearby locations depending on availability.</p>
-    <a href="contact.html" class="cta-button">Contact Us About Your Area</a>
+    <h2>Local Areas We Cover</h2>
+    <ul>
+      <li><a href="stone.html">Stone</a></li>
+      <li><a href="stafford.html">Stafford</a></li>
+      <li><a href="barlaston.html">Barlaston</a></li>
+      <li><a href="newcastle-under-lyme.html">Newcastle-under-Lyme</a></li>
+      <li><a href="eccleshall.html">Eccleshall</a></li>
+      <li><a href="trentham.html">Trentham</a></li>
+      <li><a href="madeley.html">Madeley</a></li>
+      <li><a href="cheadle.html">Cheadle</a></li>
+      <li><a href="baldwins-gate.html">Baldwins Gate</a></li>
+      <li><a href="alsager.html">Alsager</a></li>
+      <li><a href="blurton.html">Blurton</a></li>
+      <li><a href="meir.html">Meir</a></li>
+      <li><a href="rough-close.html">Rough Close</a></li>
+      <li><a href="walton.html">Walton</a></li>
+    </ul>
+    <p>We also accommodate group bookings across Staffordshire and surrounding areas — great for friends or family wanting to have treatments together in one safe location.</p>
+  </div>
+
+  <!-- Mobile Service Benefits -->
+  <div class="section">
+    <h2>Why Choose Our Mobile Aesthetic Clinic?</h2>
+    <p>Our mobile setup is ideal for busy parents, professionals, or anyone who prefers treatments at home. We eliminate travel, offer flexibility, and deliver treatments with total discretion.</p>
+    <p>All equipment is medical-grade and sterilised before each appointment. Our nurse has over 29 years of clinical healthcare experience, bringing hospital-grade safety and expertise to every procedure.</p>
+    <a href="about.html" class="cta-button">Learn More About Us</a>
+  </div>
+
+  <!-- Linked Services -->
+  <div class="section">
+    <h2>Popular Treatments in Your Area</h2>
+    <ul>
+      <li><a href="b12.html">Vitamin B12 Injections</a> – boost energy and wellness</li>
+      <li><a href="fat-dissolving.html">Fat Dissolving Injections</a> – reduce stubborn fat</li>
+      <li><a href="microneedling.html">Microneedling</a> – smooth scars and rejuvenate skin</li>
+      <li><a href="lip-filler.html">Lip Filler</a> – add volume and definition</li>
+      <li><a href="skin-boosters.html">Skin Boosters</a> – for deep hydration and glow</li>
+    </ul>
+    <a href="index.html" class="cta-button">Explore All Treatments</a>
+  </div>
+
+  <!-- Booking Prompt -->
+  <div class="section">
+    <h2>Not Sure If You're In Range?</h2>
+    <p>If you live near one of the areas listed, chances are we can visit you. Just send a quick message and we’ll confirm whether you’re in our mobile coverage zone.</p>
+    <a href="contact.html" class="cta-button">Contact Us Today</a>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="section">
+    <h2>Frequently Asked Questions – Mobile Service Coverage</h2>
+
+    <h3>What if I don’t live exactly in one of the towns listed?</h3>
+    <p>No problem — we regularly travel to nearby areas as well. Just <a href="contact.html">contact us</a> and we’ll let you know if we can reach you.</p>
+
+    <h3>Is there an extra fee for mobile visits?</h3>
+    <p>No added cost for clients within our 15-mile radius. For longer distances, a small travel fee may apply, which we’ll confirm upfront.</p>
+
+    <h3>How do I book a treatment in my area?</h3>
+    <p>You can <a href="contact.html">message us here</a> or via our social media. We'll confirm availability, explain the process, and get you booked in at a time that suits you.</p>
+
+    <h3>Do you offer treatments for groups?</h3>
+    <p>Yes! We offer group appointments, which are great for friends or family who want to receive treatments in one visit. Group discounts may apply.</p>
+
+    <h3>Is your mobile service safe?</h3>
+    <p>Absolutely. Our nurse is fully qualified, and all tools and surfaces are sterilised before every visit. We bring a professional, discreet clinic setup to you.</p>
   </div>
 
   <footer>
     <p>© 2025 PDC Aesthetics. All rights reserved.</p>
-    <p>This website does not offer medical advice. Treatments are delivered by qualified practitioners with over 29 years of clinical experience.</p>
+    <p>This website does not offer medical advice. Treatments are performed by a qualified practitioner with over 29 years of healthcare experience.</p>
   </footer>
 
   <script>
-    function toggleDropdown() {
-      const dropdown = document.getElementById("dropdown");
-      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-    }
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
 
-    window.addEventListener("click", function(e) {
-      const dropdown = document.getElementById("dropdown");
-      const button = document.querySelector(".menu-button");
-      if (!dropdown.contains(e.target) && !button.contains(e.target)) {
-        dropdown.style.display = "none";
-      }
-    });
+        window.toggleDropdown = function () {
+          const dropdown = document.getElementById("dropdown");
+          dropdown.classList.toggle("show");
+        };
 
-    const searchBox = document.getElementById("searchBox");
-    const areaList = document.getElementById("areaList");
-    const areaButtons = areaList.getElementsByClassName("area-button");
-
-    searchBox.addEventListener("keyup", function () {
-      const filter = searchBox.value.toLowerCase();
-      for (let i = 0; i < areaButtons.length; i++) {
-        const txt = areaButtons[i].textContent.toLowerCase();
-        areaButtons[i].style.display = txt.includes(filter) ? "block" : "none";
-      }
-    });
+        window.addEventListener("click", function (e) {
+          const dropdown = document.getElementById("dropdown");
+          const button = document.querySelector(".menu-button");
+          if (!dropdown || !button) return;
+          if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+            dropdown.classList.remove("show");
+          }
+        });
+      });
   </script>
 
 </body>
