@@ -16,6 +16,7 @@ body {
 a {
   color: #d0afff;
   text-decoration: underline;
+  font-weight: bold;
 }
 
 a:hover {
@@ -148,7 +149,6 @@ header h1 {
 .dropdown-slide a:hover {
   background-color: #310e78;
 }
-
 
 .section h2 {
   color: #2e0066;
