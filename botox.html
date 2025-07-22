@@ -2,233 +2,136 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Botox Treatments | PDC Aesthetics</title>
-  <meta name="description" content="Reduce fine lines and wrinkles with professional Botox treatments by a nurse with 29+ years clinical experience. Natural, safe results at PDC Aesthetics.">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #2b2b2b;
-      color: #fff;
-      text-align: center;
-    }
-
-    header {
-      background: #0e0a2b;
-      color: white;
-      padding: 30px 20px 10px;
-    }
-
-    header img {
-      width: 145px;
-      height: auto;
-      margin-bottom: 10px;
-    }
-
-    header h1 {
-      margin: 5px 0;
-      font-size: 28px;
-    }
-
-    .menu-button {
-      margin: 20px auto;
-      display: block;
-      background-color: white;
-      color: #0e0a2b;
-      border: none;
-      border-radius: 8px;
-      padding: 10px 18px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 16px;
-      z-index: 10;
-      position: relative;
-    }
-
-    .dropdown-wrapper {
-      width: 100%;
-      background-color: #1a153d;
-      text-align: center;
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.4s ease;
-    }
-
-    .dropdown-wrapper.show {
-      max-height: 600px;
-    }
-
-    .dropdown-menu a {
-      display: block;
-      padding: 12px;
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .dropdown-menu a:hover {
-      background-color: #302860;
-    }
-
-    .section {
-      background: #dcd1f8;
-      margin: 25px auto;
-      padding: 25px;
-      border-radius: 20px;
-      max-width: 800px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
-      text-align: left;
-      color: #1a1a1a;
-    }
-
-    .section h2, .section h3 {
-      color: #2e1065;
-      margin-top: 0;
-    }
-
-    .cta-button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #3b0764;
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #5b21b6;
-    }
-
-    footer {
-      background: #0e0a2b;
-      color: white;
-      padding: 20px;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-
-    @media screen and (max-width: 768px) {
-      header h1 {
-        font-size: 22px;
-      }
-
-      .menu-button {
-        font-size: 14px;
-        padding: 10px 14px;
-        margin: 15px auto;
-      }
-
-      .section {
-        padding: 20px;
-        margin: 15px 10px;
-      }
-    }
-  </style>
+  <meta name="description" content="Smooth fine lines and wrinkles with expert mobile Botox treatments from PDC Aesthetics. Safe, discreet, and delivered by a qualified nurse with 29+ years of experience.">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <img src="logo.png" alt="PDC Aesthetics Logo" />
-    <h1>PDC Aesthetics</h1>
-  </header>
+<header>
+  <img src="logo.png" alt="PDC Aesthetics Logo" />
+  <h1>PDC Aesthetics</h1>
+</header>
 
-  <button class="menu-button" onclick="toggleMenu()">Menu</button>
-  <div id="dropdown" class="dropdown-wrapper">
-    <div class="dropdown-menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="b12.html">B12 Injections</a>
-      <a href="lip-filler.html">Lip Filler</a>
-      <a href="fat-dissolving.html">Fat Dissolving</a>
-      <a href="botox.html">Botox</a>
-      <a href="microneedling.html">Microneedling</a>
-      <a href="dermaplaning.html">Dermaplaning</a>
-      <a href="skin-peels.html">Skin Peel</a>
-      <a href="skin-boosters.html">Skin Booster</a>
-      <a href="areas-we-cover.html">Areas We Cover</a>
-      <a href="privacy-policy.html">Privacy Policy</a>
-    </div>
-  </div>
-  <div class="section">
-    <h2>Safe, Subtle & Stunning Botox Treatments</h2>
-    <p>At <strong>PDC Aesthetics</strong>, we provide expertly administered <a href="botox.html">Botox injections</a> designed to soften fine lines, restore smoothness, and enhance your natural beauty — not freeze it. Our approach focuses on subtle rejuvenation that lets your true expression shine through.</p>
-    <p>With over <strong>29 years of medical and clinical nursing experience</strong>, your treatment is always delivered safely, professionally, and with a deep understanding of facial anatomy. You’re in trusted hands every step of the way.</p>
-    <a href="about.html" class="cta-button">Meet Our Practitioner</a>
-  </div>
+<!-- Shared Menu will load here -->
+<div id="menu-placeholder"></div>
 
-  <div class="section">
-    <h2>What Does Botox Help With?</h2>
-    <p>Botox can be used to reduce the appearance of common lines and wrinkles including:</p>
-    <ul>
-      <li>Forehead lines</li>
-      <li>Frown lines (glabellar lines)</li>
-      <li>Crow’s feet (around the eyes)</li>
-      <li>Neck bands</li>
-      <li>Bunny lines (nose wrinkles)</li>
-      <li>Gummy smiles</li>
-    </ul>
-    <p>We’ll assess your facial structure and discuss your goals before recommending a personalised plan. Every client receives a thorough consultation and post-treatment advice.</p>
-    <a href="contact.html" class="cta-button">Book a Free Consultation</a>
-  </div>
+<!-- EXPANSION BANNER -->
+<div class="section" style="background: #e3d5ff; border: 2px solid #9c4dff; text-align: center;">
+  <strong>We're Expanding!</strong> PDC Aesthetics is now offering Botox and more in even more towns across Staffordshire.
+</div>
 
-  <div class="section">
-    <h2>Why Choose PDC Aesthetics for Botox?</h2>
-    <p>Unlike busy chain clinics, PDC Aesthetics offers one-to-one care with a qualified nurse who truly takes the time to understand your needs. We pride ourselves on:</p>
-    <ul>
-      <li><strong>Natural-looking results</strong> – Never frozen or overdone</li>
-      <li><strong>Long-term relationships</strong> – Many of our clients return year after year</li>
-      <li><strong>Strict hygiene</strong> – Every treatment is delivered to NHS-level clinical standards</li>
-      <li><strong>Confidential service</strong> – Private and discreet setting, perfect for comfort and peace of mind</li>
-    </ul>
-    <a href="index.html" class="cta-button">Explore All Treatments</a>
-  </div>
+<div class="section">
+  <h2>Smooth, Youthful Skin with Mobile Botox Treatments</h2>
+  <p>Botox is a proven and popular non-surgical treatment used to reduce the appearance of fine lines and wrinkles. At <strong>PDC Aesthetics</strong>, our mobile Botox service brings safe, professional anti-wrinkle injections to the comfort of your home or preferred location.</p>
+  <p>Administered by a <strong>qualified nurse with over 29 years of experience</strong>, we ensure results are natural-looking, subtle, and tailored to your goals.</p>
+  <a href="contact.html" class="cta-button">Book a Consultation</a>
+</div>
 
-  <div class="section">
-    <h2>What to Expect During a Botox Appointment</h2>
-    <p>Your appointment will include a full consultation and consent process. We'll clean the treatment areas and use ultra-fine needles to inject Botox into specific facial muscles. The process usually takes 15–30 minutes.</p>
-    <p>Botox begins to take effect within 3 to 5 days, with full results visible at 10 to 14 days. Effects typically last 3 to 4 months. You can return to your daily routine immediately — there’s minimal downtime.</p>
-    <a href="contact.html" class="cta-button">Start Your Journey</a>
-  </div>
+<div class="section">
+  <h2>What Can Botox Treat?</h2>
+  <ul>
+    <li>Forehead lines</li>
+    <li>Frown lines (glabella)</li>
+    <li>Crow’s feet (around the eyes)</li>
+    <li>Bunny lines (nose)</li>
+    <li>Jawline slimming</li>
+    <li>Neck bands</li>
+    <li>Gummy smiles</li>
+  </ul>
+  <p>Each treatment is customised to your facial anatomy and desired outcome, ensuring soft, refreshed results without the frozen look.</p>
+</div>
 
-  <div class="section">
-    <h2>Common Botox Questions</h2>
-    <p><strong>Is Botox painful?</strong><br />Discomfort is very minimal. Most clients describe it as a small pinch. We use precise, gentle techniques to minimise sensation.</p>
-    <p><strong>Will I look frozen?</strong><br />Not at all. Our focus is softening lines while keeping expression and movement natural. You’ll still look like you – just refreshed.</p>
-    <p><strong>Can Botox prevent wrinkles?</strong><br />Yes – regular Botox can reduce the depth of existing wrinkles and help prevent new ones from forming.</p>
-    <a href="privacy-policy.html" class="cta-button">Read Treatment Policy</a>
-  </div>
+<div class="section">
+  <h2>Why Choose PDC Aesthetics?</h2>
+  <ul>
+    <li>Fully qualified and experienced nurse</li>
+    <li>Safe, CE-certified botulinum toxin used</li>
+    <li>Mobile treatments across Staffordshire</li>
+    <li>Private, discreet and professional</li>
+    <li>Free aftercare support</li>
+  </ul>
+  <a href="areas-we-cover.html" class="cta-button">View Our Service Areas</a>
+</div>
 
-  <div class="section">
-    <h2>Book Botox with Confidence</h2>
-    <p>Don’t trust your face to just anyone. With decades of medical experience and a commitment to high standards, we make Botox simple, safe, and stress-free.</p>
-    <p>Contact us today to ask questions or book your private consultation. We look forward to helping you feel confident in your skin.</p>
-    <a href="contact.html" class="cta-button">Book Botox Today</a>
-  </div>
+<div class="section">
+  <h2>How Botox Works</h2>
+  <p>Botox temporarily relaxes the targeted facial muscles that cause wrinkles. The procedure is quick, relatively painless, and requires no downtime. Results appear gradually within 3–7 days and typically last 3–4 months.</p>
+  <p>You’ll receive a consultation before your first treatment to assess your suitability and tailor your dosage and areas.</p>
+</div>
 
-  <footer>
-    <p>© 2025 PDC Aesthetics. All rights reserved.</p>
-    <p>This website does not offer medical advice. Treatments are delivered by a qualified nurse with 29+ years of experience.</p>
-  </footer>
+<div class="section">
+  <h2>Who Is Botox Suitable For?</h2>
+  <p>Botox is ideal for clients looking to:</p>
+  <ul>
+    <li>Minimise the signs of ageing</li>
+    <li>Prevent future wrinkle formation</li>
+    <li>Improve facial symmetry</li>
+    <li>Achieve a fresher, well-rested appearance</li>
+  </ul>
+  <p>It’s suitable for adults in good general health. All treatments are carried out following a full medical consultation and assessment.</p>
+</div>
 
-  <script>
-    function toggleMenu() {
-      const dropdown = document.getElementById("dropdown");
-      dropdown.classList.toggle("show");
-    }
+<div class="section">
+  <h2>Popular Mobile Aesthetic Services</h2>
+  <ul>
+    <li><a href="b12.html">Vitamin B12 Injections</a></li>
+    <li><a href="lip-filler.html">Lip Filler</a></li>
+    <li><a href="fat-dissolving.html">Fat Dissolving Injections</a></li>
+    <li><a href="microneedling.html">Microneedling</a></li>
+    <li><a href="dermaplaning.html">Dermaplaning</a></li>
+    <li><a href="skin-boosters.html">Skin Boosters</a></li>
+  </ul>
+  <a href="index.html" class="cta-button">Explore All Services</a>
+</div>
 
-    window.addEventListener("click", function(e) {
-      const dropdown = document.getElementById("dropdown");
-      const button = document.querySelector(".menu-button");
-      if (!dropdown.contains(e.target) && !button.contains(e.target)) {
-        dropdown.classList.remove("show");
-      }
-    });
-  </script>
+<div class="section">
+  <h2>FAQs – Botox at Home</h2>
+
+  <h3>Is Botox safe?</h3>
+  <p>Yes. Botox is one of the most studied cosmetic procedures in the world. When administered by a medical professional, it’s extremely safe and effective.</p>
+
+  <h3>How long does the treatment take?</h3>
+  <p>Most appointments take 20–30 minutes including consultation and preparation.</p>
+
+  <h3>Will it look natural?</h3>
+  <p>Absolutely. We specialise in natural-looking, subtle results that simply enhance your features. No frozen faces here!</p>
+
+  <h3>Does it hurt?</h3>
+  <p>Most clients experience only mild discomfort — similar to a pinch. The needles used are very fine and the treatment is quick.</p>
+
+  <h3>How soon will I see results?</h3>
+  <p>Results begin to appear within 3–5 days and peak around 10–14 days.</p>
+</div>
+
+<footer>
+  <p>© 2025 PDC Aesthetics. All rights reserved.</p>
+  <p>This website does not offer medical advice. Treatments are provided by qualified aesthetic practitioners with over 29 years of clinical experience.</p>
+</footer>
+
+<script>
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu-placeholder').innerHTML = data;
+
+      window.toggleDropdown = function () {
+        const dropdown = document.getElementById("dropdown");
+        dropdown.classList.toggle("show");
+      };
+
+      window.addEventListener("click", function (e) {
+        const dropdown = document.getElementById("dropdown");
+        const button = document.querySelector(".menu-button");
+        if (!dropdown || !button) return;
+        if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+          dropdown.classList.remove("show");
+        }
+      });
+    })
+    .catch(error => console.error('Error loading menu:', error));
+</script>
 
 </body>
 </html>
