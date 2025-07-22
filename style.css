@@ -11,15 +11,15 @@ body {
   color: #fff;
 }
 
-/* Global link styling: dark, bold, readable */
-a {
+/* Global link styling (for content only) */
+.section a {
   color: #111;
   font-weight: bold;
   text-decoration: underline;
   transition: color 0.3s ease;
 }
 
-a:hover {
+.section a:hover {
   color: #000;
 }
 
@@ -84,16 +84,19 @@ header h1 {
   visibility: visible;
 }
 
+/* ✅ Restore menu link style */
 .dropdown-content a {
   display: block;
   padding: 12px 20px;
-  color: #fff;
-  text-decoration: none;
+  color: #d0afff;
+  text-decoration: underline;
   font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .dropdown-content a:hover {
   background-color: #2e2170;
+  color: #fff;
 }
 
 /* Section Styling */
