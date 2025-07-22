@@ -112,29 +112,21 @@
   </footer>
 
   <!-- Load menu and scripts -->
-  <script>
-    // Load shared menu from external file
-    fetch('menu.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('menu-placeholder').innerHTML = data;
-      });
+<script>
+  function toggleDropdown() {
+    const dropdown = document.getElementById("dropdown");
+    dropdown.classList.toggle("show");
+  }
 
-    // Dropdown logic
-    function toggleDropdown() {
-      const dropdown = document.getElementById("dropdown");
-      dropdown.style.display = dropdown && dropdown.style.display === "block" ? "none" : "block";
+  window.addEventListener("click", function(e) {
+    const dropdown = document.getElementById("dropdown");
+    const button = document.querySelector(".menu-button");
+    if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+      dropdown.classList.remove("show");
     }
+  });
+</script>
 
-    window.addEventListener("click", function(e) {
-      const dropdown = document.getElementById("dropdown");
-      const button = document.querySelector(".menu-button");
-      if (!dropdown || !button) return;
-      if (!dropdown.contains(e.target) && !button.contains(e.target)) {
-        dropdown.style.display = "none";
-      }
-    });
-  </script>
 
 </body>
 </html>
