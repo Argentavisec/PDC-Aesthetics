@@ -111,22 +111,29 @@
     <p>This website does not offer medical advice. Treatments are provided by qualified aesthetic practitioners with over 29 years of clinical experience.</p>
   </footer>
 
-  <!-- Load menu and scripts -->
 <script>
-  function toggleDropdown() {
-    const dropdown = document.getElementById("dropdown");
-    dropdown.classList.toggle("show");
-  }
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu-placeholder').innerHTML = data;
 
-  window.addEventListener("click", function(e) {
-    const dropdown = document.getElementById("dropdown");
-    const button = document.querySelector(".menu-button");
-    if (!dropdown.contains(e.target) && !button.contains(e.target)) {
-      dropdown.classList.remove("show");
-    }
-  });
+      // Attach the dropdown toggle after menu loads
+      window.toggleDropdown = function () {
+        const dropdown = document.getElementById("dropdown");
+        dropdown.classList.toggle("show");
+      };
+
+      window.addEventListener("click", function (e) {
+        const dropdown = document.getElementById("dropdown");
+        const button = document.querySelector(".menu-button");
+        if (!dropdown || !button) return;
+        if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+          dropdown.classList.remove("show");
+        }
+      });
+    })
+    .catch(error => console.error('Error loading menu:', error));
 </script>
-
 
 
 </body>
