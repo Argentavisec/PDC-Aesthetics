@@ -9,18 +9,17 @@ body {
   background-color: #222;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
+  padding: 0;
+  margin: 0;
 }
 
-/* Global link styling (for content only) */
-.section a {
-  color: #111;
-  font-weight: bold;
+a {
+  color: #d0afff;
   text-decoration: underline;
-  transition: color 0.3s ease;
 }
 
-.section a:hover {
-  color: #000;
+a:hover {
+  color: #ffffff;
 }
 
 /* Header */
@@ -43,6 +42,7 @@ header h1 {
 
 /* Menu Button and Dropdown */
 .menu-wrapper {
+  position: relative;
   text-align: center;
   margin-top: 10px;
 }
@@ -65,7 +65,7 @@ header h1 {
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 100%; /* directly below the button */
   left: 50%;
   transform: translateX(-50%);
   background-color: #1a083d;
@@ -84,19 +84,18 @@ header h1 {
   visibility: visible;
 }
 
-/* ✅ Restore menu link style */
 .dropdown-content a {
   display: block;
   padding: 12px 20px;
   color: #d0afff;
   text-decoration: underline;
+  transition: background-color 0.3s;
   font-weight: bold;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 .dropdown-content a:hover {
   background-color: #2e2170;
-  color: #fff;
+  color: #ffffff;
 }
 
 /* Section Styling */
@@ -107,7 +106,7 @@ header h1 {
   margin: 20px auto;
   border-radius: 20px;
   max-width: 900px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .section h2 {
