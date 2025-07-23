@@ -156,3 +156,26 @@
     <p>© 2025 PDC Aesthetics. All rights reserved.</p>
     <p>This website does not offer medical advice. All treatments are provided by a qualified practitioner with over 29 years of clinical experience.</p>
   </footer>
+
+  <script>
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu-placeholder').innerHTML = data;
+
+      window.toggleDropdown = function () {
+        const dropdown = document.getElementById("dropdown");
+        dropdown.classList.toggle("show");
+      };
+
+      window.addEventListener("click", function (e) {
+        const dropdown = document.getElementById("dropdown");
+        const button = document.querySelector(".menu-button");
+        if (!dropdown || !button) return;
+        if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+          dropdown.classList.remove("show");
+        }
+      });
+    })
+    .catch(error => console.error('Error loading menu:', error));
+</script>
