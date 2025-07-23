@@ -1,162 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PDC Aesthetics | Enhancing Natural Beauty</title>
-  <meta name="description" content="Professional aesthetic treatments by a qualified nurse with 29+ years experience. Lip filler, Botox, B12 injections & more. Book now.">
-<style>
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #2b2b2b;
-    color: #fff;
-    text-align: center;
-  }
-
-  header {
-    background: #0e0a2b;
-    color: white;
-    padding: 30px 20px 10px;
-  }
-
-  header img {
-    width: 145px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-
-  header h1 {
-    margin: 5px 0;
-    font-size: 28px;
-  }
-
-  .menu-button {
-    margin: 20px auto;
-    display: block;
-    background-color: white;
-    color: #0e0a2b;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 18px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
-    z-index: 10;
-    position: relative;
-  }
-
-  .dropdown-wrapper {
-    width: 100%;
-    background-color: #1a153d;
-    text-align: center;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.4s ease;
-  }
-
-  .dropdown-wrapper.show {
-    max-height: 500px;
-  }
-
-  .dropdown-menu a {
-    display: block;
-    padding: 12px;
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  .dropdown-menu a:hover {
-    background-color: #302860;
-  }
-
-  .section {
-    background: #dcd1f8;
-    margin: 25px auto;
-    padding: 25px;
-    border-radius: 20px;
-    max-width: 800px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.2);
-    text-align: left;
-    color: #1a1a1a;
-  }
-
-  .section h2, .section h3 {
-    color: #2e1065;
-    margin-top: 0;
-  }
-
-  .cta-button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #3b0764;
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease;
-  }
-
-  .cta-button:hover {
-    background-color: #5b21b6;
-  }
-
-  footer {
-    background: #0e0a2b;
-    color: white;
-    padding: 20px;
-    font-size: 14px;
-    margin-top: 40px;
-  }
-
-  @media screen and (max-width: 768px) {
-    header h1 {
-      font-size: 22px;
-    }
-
-    .menu-button {
-      font-size: 14px;
-      padding: 10px 14px;
-      margin: 15px auto;
-    }
-
-    .section {
-      padding: 20px;
-      margin: 15px 10px;
-    }
-  }
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDC Aesthetics | Mobile Aesthetic Treatments Staffordshire</title>
+  <meta name="description" content="PDC Aesthetics offers expert mobile Botox, fillers, microneedling, fat dissolving and skincare across Staffordshire. 29+ years nursing experience.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header>
-    <img src="logo.png" alt="PDC Aesthetics Logo" />
+    <img src="logo.png" alt="PDC Aesthetics Logo">
     <h1>PDC Aesthetics</h1>
   </header>
 
-<button class="menu-button" onclick="toggleMenu()">Menu</button>
-<div id="dropdown" class="dropdown-wrapper">
-  <div class="dropdown-menu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="b12.html">B12 Injections</a>
-    <a href="lip-filler.html">Lip Filler</a>
-    <a href="fat-dissolving.html">Fat Dissolving</a>
-    <a href="botox.html">Botox</a>
-    <a href="microneedling.html">Microneedling</a>
-    <a href="dermaplaning.html">Dermaplaning</a>
-    <a href="skin-peels.html">Skin Peel</a>
-    <a href="skin-boosters.html">Skin Booster</a>
-    <a href="areas-we-cover.html">Areas We Cover</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-  </div>
-</div>
+  <!-- Shared Menu -->
+  <div id="menu-placeholder"></div>
 
-
+  <!-- Welcome Section -->
   <div class="section" id="welcome">
     <h2>Welcome to PDC Aesthetics – Where Experience Meets Excellence</h2>
     <p>At PDC Aesthetics, we are proud to combine luxury treatments with genuine clinical expertise. With over <strong>29 years of nursing experience</strong>, our lead practitioner is fully qualified to deliver aesthetic procedures safely, professionally, and with care.</p>
@@ -164,6 +24,7 @@
     <a href="about.html" class="cta-button">Learn More About Us</a>
   </div>
 
+  <!-- Treatments Sections -->
   <div class="section" id="b12">
     <h2>B12 Injections – Boost Energy & Immunity</h2>
     <p>B12 is essential for energy, brain function, and immune support. Our <a href="b12.html">B12 injection treatments</a> are ideal if you're experiencing fatigue, low concentration, or simply want a wellness boost. Each injection is administered with clinical precision by a qualified medical professional.</p>
@@ -184,6 +45,7 @@
     <p>It’s a great option for refining your silhouette without downtime. We tailor your plan and monitor progress carefully to ensure optimal, gradual results.</p>
     <a href="fat-dissolving.html" class="cta-button">View Fat Dissolving Options</a>
   </div>
+
   <div class="section" id="botox">
     <h2>Botox – Smooth Lines & Refresh Your Look</h2>
     <p>Botox is one of the most popular aesthetic procedures globally — and for good reason. Whether you want to soften forehead lines, crow’s feet, or frown lines, <a href="botox.html">our Botox treatments</a> provide natural-looking results that still let your personality shine through.</p>
@@ -205,31 +67,23 @@
     <a href="dermaplaning.html" class="cta-button">Book Dermaplaning</a>
   </div>
 
-  <div class="section" id="peel">
-    <h2>Skin Peels – Reveal Your Best Skin Yet</h2>
-    <p>From gentle to deep exfoliation, our <a href="skin-peels.html">chemical skin peels</a> help treat pigmentation, acne, fine lines, and tired complexions. Peels renew skin at a cellular level for noticeable clarity and brightness.</p>
-    <p>We select the perfect peel for your skin type and concerns, and include calming aftercare to reduce redness and enhance your glow.</p>
-    <a href="skin-peels.html" class="cta-button">Explore Skin Peels</a>
-  </div>
+  <div class="section" id="faq">
+    <h2>Frequently Asked Questions – Mobile Aesthetics</h2>
 
-  <div class="section" id="booster">
-    <h2>Skin Boosters – Deep Hydration & Plumpness</h2>
-    <p>Skin boosters like Profhilo and Seventy Hyal are injectable moisturisers that deeply hydrate, firm, and brighten the skin — without changing your facial shape.</p>
-    <p><a href="skin-boosters.html">Our skin booster treatments</a> are perfect for tired, dry, or ageing skin. Results include smoother texture and improved elasticity. You’ll notice a glow that radiates from within.</p>
-    <a href="skin-boosters.html" class="cta-button">Learn About Skin Boosters</a>
-  </div>
+    <h3>Do mobile aesthetic treatments work as well as in a clinic?</h3>
+    <p>Yes. Our mobile aesthetic services use the same professional-grade equipment and products as clinical settings, all delivered by a fully qualified nurse with 29+ years of experience.</p>
 
-  <div class="section" id="areas">
-    <h2>Areas We Cover – Local, Private Aesthetics Near You</h2>
-    <p>PDC Aesthetics proudly serves the surrounding area. Based in a discreet location, we welcome clients from nearby towns and villages including <strong>[insert your towns here]</strong>.</p>
-    <p>Our quiet, professional setting ensures comfort, convenience, and privacy. Find out more about the locations we operate in on our dedicated <a href="areas-we-cover.html">Areas We Cover</a> page.</p>
-    <a href="areas-we-cover.html" class="cta-button">See Local Areas</a>
-  </div>
+    <h3>Are mobile lip fillers safe?</h3>
+    <p>Absolutely. Our nurse is fully trained and insured to perform lip fillers safely. All tools are sterile and protocols follow UK clinical safety standards.</p>
 
-  <div class="section" id="contact" style="background: #120e1f; color: #fff;">
-    <h2>Ready to Start Your Aesthetic Journey?</h2>
-    <p>Whether you’re a first-timer or regular, we’re here to guide you safely and professionally. Book your consultation today and take the first step toward refreshed confidence.</p>
-    <a href="contact.html" class="cta-button">Book Now</a>
+    <h3>Is there a consultation before treatment?</h3>
+    <p>Yes. Every client receives a full consultation before treatment begins. We discuss your goals, answer your questions, and provide all information on aftercare and results.</p>
+
+    <h3>What areas do you cover?</h3>
+    <p>We serve a 15-mile radius from Stone, Stoke-on-Trent — including Stafford, Barlaston, Eccleshall, and Newcastle-under-Lyme. See our <a href="areas-we-cover.html">areas covered</a> page for full info.</p>
+
+    <h3>How do I book an appointment?</h3>
+    <p>Just visit our <a href="contact.html">contact page</a> to send us a message or request a call. We’ll arrange a consultation and find the right time for your treatment.</p>
   </div>
 
   <footer>
@@ -238,35 +92,11 @@
   </footer>
 
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("dropdown");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
-    }
-
-    window.addEventListener("click", function(e) {
-      const menu = document.getElementById("dropdown");
-      const button = document.querySelector(".menu-button");
-      if (!menu.contains(e.target) && !button.contains(e.target)) {
-        menu.style.display = "none";
-      }
-    });
+    fetch('menu.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("menu-placeholder").innerHTML = data;
+      });
   </script>
-
-<script>
-  function toggleMenu() {
-    const dropdown = document.getElementById("dropdown");
-    dropdown.classList.toggle("show");
-  }
-
-  window.addEventListener("click", function (e) {
-    const dropdown = document.getElementById("dropdown");
-    const button = document.querySelector(".menu-button");
-
-    if (!dropdown.contains(e.target) && !button.contains(e.target)) {
-      dropdown.classList.remove("show");
-    }
-  });
-</script>
-
 </body>
 </html>
