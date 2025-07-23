@@ -1,4 +1,4 @@
-/* Reset and Base Styling */
+/* Reset & Base Styling */
 * {
   margin: 0;
   padding: 0;
@@ -9,12 +9,10 @@ body {
   background-color: #222;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
-  padding: 0;
-  margin: 0;
 }
 
 a {
-  color: #222; /* Nearly black for links */
+  color: #222; /* Dark links inside content */
   text-decoration: underline;
   font-weight: bold;
 }
@@ -23,25 +21,25 @@ a:hover {
   color: #000;
 }
 
-/* Header */
+/* Header and Logo */
 header {
   background-color: #12002f;
-  padding: 20px 0 10px 0;
+  padding: 20px 0 10px;
   text-align: center;
 }
 
 header img {
   max-width: 120px;
-  display: block;
   margin: 0 auto 10px;
+  display: block;
 }
 
 header h1 {
   font-size: 28px;
-  color: #fff;
+  color: white;
 }
 
-/* Menu Button and Dropdown */
+/* Menu Button */
 .menu-wrapper {
   position: relative;
   text-align: center;
@@ -50,54 +48,46 @@ header h1 {
 
 .menu-button {
   padding: 10px 20px;
-  background-color: #fff;
-  color: #000;
-  border: none;
+  background-color: white;
+  color: black;
   font-weight: bold;
+  border: none;
   border-radius: 12px;
   cursor: pointer;
-  transition: background 0.3s ease;
-  z-index: 1001;
-  position: relative;
+  z-index: 1000;
 }
 
-.menu-button:hover {
-  background-color: #f0f0f0;
-}
-
+/* Dropdown Menu (initially hidden) */
 .dropdown-content {
   max-height: 0;
   overflow: hidden;
   background-color: #1a083d;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: max-height 0.5s ease;
-  position: relative;
   margin: 10px auto 0;
-  padding: 0;
   width: fit-content;
 }
 
 .dropdown-content.show {
-  max-height: 600px; /* enough to reveal all links */
-  padding: 10px 0;
+  max-height: 500px;
 }
 
+/* Menu Links */
 .dropdown-content a {
   display: block;
   padding: 12px 20px;
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s;
 }
 
 .dropdown-content a:hover {
-  background-color: #2e2170;
+  background-color: #2f1c66;
 }
 
-/* Section Styling */
+/* Content Sections */
 .section {
-  background-color: #dac4ff; /* Slightly darker than before */
+  background-color: #dac4ff; /* Slightly darker purple */
   color: #111;
   padding: 30px 20px;
   margin: 20px auto;
@@ -109,30 +99,11 @@ header h1 {
 .section h2 {
   color: #2e0066;
   margin-bottom: 15px;
-  font-size: 22px;
 }
 
-.section h3 {
-  color: #3a0066;
-  margin-top: 20px;
-  font-size: 18px;
-}
-
-.section p {
-  margin-bottom: 15px;
+.section p, .section ul li {
+  font-size: 16px;
   line-height: 1.6;
-  font-size: 16px;
-}
-
-.section ul {
-  list-style-type: disc;
-  margin-left: 20px;
-  margin-bottom: 15px;
-}
-
-.section ul li {
-  margin-bottom: 8px;
-  font-size: 16px;
 }
 
 /* CTA Buttons */
@@ -161,6 +132,7 @@ footer {
   font-size: 14px;
 }
 
+/* Responsive */
 @media screen and (max-width: 768px) {
   .section {
     padding: 25px 15px;
