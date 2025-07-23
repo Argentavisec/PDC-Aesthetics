@@ -1,1 +1,106 @@
-<!DOCTYPE html><html><head><title>Skin Boosters</title></head><body><h1>Skin Boosters</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skin Boosters | PDC Aesthetics Staffordshire</title>
+  <meta name="description" content="Deeply hydrate and rejuvenate your skin with injectable skin boosters like Profhilo and Seventy Hyal. Safe mobile aesthetic treatments in Staffordshire with 29+ years nursing experience.">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="PDC Aesthetics Logo">
+    <h1>PDC Aesthetics</h1>
+  </header>
+
+  <div id="menu-placeholder"></div>
+
+  <div class="section">
+    <h2>Skin Boosters – Deep Hydration from Within</h2>
+    <p>Looking for a glow that comes from deep within? Our <strong>skin booster treatments</strong>, including <a href="#">Profhilo</a> and <a href="#">Seventy Hyal</a>, offer intense hydration, improved elasticity, and an overall smoother, firmer complexion — without adding volume like traditional fillers.</p>
+    <p>Unlike regular moisturisers or serums that only work on the skin's surface, injectable boosters deliver hyaluronic acid beneath the skin’s surface to attract and retain moisture where it matters most. The result? Radiant, plump skin that glows naturally.</p>
+    <a href="contact.html" class="cta-button">Book Your Skin Booster Consultation</a>
+  </div>
+
+  <div class="section">
+    <h2>Why Choose Skin Boosters?</h2>
+    <ul>
+      <li>Improve skin texture and tone</li>
+      <li>Boost hydration and glow</li>
+      <li>Reduce fine lines and crepiness</li>
+      <li>Firm sagging or dull areas</li>
+      <li>No change to facial volume — just healthy-looking skin</li>
+    </ul>
+    <p>This makes them a great option for clients of all ages who want subtle, natural results without looking "done".</p>
+    <a href="about.html" class="cta-button">Meet Our Practitioner</a>
+  </div>
+
+  <div class="section">
+    <h2>What Are Profhilo and Seventy Hyal?</h2>
+    <p><strong>Profhilo</strong> is a unique hyaluronic acid injectable that spreads smoothly throughout the skin, stimulating collagen and elastin while intensely hydrating. It’s often described as a “remodeling” treatment, leaving your face or neck looking firmer and fresher.</p>
+    <p><strong>Seventy Hyal 2000</strong> is one of the latest skin boosters on the market, known for its long-lasting hydration, plumpness, and a dewy finish that clients love.</p>
+    <p>We’ll help you decide which product best suits your needs, skin type, and desired results.</p>
+    <a href="contact.html" class="cta-button">Ask Us Which Booster Is Right for You</a>
+  </div>
+
+  <div class="section">
+    <h2>Mobile Skin Boosters – Delivered Safely to Your Home</h2>
+    <p>Our mobile aesthetic service brings expert skincare directly to you. Whether you’re based in Stone, Stafford, Stoke-on-Trent, Eccleshall, or the surrounding areas, we offer convenient at-home appointments performed by a qualified nurse with 29+ years of experience.</p>
+    <p>Treatments are discreet, hygienic, and tailored to your lifestyle. There's no need to travel or wait in clinics — enjoy luxury skin rejuvenation in your own space.</p>
+    <a href="areas-we-cover.html" class="cta-button">View Areas We Cover</a>
+  </div>
+
+  <div class="section">
+    <h2>How Many Treatments Do I Need?</h2>
+    <p>Most clients benefit from a course of <strong>2 to 3 sessions spaced 2–4 weeks apart</strong>. Results are typically visible after the first session, with full rejuvenation developing gradually. Maintenance sessions every 6 months help keep skin looking its best long term.</p>
+    <p>Every client receives a full consultation to ensure their booster plan is customised to their skin goals.</p>
+    <a href="contact.html" class="cta-button">Start Your Skin Rejuvenation</a>
+  </div>
+
+  <div class="section" id="faq">
+    <h2>Skin Booster FAQs</h2>
+
+    <h3>Are skin boosters the same as dermal fillers?</h3>
+    <p>No. Skin boosters hydrate the skin without changing volume or structure. They improve tone, texture, and elasticity, while fillers are used for contouring and adding volume.</p>
+
+    <h3>How long do results last?</h3>
+    <p>Results typically last 6–9 months depending on your skin, product used, and lifestyle. Maintenance treatments help preserve the glow.</p>
+
+    <h3>Do skin boosters hurt?</h3>
+    <p>Most clients report minimal discomfort. A numbing cream can be applied beforehand. Injections are quick and performed using fine needles by a qualified nurse.</p>
+
+    <h3>Who is a good candidate for skin boosters?</h3>
+    <p>Almost anyone looking for better skin quality! They're ideal for dull, dry, or ageing skin, and suitable for both men and women.</p>
+
+    <h3>Is there downtime?</h3>
+    <p>There may be slight redness or swelling for 24–48 hours. You can resume normal activities right after treatment, making it a convenient option for busy schedules.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 PDC Aesthetics. All rights reserved.</p>
+    <p>This website does not offer medical advice. Treatments are provided by qualified aesthetic practitioners with over 29 years of clinical experience.</p>
+  </footer>
+
+    <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
+
+        window.toggleDropdown = function () {
+          const dropdown = document.getElementById("dropdown");
+          dropdown.classList.toggle("show");
+        };
+
+        window.addEventListener("click", function (e) {
+          const dropdown = document.getElementById("dropdown");
+          const button = document.querySelector(".menu-button");
+          if (!dropdown || !button) return;
+          if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+            dropdown.classList.remove("show");
+          }
+        });
+      });
+  </script>
+</body>
+</html>
