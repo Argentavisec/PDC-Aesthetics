@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stone Aesthetics | Mobile Botox & Fillers in Stone</title>
+  <meta name="description" content="PDC Aesthetics offers professional mobile treatments including Botox, lip fillers, fat dissolving, and skincare in Stone, Staffordshire. Trusted by locals for over 29 years.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="PDC Aesthetics Logo">
+    <h1>PDC Aesthetics</h1>
+  </header>
+
+  <!-- Shared Menu -->
+  <div id="menu-placeholder"></div>
+
+  <!-- Section: About Stone Services -->
+  <div class="section">
+    <h2>Mobile Aesthetic Treatments in Stone, Staffordshire</h2>
+    <p>If you’re looking for trusted, professional aesthetic treatments in <strong>Stone</strong>, you’ve come to the right place. At PDC Aesthetics, we offer a wide range of mobile beauty treatments delivered in the comfort of your own home by a nurse with over 29 years of clinical experience.</p>
+    <p>Whether you’re interested in <a href="botox.html">Botox</a>, <a href="lip-filler.html">lip fillers</a>, <a href="fat-dissolving.html">fat dissolving</a>, or <a href="microneedling.html">microneedling</a>, we tailor every session to meet your needs — safely and discreetly across the Stone area.</p>
+    <a href="contact.html" class="cta-button">Book Your Consultation in Stone</a>
+  </div>
+
+  <!-- Section: Why Choose Us -->
+  <div class="section">
+    <h2>Why Choose PDC Aesthetics in Stone?</h2>
+    <ul>
+      <li>Over 29 years of medical and aesthetic experience</li>
+      <li>Fully mobile service – we come to you</li>
+      <li>Private, confidential, and tailored treatments</li>
+      <li>High-quality, clinically approved products</li>
+      <li>Friendly, local and highly rated</li>
+    </ul>
+    <p>We’ve built a reputation in Stone for delivering reliable and effective results while putting your safety first.</p>
+    <a href="about.html" class="cta-button">Learn More About Us</a>
+  </div>
+
+  <!-- Section: Popular Services -->
+  <div class="section">
+    <h2>Popular Aesthetic Treatments Available in Stone</h2>
+    <ul>
+      <li><a href="botox.html">Botox for fine lines and wrinkles</a></li>
+      <li><a href="lip-filler.html">Lip filler for volume and shape</a></li>
+      <li><a href="fat-dissolving.html">Fat dissolving injections</a></li>
+      <li><a href="b12.html">B12 energy boosters</a></li>
+      <li><a href="microneedling.html">Microneedling for skin rejuvenation</a></li>
+      <li><a href="dermaplaning.html">Dermaplaning and exfoliation</a></li>
+      <li><a href="skin-peels.html">Skin peels for pigmentation</a></li>
+      <li><a href="skin-boosters.html">Skin boosters like Profhilo</a></li>
+    </ul>
+    <p>All treatments are carried out by a registered nurse who is trained in the latest aesthetic techniques.</p>
+    <a href="contact.html" class="cta-button">Contact Us Today</a>
+  </div>
+
+  <!-- Section: Areas Nearby -->
+  <div class="section">
+    <h2>Serving Stone & Nearby Areas</h2>
+    <p>We proudly serve clients in Stone and surrounding towns like Barlaston, Stafford, Eccleshall, and Newcastle-under-Lyme. Not sure if we come to you? Just <a href="contact.html">get in touch</a>.</p>
+    <a href="areas-we-cover.html" class="cta-button">See Full Service Area</a>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="section" id="faq">
+    <h2>Frequently Asked Questions – Stone Aesthetic Services</h2>
+
+    <h3>Do you offer mobile Botox in Stone?</h3>
+    <p>Yes, we provide fully mobile Botox services throughout Stone. All treatments are administered by a qualified nurse for your peace of mind.</p>
+
+    <h3>Are the treatments done at home safe?</h3>
+    <p>Absolutely. We follow strict hygiene protocols, use sterile tools, and ensure every treatment is performed to the highest standard.</p>
+
+    <h3>How do I book a consultation in Stone?</h3>
+    <p>Visit our <a href="contact.html">contact page</a> to request your preferred date and we’ll get back to confirm a time that suits you.</p>
+
+    <h3>Do you charge a travel fee to Stone?</h3>
+    <p>No additional travel fees apply for Stone. We’re based nearby and cover this area regularly.</p>
+
+    <h3>Can I get multiple treatments in one visit?</h3>
+    <p>Yes! Many of our clients in Stone opt to combine treatments like lip filler and B12 injections in a single session.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 PDC Aesthetics. All rights reserved.</p>
+    <p>This website does not offer medical advice. Treatments are provided by qualified aesthetic practitioners with over 29 years of clinical experience.</p>
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
+
+        window.toggleDropdown = function () {
+          const dropdown = document.getElementById("dropdown");
+          dropdown.classList.toggle("show");
+        };
+
+        window.addEventListener("click", function (e) {
+          const dropdown = document.getElementById("dropdown");
+          const button = document.querySelector(".menu-button");
+          if (!dropdown || !button) return;
+          if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+            dropdown.classList.remove("show");
+          }
+        });
+      });
+  </script>
+</body>
+</html>

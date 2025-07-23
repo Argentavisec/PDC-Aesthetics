@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barlaston Aesthetic Treatments | PDC Aesthetics</title>
+  <meta name="description" content="PDC Aesthetics offers expert mobile aesthetic treatments in Barlaston including Botox, fillers, fat dissolving and more. 29+ years experience. Book today.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="PDC Aesthetics Logo">
+    <h1>PDC Aesthetics</h1>
+  </header>
+
+  <!-- Shared Menu -->
+  <div id="menu-placeholder"></div>
+
+  <div class="section">
+    <h2>Aesthetic Treatments in Barlaston – Discreet, Mobile & Professional</h2>
+    <p>If you're in <strong>Barlaston</strong> and searching for a trusted aesthetic practitioner, PDC Aesthetics is proud to offer mobile services direct to your home. From Botox and fillers to fat dissolving injections and skin boosters, all treatments are administered by a qualified nurse with over <strong>29 years of clinical experience</strong>.</p>
+    <p>Whether you're seeking a natural lip enhancement or smoother, younger-looking skin, we provide tailored aesthetic treatments with medical precision and care.</p>
+    <a href="contact.html" class="cta-button">Book Your Consultation</a>
+  </div>
+
+  <div class="section">
+    <h2>Popular Treatments Available in Barlaston</h2>
+    <ul>
+      <li><a href="lip-filler.html">Lip Filler</a> – Subtle volume, definition, and symmetry</li>
+      <li><a href="botox.html">Botox</a> – Smooth lines and reduce signs of ageing</li>
+      <li><a href="fat-dissolving.html">Fat Dissolving</a> – Chin, belly, thighs, arms</li>
+      <li><a href="skin-boosters.html">Skin Boosters</a> – Hydration and collagen stimulation</li>
+      <li><a href="microneedling.html">Microneedling</a> – Skin texture and scar improvement</li>
+      <li><a href="dermaplaning.html">Dermaplaning</a> – Exfoliate and brighten the skin</li>
+      <li><a href="b12.html">B12 Injections</a> – Boost energy and wellness</li>
+    </ul>
+    <p>Every treatment includes a consultation to ensure safety, comfort, and the best outcome possible.</p>
+    <a href="about.html" class="cta-button">Meet Your Practitioner</a>
+  </div>
+
+  <div class="section">
+    <h2>Why Barlaston Clients Choose PDC Aesthetics</h2>
+    <p>As a local mobile aesthetic provider, we understand the importance of discretion and personalised care. Our nurse-led approach means you receive clinical-grade treatments with full aftercare support — in the comfort of your own home in Barlaston.</p>
+    <p>Clients appreciate our professionalism, honest advice, and commitment to natural-looking results that enhance your existing beauty.</p>
+    <a href="areas-we-cover.html" class="cta-button">See All Areas We Cover</a>
+  </div>
+
+  <div class="section">
+    <h2>Mobile Aesthetics Across Staffordshire</h2>
+    <p>We also serve surrounding areas including <a href="stone.html">Stone</a>, <a href="stafford.html">Stafford</a>, <a href="eccleshall.html">Eccleshall</a>, <a href="trentham.html">Trentham</a>, and <a href="newcastle-under-lyme.html">Newcastle-under-Lyme</a>. Our goal is to make high-quality aesthetics accessible without the need to travel far or enter a busy clinic.</p>
+    <p>With flexible appointment slots and safe, private treatments, we make looking and feeling your best as easy and convenient as possible.</p>
+    <a href="contact.html" class="cta-button">Get in Touch</a>
+  </div>
+
+  <div class="section" id="faq">
+    <h2>Frequently Asked Questions – Aesthetic Treatments in Barlaston</h2>
+
+    <h3>Is it safe to have mobile Botox or fillers?</h3>
+    <p>Yes. Treatments are provided by a nurse with 29+ years experience using sterile techniques and licensed products. You get the same care you’d expect from a clinic — just in your own home.</p>
+
+    <h3>Do you cover the whole of Barlaston?</h3>
+    <p>We cover all areas of Barlaston and nearby villages. If you’re unsure whether we reach your location, <a href="contact.html">get in touch</a> and we’ll confirm availability.</p>
+
+    <h3>What qualifications do you hold?</h3>
+    <p>Your practitioner is a qualified nurse with nearly three decades of experience in healthcare and aesthetics. You’re in safe, professional hands.</p>
+
+    <h3>How do I book?</h3>
+    <p>Simply visit the <a href="contact.html">Contact</a> page and submit your enquiry. We’ll call you back to confirm your consultation and discuss your needs.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 PDC Aesthetics. All rights reserved.</p>
+    <p>This website does not offer medical advice. Treatments are provided by qualified aesthetic practitioners with over 29 years of clinical experience.</p>
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
+
+        window.toggleDropdown = function () {
+          const dropdown = document.getElementById("dropdown");
+          dropdown.classList.toggle("show");
+        };
+
+        window.addEventListener("click", function (e) {
+          const dropdown = document.getElementById("dropdown");
+          const button = document.querySelector(".menu-button");
+          if (!dropdown || !button) return;
+          if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+            dropdown.classList.remove("show");
+          }
+        });
+      });
+  </script>
+</body>
+</html>

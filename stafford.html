@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Aesthetic Treatments in Stafford | PDC Aesthetics</title>
+  <meta name="description" content="PDC Aesthetics provides expert mobile Botox, fillers, skin boosters, microneedling and fat dissolving in Stafford. 29+ years of clinical experience.">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="PDC Aesthetics Logo">
+    <h1>PDC Aesthetics</h1>
+  </header>
+
+  <div id="menu-placeholder"></div>
+
+  <div class="section">
+    <h2>Aesthetic Treatments in Stafford – Expert Care That Comes to You</h2>
+    <p>PDC Aesthetics offers high-quality, mobile aesthetic treatments in <strong>Stafford</strong> and the surrounding areas. With over <strong>29 years of clinical nursing experience</strong>, our lead practitioner delivers treatments safely, discreetly, and professionally in the comfort of your own home.</p>
+    <p>Whether you’re looking for wrinkle reduction, lip enhancement, skin rejuvenation, or targeted fat reduction, we bring advanced aesthetic solutions directly to you in Stafford.</p>
+    <a href="contact.html" class="cta-button">Book a Mobile Consultation</a>
+  </div>
+
+  <div class="section">
+    <h2>Popular Treatments Available in Stafford</h2>
+    <ul>
+      <li><a href="botox.html">Botox</a> – smooth lines and reduce wrinkles</li>
+      <li><a href="lip-filler.html">Lip Filler</a> – for natural, defined enhancement</li>
+      <li><a href="fat-dissolving.html">Fat Dissolving</a> – non-surgical contouring</li>
+      <li><a href="microneedling.html">Microneedling</a> – for glowing, firm skin</li>
+      <li><a href="skin-boosters.html">Skin Boosters</a> – injectables that hydrate and plump</li>
+      <li><a href="b12.html">B12 Injections</a> – boost energy and wellness</li>
+    </ul>
+    <p>Every treatment is administered by a medical professional who takes time to understand your goals and provide personalised results with clear aftercare guidance.</p>
+    <a href="about.html" class="cta-button">Meet Your Aesthetic Practitioner</a>
+  </div>
+
+  <div class="section">
+    <h2>Why Choose PDC Aesthetics in Stafford?</h2>
+    <ul>
+      <li>Mobile service that respects your time and privacy</li>
+      <li>Delivered by a nurse with nearly 30 years of clinical experience</li>
+      <li>One-to-one care — no rushed appointments or busy salons</li>
+      <li>Strict hygiene and safety protocols</li>
+      <li>Free consultations and clear treatment advice</li>
+    </ul>
+    <p>Our clients in Stafford choose us for our honest, professional approach and consistent results.</p>
+    <a href="reviews.html" class="cta-button">See Client Feedback</a>
+  </div>
+
+  <div class="section">
+    <h2>Discreet, Friendly Mobile Aesthetics Near You</h2>
+    <p>We offer home visits throughout Stafford including areas such as Baswich, Castlefields, Wildwood, Rowley Park, and Doxey. No need to travel — we bring all the necessary equipment to create a relaxing treatment environment in your home.</p>
+    <p>All consultations are confidential and there’s no pressure to book. You’ll get clear, honest advice from an experienced professional who truly cares.</p>
+    <a href="areas-we-cover.html" class="cta-button">View Full Coverage Areas</a>
+  </div>
+
+  <div class="section" id="faq">
+    <h2>Frequently Asked Questions – Aesthetic Treatments in Stafford</h2>
+
+    <h3>Is it safe to get Botox or fillers at home?</h3>
+    <p>Yes — when performed by a trained, insured medical professional. We use sterile equipment and follow strict clinical protocols to ensure every treatment is safe and hygienic.</p>
+
+    <h3>Do you cover the whole of Stafford?</h3>
+    <p>We cover all major neighbourhoods in Stafford, including Castlefields, Wildwood, and more. If you're unsure, just contact us to check.</p>
+
+    <h3>Can I get a consultation first?</h3>
+    <p>Absolutely. We offer free consultations before any treatment. We'll discuss your goals, assess suitability, and answer all your questions before moving forward.</p>
+
+    <h3>How do I book a home visit?</h3>
+    <p>You can <a href="contact.html">send us a message</a> or call to arrange your appointment. We’ll find a convenient time that suits you.</p>
+
+    <h3>Are mobile treatments more expensive?</h3>
+    <p>No. Our prices remain competitive, with the added convenience of receiving treatment in your own space without added salon fees or travel time.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 PDC Aesthetics. All rights reserved.</p>
+    <p>This website does not offer medical advice. Treatments are provided by qualified aesthetic practitioners with over 29 years of clinical experience.</p>
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
+
+        window.toggleDropdown = function () {
+          const dropdown = document.getElementById("dropdown");
+          dropdown.classList.toggle("show");
+        };
+
+        window.addEventListener("click", function (e) {
+          const dropdown = document.getElementById("dropdown");
+          const button = document.querySelector(".menu-button");
+          if (!dropdown || !button) return;
+          if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+            dropdown.classList.remove("show");
+          }
+        });
+      });
+  </script>
+</body>
+</html>
