@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheadle Aesthetic Treatments | Mobile Botox & Fillers</title>
+  <meta name="description" content="Looking for Botox, fillers, and skin treatments in Cheadle? PDC Aesthetics offers mobile aesthetic services with 29+ years of experience. Book today!">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="PDC Aesthetics Logo">
+    <h1>PDC Aesthetics</h1>
+  </header>
+
+  <div id="menu-placeholder"></div>
+
+  <div class="section">
+    <h2>Mobile Aesthetic Treatments in Cheadle</h2>
+    <p>Welcome to PDC Aesthetics – your trusted provider of mobile aesthetic treatments in <strong>Cheadle</strong>. With over 29 years of clinical nursing experience, we deliver professional, safe, and discreet treatments directly to your home. From Botox and lip fillers to microneedling and fat dissolving injections, our mobile service ensures convenience and quality without compromise.</p>
+    <p>Our founder is a qualified nurse offering a personal, one-to-one service in the comfort and privacy of your own home. Whether you live near Cheadle town centre, around the outskirts, or nearby villages, we can bring tailored aesthetic care directly to your door.</p>
+    <a href="contact.html" class="cta-button">Book Your Consultation</a>
+  </div>
+
+  <div class="section">
+    <h2>Why Choose PDC Aesthetics in Cheadle?</h2>
+    <ul>
+      <li>✔ Over 29 years of real clinical nursing experience</li>
+      <li>✔ Mobile service across Cheadle and surrounding areas</li>
+      <li>✔ Discreet, one-on-one consultations</li>
+      <li>✔ Fully qualified and insured practitioner</li>
+      <li>✔ Luxury treatments using safe, approved products</li>
+    </ul>
+    <p>We pride ourselves on a personal approach, taking time to understand your goals and designing a bespoke treatment plan that enhances your natural beauty.</p>
+    <a href="about.html" class="cta-button">Learn More About Us</a>
+  </div>
+
+  <div class="section">
+    <h2>Popular Treatments Available in Cheadle</h2>
+    <ul>
+      <li><a href="botox.html">Botox</a> – Reduce fine lines and wrinkles with natural-looking results.</li>
+      <li><a href="lip-filler.html">Lip Filler</a> – Add volume, symmetry, and definition to your lips.</li>
+      <li><a href="fat-dissolving.html">Fat Dissolving Injections</a> – Target stubborn fat under the chin, arms, or stomach.</li>
+      <li><a href="microneedling.html">Microneedling</a> – Stimulate collagen for smoother, brighter skin.</li>
+      <li><a href="dermaplaning.html">Dermaplaning</a> – Gentle exfoliation for soft, glowing skin.</li>
+      <li><a href="skin-peels.html">Skin Peels</a> – Improve skin tone, texture, and clarity.</li>
+      <li><a href="skin-boosters.html">Skin Boosters</a> – Hydrate and plump the skin from within.</li>
+      <li><a href="b12.html">B12 Injections</a> – Boost energy, focus, and immunity.</li>
+    </ul>
+    <a href="index.html" class="cta-button">See All Treatments</a>
+  </div>
+
+  <div class="section">
+    <h2>Serving Cheadle and Surrounding Areas</h2>
+    <p>We cover the wider Cheadle area including Cheadle Heath, Cheadle Hulme, Cheadle Village, Heald Green, Gatley, and beyond. Our mobile aesthetic service is ideal for those who value privacy, comfort, and professional care without travelling to a clinic.</p>
+    <p>If you're based in nearby areas like <a href="baldwins-gate.html">Baldwins Gate</a>, <a href="alsager.html">Alsager</a>, <a href="stone.html">Stone</a>, or <a href="stafford.html">Stafford</a>, we can reach you too.</p>
+    <a href="areas-we-cover.html" class="cta-button">Full List of Areas Covered</a>
+  </div>
+
+  <div class="section" id="faq">
+    <h2>FAQs – Aesthetic Treatments in Cheadle</h2>
+
+    <h3>Is it safe to have aesthetic treatments done at home?</h3>
+    <p>Yes. All treatments are carried out by a qualified nurse with full insurance and clinical experience. We follow strict hygiene and safety protocols for every visit.</p>
+
+    <h3>Do you offer consultations before treatment?</h3>
+    <p>Absolutely. Every treatment begins with a personalised consultation to discuss your goals and medical history.</p>
+
+    <h3>How long do Botox and fillers last?</h3>
+    <p>Botox typically lasts 3–4 months. Fillers can last 6–12 months depending on the area treated and your individual metabolism.</p>
+
+    <h3>Is there any downtime?</h3>
+    <p>Most treatments involve minimal downtime. Some clients may experience redness, swelling, or bruising, which usually settles quickly.</p>
+
+    <h3>How do I book in Cheadle?</h3>
+    <p>Use our <a href="contact.html">contact form</a> or message us directly to arrange a consultation. We’ll confirm availability and schedule your appointment.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 PDC Aesthetics. All rights reserved.</p>
+    <p>This website does not offer medical advice. Treatments are provided by qualified aesthetic practitioners with over 29 years of clinical experience.</p>
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
+
+        window.toggleDropdown = function () {
+          const dropdown = document.getElementById("dropdown");
+          dropdown.classList.toggle("show");
+        };
+
+        window.addEventListener("click", function (e) {
+          const dropdown = document.getElementById("dropdown");
+          const button = document.querySelector(".menu-button");
+          if (!dropdown || !button) return;
+          if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+            dropdown.classList.remove("show");
+          }
+        });
+      });
+  </script>
+</body>
+</html>

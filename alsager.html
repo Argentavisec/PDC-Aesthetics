@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Aesthetic Treatments in Alsager | PDC Aesthetics</title>
+  <meta name="description" content="Professional mobile Botox, lip fillers, microneedling & skincare in Alsager. Over 29 years of nursing experience. Book your private home visit today." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="PDC Aesthetics Logo" />
+    <h1>PDC Aesthetics</h1>
+  </header>
+
+  <div id="menu-placeholder"></div>
+
+  <div class="section">
+    <h2>Mobile Aesthetic Treatments in Alsager</h2>
+    <p>PDC Aesthetics proudly provides expert mobile aesthetic treatments to clients in <strong>Alsager</strong> and nearby areas. With over <strong>29 years of nursing experience</strong>, we deliver clinically safe, high-quality treatments in the privacy and comfort of your own home.</p>
+    <p>Our mobile service covers everything from <a href="botox.html">anti-wrinkle Botox</a> to <a href="lip-filler.html">lip filler</a>, <a href="microneedling.html">microneedling</a>, and <a href="fat-dissolving.html">fat dissolving injections</a> — all performed by a fully qualified nurse.</p>
+    <a href="contact.html" class="cta-button">Book Your Consultation</a>
+  </div>
+
+  <div class="section">
+    <h2>Why Choose Us in Alsager?</h2>
+    <ul>
+      <li><strong>Discreet & Mobile:</strong> Treatments brought to your home</li>
+      <li><strong>Clinically Trained Nurse:</strong> 29+ years in healthcare</li>
+      <li><strong>Safe, Personalised Care:</strong> Every plan is tailored</li>
+      <li><strong>Flexible Appointments:</strong> Evenings and weekends available</li>
+    </ul>
+    <p>Our clients in Alsager appreciate the convenience of at-home treatments without sacrificing professionalism or safety. Enjoy personalised advice and exceptional service, every time.</p>
+    <a href="about.html" class="cta-button">Meet Your Nurse</a>
+  </div>
+
+  <div class="section">
+    <h2>Available Treatments in Alsager</h2>
+    <ul>
+      <li><a href="botox.html">Botox (Anti-Wrinkle Injections)</a></li>
+      <li><a href="lip-filler.html">Lip Fillers</a></li>
+      <li><a href="fat-dissolving.html">Fat Dissolving</a></li>
+      <li><a href="microneedling.html">Microneedling</a></li>
+      <li><a href="dermaplaning.html">Dermaplaning</a></li>
+      <li><a href="skin-peels.html">Chemical Peels</a></li>
+      <li><a href="skin-boosters.html">Skin Boosters</a> like Profhilo</li>
+      <li><a href="b12.html">B12 Injections</a></li>
+    </ul>
+    <a href="index.html" class="cta-button">Browse All Treatments</a>
+  </div>
+
+  <div class="section">
+    <h2>Nearby Areas We Also Serve</h2>
+    <p>We also operate in <a href="stone.html">Stone</a>, <a href="stafford.html">Stafford</a>, <a href="newcastle-under-lyme.html">Newcastle-under-Lyme</a>, <a href="barlaston.html">Barlaston</a>, and <a href="trentham.html">Trentham</a>.</p>
+    <a href="areas-we-cover.html" class="cta-button">See All Areas</a>
+  </div>
+
+  <div class="section" id="faq">
+    <h2>Frequently Asked Questions – Alsager Clients</h2>
+
+    <h3>Do you need to visit a clinic for Botox?</h3>
+    <p>No, we come to you. Botox is safely administered in your home by a nurse with over 29 years of clinical experience.</p>
+
+    <h3>Is there a consultation before every treatment?</h3>
+    <p>Yes. A full consultation is provided before each session to understand your goals and explain the procedure and aftercare.</p>
+
+    <h3>How long do lip fillers and Botox last?</h3>
+    <p>Lip fillers typically last 6–12 months; Botox lasts around 3–4 months depending on metabolism and treatment area.</p>
+
+    <h3>What qualifications does your practitioner have?</h3>
+    <p>Our aesthetic nurse has over 29 years of nursing experience, with full aesthetic training, insurance, and professionalism.</p>
+
+    <h3>How do I book an appointment in Alsager?</h3>
+    <p>Simply visit our <a href="contact.html">contact page</a> to message us or request a call back. We’ll get back to you promptly.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 PDC Aesthetics. All rights reserved.</p>
+    <p>This website does not offer medical advice. Treatments are provided by qualified aesthetic practitioners with over 29 years of clinical experience.</p>
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
+
+        window.toggleDropdown = function () {
+          const dropdown = document.getElementById("dropdown");
+          dropdown.classList.toggle("show");
+        };
+
+        window.addEventListener("click", function (e) {
+          const dropdown = document.getElementById("dropdown");
+          const button = document.querySelector(".menu-button");
+          if (!dropdown || !button) return;
+          if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+            dropdown.classList.remove("show");
+          }
+        });
+      });
+  </script>
+</body>
+</html>

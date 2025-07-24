@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Aesthetic Treatments in Walton | PDC Aesthetics</title>
+  <meta name="description" content="Expert mobile Botox, lip fillers & skin treatments in Walton. 29+ years of qualified nursing experience. Book a discreet home visit today." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="PDC Aesthetics Logo" />
+    <h1>PDC Aesthetics</h1>
+  </header>
+
+  <div id="menu-placeholder"></div>
+
+  <div class="section">
+    <h2>Mobile Aesthetic Treatments in Walton</h2>
+    <p>PDC Aesthetics provides trusted mobile aesthetic services across <strong>Walton</strong> and nearby areas. Whether it’s <a href="botox.html">Botox</a>, <a href="lip-filler.html">lip fillers</a>, or <a href="microneedling.html">microneedling</a>, our qualified nurse delivers care with professionalism and precision — all in the comfort of your home.</p>
+    <p>With over <strong>29 years of nursing experience</strong>, you're in safe, capable hands every step of the way.</p>
+    <a href="contact.html" class="cta-button">Book Your Consultation</a>
+  </div>
+
+  <div class="section">
+    <h2>Why Choose PDC Aesthetics in Walton?</h2>
+    <ul>
+      <li><strong>Home Visits:</strong> Discreet treatments in your space</li>
+      <li><strong>Qualified Nurse:</strong> 29+ years in healthcare</li>
+      <li><strong>Fully Insured:</strong> Safe, professional standards</li>
+      <li><strong>Flexible Scheduling:</strong> Including evenings and weekends</li>
+    </ul>
+    <p>Our clients in Walton choose us for our friendly, expert service that fits around your lifestyle — no clinics, no waiting, just results.</p>
+    <a href="about.html" class="cta-button">Meet Your Nurse</a>
+  </div>
+
+  <div class="section">
+    <h2>Popular Treatments in Walton</h2>
+    <ul>
+      <li><a href="botox.html">Botox (Anti-Wrinkle Injections)</a></li>
+      <li><a href="lip-filler.html">Lip Fillers</a></li>
+      <li><a href="fat-dissolving.html">Fat Dissolving</a></li>
+      <li><a href="microneedling.html">Microneedling</a></li>
+      <li><a href="dermaplaning.html">Dermaplaning</a></li>
+      <li><a href="skin-peels.html">Chemical Peels</a></li>
+      <li><a href="skin-boosters.html">Skin Boosters</a></li>
+      <li><a href="b12.html">B12 Injections</a></li>
+    </ul>
+    <a href="index.html" class="cta-button">View All Services</a>
+  </div>
+
+  <div class="section">
+    <h2>Other Areas We Serve</h2>
+    <p>We also provide mobile aesthetic care in <a href="rough-close.html">Rough Close</a>, <a href="blurton.html">Blurton</a>, <a href="meir.html">Meir</a>, <a href="stone.html">Stone</a>, and <a href="trentham.html">Trentham</a>.</p>
+    <a href="areas-we-cover.html" class="cta-button">See Full List</a>
+  </div>
+
+  <div class="section" id="faq">
+    <h2>Frequently Asked Questions – Walton Clients</h2>
+
+    <h3>Do you offer at-home Botox treatments in Walton?</h3>
+    <p>Yes. We bring Botox and other treatments directly to your home, administered by a fully qualified nurse.</p>
+
+    <h3>Do you offer consultations first?</h3>
+    <p>Every session starts with a full consultation to discuss your goals and ensure suitability before any treatment begins.</p>
+
+    <h3>How long do the results last?</h3>
+    <p>Results vary: Botox generally lasts 3–4 months, while lip fillers can last 6–12 months depending on the individual.</p>
+
+    <h3>Are you fully trained and insured?</h3>
+    <p>Yes. You will be treated by a nurse with over 29 years of experience and full insurance cover for all procedures.</p>
+
+    <h3>How do I book in Walton?</h3>
+    <p>Simply visit our <a href="contact.html">contact page</a> and we’ll get back to you as soon as possible to confirm your appointment.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 PDC Aesthetics. All rights reserved.</p>
+    <p>This website does not offer medical advice. Treatments are provided by qualified aesthetic practitioners with over 29 years of clinical experience.</p>
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
+
+        window.toggleDropdown = function () {
+          const dropdown = document.getElementById("dropdown");
+          dropdown.classList.toggle("show");
+        };
+
+        window.addEventListener("click", function (e) {
+          const dropdown = document.getElementById("dropdown");
+          const button = document.querySelector(".menu-button");
+          if (!dropdown || !button) return;
+          if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+            dropdown.classList.remove("show");
+          }
+        });
+      });
+  </script>
+</body>
+</html>

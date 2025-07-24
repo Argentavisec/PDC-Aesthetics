@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Aesthetic Treatments in Meir | PDC Aesthetics</title>
+  <meta name="description" content="Mobile Botox, lip fillers, skin boosters & more in Meir. 29+ years of nursing experience. Qualified, discreet, and convenient aesthetic care at home." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="PDC Aesthetics Logo" />
+    <h1>PDC Aesthetics</h1>
+  </header>
+
+  <div id="menu-placeholder"></div>
+
+  <div class="section">
+    <h2>Mobile Aesthetic Treatments in Meir</h2>
+    <p>If you're in <strong>Meir</strong> and looking for trusted, qualified mobile aesthetic care, PDC Aesthetics is here for you. With over <strong>29 years of nursing experience</strong>, we bring expert treatments right to your doorstep.</p>
+    <p>Choose from <a href="botox.html">Botox</a>, <a href="lip-filler.html">lip fillers</a>, <a href="microneedling.html">microneedling</a>, <a href="fat-dissolving.html">fat dissolving</a>, and more — all administered by a fully trained nurse in the comfort of your own home.</p>
+    <a href="contact.html" class="cta-button">Book Your Consultation</a>
+  </div>
+
+  <div class="section">
+    <h2>Why Clients in Meir Trust Us</h2>
+    <ul>
+      <li><strong>Home-Based Care:</strong> No clinic visits — we come to you</li>
+      <li><strong>Qualified Nurse:</strong> 29+ years NHS & aesthetic experience</li>
+      <li><strong>Personalised Treatment:</strong> Plans tailored to your goals</li>
+      <li><strong>Flexible Scheduling:</strong> Evening & weekend appointments</li>
+    </ul>
+    <p>Clients in Meir value our professional, confidential service that fits around busy lifestyles — without compromising on results.</p>
+    <a href="about.html" class="cta-button">Meet Your Nurse</a>
+  </div>
+
+  <div class="section">
+    <h2>Available Aesthetic Treatments in Meir</h2>
+    <ul>
+      <li><a href="botox.html">Botox (Anti-Wrinkle Injections)</a></li>
+      <li><a href="lip-filler.html">Lip Fillers</a></li>
+      <li><a href="fat-dissolving.html">Fat Dissolving</a></li>
+      <li><a href="microneedling.html">Microneedling</a></li>
+      <li><a href="dermaplaning.html">Dermaplaning</a></li>
+      <li><a href="skin-peels.html">Chemical Peels</a></li>
+      <li><a href="skin-boosters.html">Skin Boosters</a></li>
+      <li><a href="b12.html">B12 Injections</a></li>
+    </ul>
+    <a href="index.html" class="cta-button">Explore All Treatments</a>
+  </div>
+
+  <div class="section">
+    <h2>Other Areas We Serve Near Meir</h2>
+    <p>We also provide mobile treatments in <a href="stone.html">Stone</a>, <a href="stafford.html">Stafford</a>, <a href="blurton.html">Blurton</a>, <a href="walton.html">Walton</a>, and <a href="barlaston.html">Barlaston</a>.</p>
+    <a href="areas-we-cover.html" class="cta-button">View Full Service Area</a>
+  </div>
+
+  <div class="section" id="faq">
+    <h2>Frequently Asked Questions – Meir Clients</h2>
+
+    <h3>Is Botox safe to do at home?</h3>
+    <p>Yes. All procedures are performed by a fully trained nurse with over 29 years of experience, following strict safety protocols.</p>
+
+    <h3>What happens at the first appointment?</h3>
+    <p>We conduct a full consultation, assess your needs, and provide personalised recommendations before beginning any treatment.</p>
+
+    <h3>How long will results last?</h3>
+    <p>Botox typically lasts 3–4 months. Lip filler lasts between 6–12 months depending on metabolism and placement.</p>
+
+    <h3>Are you insured and qualified?</h3>
+    <p>Yes. We are fully trained, insured, and experienced in all treatments offered.</p>
+
+    <h3>How do I book a mobile visit in Meir?</h3>
+    <p>Just visit our <a href="contact.html">contact page</a> and we’ll be in touch quickly to arrange your appointment.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 PDC Aesthetics. All rights reserved.</p>
+    <p>This website does not offer medical advice. Treatments are provided by qualified aesthetic practitioners with over 29 years of clinical experience.</p>
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
+
+        window.toggleDropdown = function () {
+          const dropdown = document.getElementById("dropdown");
+          dropdown.classList.toggle("show");
+        };
+
+        window.addEventListener("click", function (e) {
+          const dropdown = document.getElementById("dropdown");
+          const button = document.querySelector(".menu-button");
+          if (!dropdown || !button) return;
+          if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+            dropdown.classList.remove("show");
+          }
+        });
+      });
+  </script>
+</body>
+</html>

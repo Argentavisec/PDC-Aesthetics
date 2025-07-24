@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Aesthetic Treatments in Baldwins Gate | PDC Aesthetics</title>
+  <meta name="description" content="Expert mobile aesthetic treatments in Baldwins Gate. Botox, fillers, skin boosters & more. 29+ years of clinical experience. Book now with PDC Aesthetics." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="PDC Aesthetics Logo" />
+    <h1>PDC Aesthetics</h1>
+  </header>
+
+  <div id="menu-placeholder"></div>
+
+  <div class="section">
+    <h2>Mobile Aesthetic Treatments in Baldwins Gate</h2>
+    <p>PDC Aesthetics proudly brings professional, nurse-led aesthetic treatments directly to your door in <strong>Baldwins Gate</strong> and surrounding areas. With over <strong>29 years of nursing experience</strong>, our fully qualified aesthetic nurse ensures each treatment is delivered with expert care, attention to detail, and the highest safety standards.</p>
+    <p>Whether you're looking to soften fine lines with <a href="botox.html">Botox</a>, enhance volume with <a href="lip-filler.html">dermal fillers</a>, or improve skin texture with <a href="microneedling.html">microneedling</a>, we offer tailored treatments in the privacy and comfort of your own home.</p>
+    <a href="contact.html" class="cta-button">Book a Consultation</a>
+  </div>
+
+  <div class="section">
+    <h2>Why Choose Mobile Aesthetics in Baldwins Gate?</h2>
+    <ul>
+      <li><strong>Discreet & Convenient:</strong> Treatments in the comfort of your home</li>
+      <li><strong>Experienced Practitioner:</strong> Over 29 years of clinical and aesthetic experience</li>
+      <li><strong>Tailored Advice:</strong> Consultations focused on your unique goals</li>
+      <li><strong>Safe & Professional:</strong> Fully insured and medically qualified provider</li>
+    </ul>
+    <p>Clients in Baldwins Gate love our approachable and honest care. We help you look refreshed — not frozen. It’s all about subtle, natural beauty.</p>
+    <a href="about.html" class="cta-button">Meet Your Practitioner</a>
+  </div>
+
+  <div class="section">
+    <h2>Popular Aesthetic Services Available in Baldwins Gate</h2>
+    <p>Our mobile services include:</p>
+    <ul>
+      <li><a href="botox.html">Anti-Wrinkle Injections (Botox)</a></li>
+      <li><a href="lip-filler.html">Lip Fillers</a></li>
+      <li><a href="fat-dissolving.html">Fat Dissolving Injections</a></li>
+      <li><a href="microneedling.html">Microneedling</a></li>
+      <li><a href="dermaplaning.html">Dermaplaning</a></li>
+      <li><a href="skin-peels.html">Skin Peels</a></li>
+      <li><a href="skin-boosters.html">Skin Boosters</a> including Profhilo & Seventy Hyal</li>
+      <li><a href="b12.html">Vitamin B12 Injections</a></li>
+    </ul>
+    <a href="index.html" class="cta-button">See Full Treatment List</a>
+  </div>
+
+  <div class="section">
+    <h2>Areas We Also Cover Nearby</h2>
+    <p>In addition to Baldwins Gate, we also serve surrounding areas such as <a href="stone.html">Stone</a>, <a href="eccleshall.html">Eccleshall</a>, <a href="stafford.html">Stafford</a>, <a href="newcastle-under-lyme.html">Newcastle-under-Lyme</a>, and <a href="trentham.html">Trentham</a>.</p>
+    <a href="areas-we-cover.html" class="cta-button">View All Locations</a>
+  </div>
+
+  <div class="section" id="faq">
+    <h2>Frequently Asked Questions – Baldwins Gate Clients</h2>
+
+    <h3>Do I need to travel for treatments?</h3>
+    <p>No. We offer fully mobile services — treatments are carried out in the comfort of your own home in Baldwins Gate.</p>
+
+    <h3>Is mobile Botox as safe as clinic-based?</h3>
+    <p>Yes. All our mobile Botox treatments are performed by a registered nurse with full qualifications and insurance.</p>
+
+    <h3>Do you offer flexible appointment times?</h3>
+    <p>Absolutely. We provide daytime, evening, and weekend appointments to suit your schedule.</p>
+
+    <h3>How long do aesthetic treatments last?</h3>
+    <p>It depends on the treatment. Botox typically lasts 3–4 months, fillers around 6–12 months, and skin boosters up to 6 months.</p>
+
+    <h3>Is there a consultation before treatment?</h3>
+    <p>Yes. Every appointment includes a consultation where we discuss your goals, answer questions, and ensure the treatment is right for you.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 PDC Aesthetics. All rights reserved.</p>
+    <p>This website does not offer medical advice. Treatments are provided by qualified aesthetic practitioners with over 29 years of clinical experience.</p>
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
+
+        window.toggleDropdown = function () {
+          const dropdown = document.getElementById("dropdown");
+          dropdown.classList.toggle("show");
+        };
+
+        window.addEventListener("click", function (e) {
+          const dropdown = document.getElementById("dropdown");
+          const button = document.querySelector(".menu-button");
+          if (!dropdown || !button) return;
+          if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+            dropdown.classList.remove("show");
+          }
+        });
+      });
+  </script>
+</body>
+</html>

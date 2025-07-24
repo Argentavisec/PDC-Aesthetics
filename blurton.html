@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Aesthetic Treatments in Blurton | PDC Aesthetics</title>
+  <meta name="description" content="Professional mobile Botox, lip fillers, microneedling & skincare in Blurton. Over 29 years of nursing experience. Book your private home visit today." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="PDC Aesthetics Logo" />
+    <h1>PDC Aesthetics</h1>
+  </header>
+
+  <div id="menu-placeholder"></div>
+
+  <div class="section">
+    <h2>Mobile Aesthetic Treatments in Blurton</h2>
+    <p>PDC Aesthetics proudly delivers expert mobile aesthetic treatments to clients in <strong>Blurton</strong> and surrounding areas. With over <strong>29 years of nursing experience</strong>, we offer professional, safe treatments in the comfort of your home.</p>
+    <p>From <a href="botox.html">Botox</a> to <a href="lip-filler.html">lip fillers</a>, <a href="microneedling.html">microneedling</a>, and <a href="fat-dissolving.html">fat dissolving injections</a>, we bring clinical-level care to your door.</p>
+    <a href="contact.html" class="cta-button">Book Your Consultation</a>
+  </div>
+
+  <div class="section">
+    <h2>Why Choose Us in Blurton?</h2>
+    <ul>
+      <li><strong>Mobile & Discreet:</strong> Treatments in your own home</li>
+      <li><strong>Experienced Nurse:</strong> 29+ years of healthcare expertise</li>
+      <li><strong>Personal Care:</strong> Every client receives a tailored plan</li>
+      <li><strong>Evening & Weekend Slots:</strong> We work around you</li>
+    </ul>
+    <p>Our clients in Blurton love the convenience, privacy, and personal care that comes with our mobile aesthetic services.</p>
+    <a href="about.html" class="cta-button">Meet Your Nurse</a>
+  </div>
+
+  <div class="section">
+    <h2>Available Treatments in Blurton</h2>
+    <ul>
+      <li><a href="botox.html">Botox (Anti-Wrinkle Injections)</a></li>
+      <li><a href="lip-filler.html">Lip Fillers</a></li>
+      <li><a href="fat-dissolving.html">Fat Dissolving</a></li>
+      <li><a href="microneedling.html">Microneedling</a></li>
+      <li><a href="dermaplaning.html">Dermaplaning</a></li>
+      <li><a href="skin-peels.html">Chemical Peels</a></li>
+      <li><a href="skin-boosters.html">Skin Boosters</a></li>
+      <li><a href="b12.html">B12 Injections</a></li>
+    </ul>
+    <a href="index.html" class="cta-button">Browse All Treatments</a>
+  </div>
+
+  <div class="section">
+    <h2>Nearby Areas We Also Serve</h2>
+    <p>We also cover <a href="stone.html">Stone</a>, <a href="stafford.html">Stafford</a>, <a href="alsager.html">Alsager</a>, <a href="barlaston.html">Barlaston</a>, and <a href="trentham.html">Trentham</a>.</p>
+    <a href="areas-we-cover.html" class="cta-button">See All Areas</a>
+  </div>
+
+  <div class="section" id="faq">
+    <h2>Frequently Asked Questions – Blurton Clients</h2>
+
+    <h3>Can I get Botox at home?</h3>
+    <p>Yes! We provide safe, professional Botox in your home by a nurse with decades of experience.</p>
+
+    <h3>Is a consultation provided?</h3>
+    <p>Every treatment includes a full consultation to ensure you get the results you want, safely.</p>
+
+    <h3>How long do results last?</h3>
+    <p>Botox typically lasts 3–4 months. Lip fillers can last 6–12 months, depending on your metabolism.</p>
+
+    <h3>What are your nurse’s qualifications?</h3>
+    <p>Our practitioner is a fully trained, insured aesthetic nurse with over 29 years of clinical experience.</p>
+
+    <h3>How do I book in Blurton?</h3>
+    <p>Just head to our <a href="contact.html">contact page</a> to get in touch or request a callback. We’ll reply quickly!</p>
+  </div>
+
+  <footer>
+    <p>© 2025 PDC Aesthetics. All rights reserved.</p>
+    <p>This website does not offer medical advice. Treatments are provided by qualified aesthetic practitioners with over 29 years of clinical experience.</p>
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
+
+        window.toggleDropdown = function () {
+          const dropdown = document.getElementById("dropdown");
+          dropdown.classList.toggle("show");
+        };
+
+        window.addEventListener("click", function (e) {
+          const dropdown = document.getElementById("dropdown");
+          const button = document.querySelector(".menu-button");
+          if (!dropdown || !button) return;
+          if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+            dropdown.classList.remove("show");
+          }
+        });
+      });
+  </script>
+</body>
+</html>
