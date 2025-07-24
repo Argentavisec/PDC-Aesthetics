@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Aesthetic Treatments in Eccleshall | PDC Aesthetics</title>
+  <meta name="description" content="PDC Aesthetics offers expert mobile Botox, fillers, skin boosters, and more in Eccleshall. 29+ years of nursing experience. Discreet, safe, and local." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="PDC Aesthetics Logo">
+    <h1>PDC Aesthetics</h1>
+  </header>
+
+  <!-- Menu -->
+  <div id="menu-placeholder"></div>
+
+  <div class="section">
+    <h2>Mobile Aesthetic Treatments in Eccleshall</h2>
+    <p>Looking for professional, discreet aesthetic treatments in <strong>Eccleshall</strong>? At PDC Aesthetics, we bring high-quality procedures such as <a href="botox.html">Botox</a>, <a href="lip-filler.html">lip filler</a>, <a href="skin-boosters.html">skin boosters</a>, and <a href="microneedling.html">microneedling</a> directly to your door — safely and privately.</p>
+    <p>With over <strong>29 years of nursing experience</strong>, our qualified practitioner ensures clinical excellence, comfort, and care in every visit. Whether you’re prepping for a special occasion or maintaining your glow, we tailor every session to your goals.</p>
+    <a href="contact.html" class="cta-button">Book Your Consultation</a>
+  </div>
+
+  <div class="section">
+    <h2>Why Choose PDC Aesthetics in Eccleshall?</h2>
+    <ul>
+      <li>Mobile service for privacy and convenience</li>
+      <li>Registered nurse with 29+ years experience</li>
+      <li>Local to Eccleshall and surrounding areas</li>
+      <li>Fully insured and sterile treatment environment</li>
+      <li>Customised treatment plans for every client</li>
+    </ul>
+    <p>Our clients appreciate the personal touch of mobile aesthetics. No waiting rooms, no stress — just quality care in the comfort of your own home.</p>
+    <a href="about.html" class="cta-button">Meet Your Practitioner</a>
+  </div>
+
+  <div class="section">
+    <h2>Our Most Popular Treatments in Eccleshall</h2>
+    <ul>
+      <li><a href="botox.html">Botox</a> for forehead lines, crow’s feet, and more</li>
+      <li><a href="lip-filler.html">Lip fillers</a> for volume, shape, and symmetry</li>
+      <li><a href="fat-dissolving.html">Fat dissolving injections</a> for stubborn areas</li>
+      <li><a href="microneedling.html">Microneedling</a> to renew and smooth skin</li>
+      <li><a href="dermaplaning.html">Dermaplaning</a> for instant glow and smoothness</li>
+      <li><a href="skin-peels.html">Skin peels</a> to improve tone and clarity</li>
+      <li><a href="skin-boosters.html">Skin boosters</a> like Profhilo and Seventy Hyal</li>
+    </ul>
+    <p>Each treatment is fully explained during your consultation, and we’ll only proceed when you’re fully informed and confident.</p>
+    <a href="contact.html" class="cta-button">Request a Call Back</a>
+  </div>
+
+  <div class="section">
+    <h2>Aesthetic Treatments Tailored to You</h2>
+    <p>No two clients are the same — and neither are our treatments. We listen carefully to your goals, assess your skin or facial structure, and suggest options that suit your natural beauty and lifestyle.</p>
+    <p>Our mobile aesthetics services in Eccleshall are perfect for busy mums, professionals, and anyone who values a discreet, personalised approach.</p>
+    <a href="microneedling.html" class="cta-button">View All Treatments</a>
+  </div>
+
+  <div class="section">
+    <h2>Book Your Mobile Aesthetic Appointment in Eccleshall</h2>
+    <p>We’re based near Eccleshall and happy to travel within a 15-mile radius. All bookings are confidential, and your safety is our top priority. Treatments are only performed by a qualified nurse who follows strict hygiene and safety standards.</p>
+    <p>If you're ready to explore anti-wrinkle solutions, rejuvenating skincare, or facial enhancements — we’re here to help.</p>
+    <a href="contact.html" class="cta-button">Book Now</a>
+  </div>
+
+  <div class="section" id="faq">
+    <h2>FAQs – Mobile Aesthetics in Eccleshall</h2>
+
+    <h3>Are mobile Botox and fillers safe?</h3>
+    <p>Yes. Treatments are administered by a nurse with over 29 years of experience in safe, sterile conditions. You receive the same standard of care you would expect in a clinic.</p>
+
+    <h3>How long do treatments take?</h3>
+    <p>Most treatments take 20–45 minutes. You’ll also have a consultation beforehand to discuss your goals and ensure you’re comfortable with the procedure.</p>
+
+    <h3>Is there a travel fee for Eccleshall?</h3>
+    <p>No. Eccleshall is within our standard mobile service area, so there are no extra travel costs.</p>
+
+    <h3>What if I’ve never had aesthetic treatments before?</h3>
+    <p>That’s completely fine. We specialise in first-time clients and will guide you through the process with reassurance, professionalism, and clear explanations.</p>
+
+    <h3>How do I book an appointment?</h3>
+    <p>Visit our <a href="contact.html">contact page</a> to request a call or message us directly. We’ll arrange a date that suits you and send all the details you need.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 PDC Aesthetics. All rights reserved.</p>
+    <p>This website does not offer medical advice. Treatments are provided by qualified aesthetic practitioners with over 29 years of clinical experience.</p>
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
+
+        window.toggleDropdown = function () {
+          const dropdown = document.getElementById("dropdown");
+          dropdown.classList.toggle("show");
+        };
+
+        window.addEventListener("click", function (e) {
+          const dropdown = document.getElementById("dropdown");
+          const button = document.querySelector(".menu-button");
+          if (!dropdown || !button) return;
+          if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+            dropdown.classList.remove("show");
+          }
+        });
+      });
+  </script>
+</body>
+</html>

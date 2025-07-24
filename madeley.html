@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Aesthetics in Madeley | Botox & Lip Fillers by Nurse with 29+ Years Experience</title>
+  <meta name="description" content="PDC Aesthetics offers mobile Botox, fillers, skin boosters and more in Madeley. 29+ years nursing experience. Discreet and professional home visits." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="PDC Aesthetics Logo" />
+    <h1>PDC Aesthetics</h1>
+  </header>
+
+  <div id="menu-placeholder"></div>
+
+  <div class="section">
+    <h2>Mobile Aesthetic Treatments in Madeley, Staffordshire</h2>
+    <p>Welcome to PDC Aesthetics – your trusted mobile aesthetics service covering Madeley and surrounding areas. With over <strong>29 years of nursing experience</strong>, we offer high-quality treatments from the comfort of your own home. Whether you're looking for lip fillers, anti-wrinkle injections, skin boosters, or microneedling, our professional service is fully qualified, insured, and discreet.</p>
+    <p>We understand the importance of privacy and personalised care. That's why we offer a calm, one-to-one consultation in your home, tailored to your goals and comfort. Whether you’re in central Madeley or nearby villages, we bring aesthetics directly to your door.</p>
+    <a href="contact.html" class="cta-button">Book Your Consultation</a>
+  </div>
+
+  <div class="section">
+    <h2>Our Most Popular Treatments in Madeley</h2>
+    <ul>
+      <li><a href="lip-filler.html">Lip Fillers</a> – Natural enhancements with premium dermal filler products</li>
+      <li><a href="botox.html">Botox (Anti-Wrinkle)</a> – Smooth fine lines and refresh your look</li>
+      <li><a href="skin-boosters.html">Skin Boosters</a> – Deep hydration with Profhilo or Seventy Hyal</li>
+      <li><a href="fat-dissolving.html">Fat Dissolving Injections</a> – Target double chin, belly and thighs</li>
+      <li><a href="microneedling.html">Microneedling</a> – Collagen stimulation and skin texture renewal</li>
+      <li><a href="dermaplaning.html">Dermaplaning</a> – Instant exfoliation and skin brightening</li>
+    </ul>
+    <p>All treatments are performed by a qualified nurse practitioner using medical-grade products and sterile equipment. Your safety, comfort and satisfaction are our top priorities.</p>
+    <a href="index.html" class="cta-button">Explore All Treatments</a>
+  </div>
+
+  <div class="section">
+    <h2>Why Choose PDC Aesthetics in Madeley?</h2>
+    <p>Our mobile service is ideal for clients who value discretion, convenience and clinical standards. With over two decades of medical experience, we offer safe treatments and realistic results. Whether you’re preparing for a special occasion or simply want to feel your best, we help you achieve subtle, beautiful improvements without pressure or upselling.</p>
+    <p>From first-timers to regular aesthetic clients, you’ll receive a full consultation, aftercare advice, and follow-up support. Based near Stoke-on-Trent, we regularly visit clients across Madeley and nearby areas such as Keele, Betley, and Woore.</p>
+    <a href="about.html" class="cta-button">Meet Your Practitioner</a>
+  </div>
+
+  <div class="section">
+    <h2>Discreet Home Visits Across Madeley</h2>
+    <p>We provide fully mobile aesthetics services within Madeley and the surrounding areas. This includes both village centres and more rural homes. There's no need to travel or visit a busy salon – we bring a calm, professional environment to you, with all the necessary equipment for a safe and hygienic treatment experience.</p>
+    <p>Appointments are flexible, private, and always one-to-one. We aim to work around your schedule and provide a relaxed, no-rush experience from start to finish.</p>
+    <a href="areas-we-cover.html" class="cta-button">View All Covered Areas</a>
+  </div>
+
+  <div class="section">
+    <h2>Frequently Asked Questions – Aesthetics in Madeley</h2>
+
+    <h3>Are mobile aesthetics safe in Madeley?</h3>
+    <p>Yes, absolutely. All treatments are performed by a qualified nurse with over 29 years of clinical experience. We follow strict hygiene protocols and use only approved aesthetic products.</p>
+
+    <h3>Do you offer lip fillers at home in Madeley?</h3>
+    <p>Yes – we regularly provide <a href="lip-filler.html">lip filler</a> treatments for clients across Madeley. A consultation is included, and you’ll receive detailed aftercare guidance.</p>
+
+    <h3>What areas around Madeley do you cover?</h3>
+    <p>We cover Madeley and surrounding areas including Keele, Betley, Woore, Alsagers Bank and Silverdale. If you’re unsure, feel free to <a href="contact.html">get in touch</a>.</p>
+
+    <h3>Can I get Botox or microneedling in Madeley?</h3>
+    <p>Yes – our <a href="botox.html">anti-wrinkle</a> and <a href="microneedling.html">microneedling</a> services are popular in the Madeley area. We bring all required tools and products directly to your location.</p>
+
+    <h3>How do I book?</h3>
+    <p>Simply visit our <a href="contact.html">contact page</a> or send us a message to arrange your consultation. We’ll respond promptly and answer any questions you have.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 PDC Aesthetics. All rights reserved.</p>
+    <p>This website does not offer medical advice. Treatments are provided by qualified aesthetic practitioners with over 29 years of clinical experience.</p>
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
+
+        window.toggleDropdown = function () {
+          const dropdown = document.getElementById("dropdown");
+          dropdown.classList.toggle("show");
+        };
+
+        window.addEventListener("click", function (e) {
+          const dropdown = document.getElementById("dropdown");
+          const button = document.querySelector(".menu-button");
+          if (!dropdown || !button) return;
+          if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+            dropdown.classList.remove("show");
+          }
+        });
+      });
+  </script>
+</body>
+</html>

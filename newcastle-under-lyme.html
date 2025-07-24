@@ -1,0 +1,86 @@
+  <div class="section">
+    <h2>Mobile Aesthetic Treatments in Newcastle-under-Lyme</h2>
+    <p>If you're based in Newcastle-under-Lyme and seeking professional, discreet aesthetic treatments, PDC Aesthetics brings expertise directly to your door. With <strong>29+ years of nursing experience</strong>, we provide medically-led mobile aesthetic services — all in the comfort of your own home.</p>
+    <p>Our popular treatments include <a href="lip-filler.html">lip filler</a>, <a href="botox.html">Botox</a>, <a href="fat-dissolving.html">fat dissolving injections</a>, <a href="microneedling.html">microneedling</a>, <a href="dermaplaning.html">dermaplaning</a>, and more. Each service is delivered with care, professionalism, and full hygiene protocols.</p>
+    <a href="contact.html" class="cta-button">Book Your Consultation</a>
+  </div>
+
+  <div class="section">
+    <h2>Why Choose PDC Aesthetics in Newcastle-under-Lyme?</h2>
+    <ul>
+      <li><strong>29+ years of clinical nursing experience</strong></li>
+      <li>Fully mobile – treatments brought directly to your home</li>
+      <li>Discreet, safe, and private service</li>
+      <li>Fully qualified and insured nurse practitioner</li>
+      <li>Tailored consultations before every procedure</li>
+    </ul>
+    <p>Many clients in Newcastle-under-Lyme appreciate the convenience and comfort of our mobile aesthetic service — no parking, no busy salons, just personalised care that fits your schedule.</p>
+    <a href="about.html" class="cta-button">Meet Your Practitioner</a>
+  </div>
+
+  <div class="section">
+    <h2>Popular Aesthetic Treatments We Offer Locally</h2>
+    <p>Our full range of aesthetic services is available to residents in Newcastle-under-Lyme and surrounding areas:</p>
+    <ul>
+      <li><a href="lip-filler.html">Lip Filler</a> – define shape and volume naturally</li>
+      <li><a href="botox.html">Botox</a> – reduce lines and wrinkles gently</li>
+      <li><a href="microneedling.html">Microneedling</a> – for scars, texture, and glow</li>
+      <li><a href="fat-dissolving.html">Fat Dissolving</a> – break down stubborn areas</li>
+      <li><a href="skin-peels.html">Skin Peels</a> – even tone and improve clarity</li>
+      <li><a href="skin-boosters.html">Skin Boosters</a> – intense hydration & firmness</li>
+    </ul>
+    <a href="contact.html" class="cta-button">Check Availability</a>
+  </div>
+  <div class="section">
+    <h2>Aesthetics in Newcastle-under-Lyme, Delivered to You</h2>
+    <p>Whether you're prepping for a special event or simply want to boost your confidence, PDC Aesthetics brings safe, high-quality aesthetic treatments straight to clients in Newcastle-under-Lyme. Every session is handled with discretion, compassion, and professionalism.</p>
+    <p>Serving the broader Staffordshire area, including Stone, Stafford, Barlaston, and Eccleshall, we’re proud to support our local community with trusted treatments.</p>
+    <a href="areas-we-cover.html" class="cta-button">See More Local Areas</a>
+  </div>
+
+  <div class="section" id="faq">
+    <h2>FAQs – Aesthetic Treatments in Newcastle-under-Lyme</h2>
+
+    <h3>Do you offer mobile lip fillers in Newcastle-under-Lyme?</h3>
+    <p>Yes — our mobile service includes lip filler treatments performed by a fully qualified nurse. We visit homes in Newcastle-under-Lyme for comfortable, discreet care.</p>
+
+    <h3>Is Botox available in Newcastle-under-Lyme?</h3>
+    <p>Absolutely. We offer <a href="botox.html">Botox treatments</a> to reduce wrinkles and fine lines, with full consultation included before any injections.</p>
+
+    <h3>What qualifications do you have?</h3>
+    <p>Our practitioner has over 29 years of nursing experience, is fully trained in advanced aesthetics, and insured for all treatments provided.</p>
+
+    <h3>What safety measures do you follow?</h3>
+    <p>We follow strict hygiene and clinical safety standards — all equipment is sterile, and full medical history is taken before treatment.</p>
+
+    <h3>How can I book a treatment in Newcastle-under-Lyme?</h3>
+    <p>Visit our <a href="contact.html">Contact</a> page to send an enquiry or request a call-back. We'll find a time that works for you.</p>
+  </div>
+  <footer>
+    <p>© 2025 PDC Aesthetics. All rights reserved.</p>
+    <p>This website does not offer medical advice. Treatments are provided by qualified aesthetic practitioners with over 29 years of clinical experience.</p>
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
+
+        window.toggleDropdown = function () {
+          const dropdown = document.getElementById("dropdown");
+          dropdown.classList.toggle("show");
+        };
+
+        window.addEventListener("click", function (e) {
+          const dropdown = document.getElementById("dropdown");
+          const button = document.querySelector(".menu-button");
+          if (!dropdown || !button) return;
+          if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+            dropdown.classList.remove("show");
+          }
+        });
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Aesthetic Treatments in Trentham | PDC Aesthetics</title>
+  <meta name="description" content="Looking for expert mobile aesthetic treatments in Trentham? PDC Aesthetics offers Botox, fillers, B12, microneedling, and more – all from a qualified nurse with 29+ years experience.">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="PDC Aesthetics Logo">
+    <h1>PDC Aesthetics</h1>
+  </header>
+
+  <!-- Menu placeholder -->
+  <div id="menu-placeholder"></div>
+
+  <div class="section">
+    <h2>Aesthetic Treatments in Trentham – Delivered to Your Door</h2>
+    <p>At PDC Aesthetics, we proudly serve the beautiful area of Trentham with expert mobile aesthetic treatments delivered in the comfort of your own home. Whether you’re looking for natural <a href="botox.html">Botox</a>, <a href="lip-filler.html">lip fillers</a>, <a href="b12.html">B12 injections</a>, or <a href="microneedling.html">microneedling</a>, we bring over 29 years of nursing expertise to you – safely and discreetly.</p>
+    <p>Clients in Trentham choose us for our clinical professionalism, relaxing approach, and convenient mobile service. Perfect for busy professionals, parents, or those who prefer privacy.</p>
+    <a href="contact.html" class="cta-button">Book Your Mobile Consultation</a>
+  </div>
+
+  <div class="section">
+    <h2>Why Choose PDC Aesthetics in Trentham?</h2>
+    <ul>
+      <li><strong>29+ years of nursing experience</strong> – treatments delivered by a qualified, insured practitioner</li>
+      <li><strong>Private mobile service</strong> – we come to your home or chosen location in Trentham</li>
+      <li><strong>Natural-looking results</strong> – using only high-quality products and safe techniques</li>
+      <li><strong>Local expertise</strong> – we know Trentham well and schedule appointments at times that suit you</li>
+    </ul>
+    <a href="about.html" class="cta-button">Learn More About Our Background</a>
+  </div>
+
+  <div class="section">
+    <h2>Popular Treatments Available in Trentham</h2>
+    <p>Our full range of treatments is available in Trentham and the surrounding areas. These include:</p>
+    <ul>
+      <li><a href="botox.html">Botox</a> – for frown lines, crow’s feet, and forehead smoothing</li>
+      <li><a href="lip-filler.html">Lip Filler</a> – enhance volume, shape and symmetry</li>
+      <li><a href="fat-dissolving.html">Fat Dissolving</a> – reduce stubborn areas like chin and abdomen</li>
+      <li><a href="b12.html">B12 Injections</a> – boost energy, focus and immunity</li>
+      <li><a href="microneedling.html">Microneedling</a> – improve texture, tone, and acne scarring</li>
+      <li><a href="dermaplaning.html">Dermaplaning</a> – reveal smoother, brighter skin</li>
+      <li><a href="skin-peels.html">Chemical Peels</a> – tackle pigmentation, dullness, and blemishes</li>
+    </ul>
+    <a href="contact.html" class="cta-button">Request a Full Price List</a>
+  </div>
+
+  <div class="section">
+    <h2>Discreet, Professional Mobile Aesthetics in Trentham</h2>
+    <p>Trentham residents value privacy and convenience – and that’s exactly what our mobile aesthetic service delivers. We arrive with all necessary equipment, observe strict hygiene protocols, and ensure every treatment is explained, comfortable, and never rushed.</p>
+    <p>Whether you live near Trentham Gardens, Park Drive, or Stone Road, we can bring safe, professional aesthetics to your doorstep.</p>
+    <a href="contact.html" class="cta-button">Enquire About Home Visits in Trentham</a>
+  </div>
+
+  <div class="section">
+    <h2>FAQ – Mobile Aesthetic Treatments in Trentham</h2>
+
+    <h3>Do you offer mobile Botox in Trentham?</h3>
+    <p>Yes! We offer mobile <a href="botox.html">Botox</a> throughout Trentham and surrounding areas, administered by a nurse with 29+ years of experience.</p>
+
+    <h3>Is there a minimum spend or consultation fee?</h3>
+    <p>No consultation fee is charged. We have a fair minimum spend of £60 for home visits in Trentham to cover time and travel.</p>
+
+    <h3>How private are home aesthetic appointments?</h3>
+    <p>Very private. We arrive discreetly, work in a quiet space of your home, and maintain complete confidentiality before, during, and after treatment.</p>
+
+    <h3>How far do you travel from Trentham?</h3>
+    <p>We cover a 15-mile radius from our base, which includes Trentham, Stone, Stafford, Barlaston, Eccleshall, and Newcastle-under-Lyme.</p>
+
+    <h3>Is it safe to have aesthetic treatments at home?</h3>
+    <p>Absolutely. Treatments are provided by a registered nurse using sterile equipment and medical-grade products. Safety and hygiene are our top priority.</p>
+
+    <h3>How do I book?</h3>
+    <p>Visit the <a href="contact.html">contact page</a> to send us a message or request a call back. We'll discuss your goals and schedule a convenient time to visit you in Trentham.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 PDC Aesthetics. All rights reserved.</p>
+    <p>This website does not provide medical advice. Treatments are performed by fully qualified aesthetic practitioners with 29+ years of clinical experience.</p>
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
+
+        window.toggleDropdown = function () {
+          const dropdown = document.getElementById("dropdown");
+          dropdown.classList.toggle("show");
+        };
+
+        window.addEventListener("click", function (e) {
+          const dropdown = document.getElementById("dropdown");
+          const button = document.querySelector(".menu-button");
+          if (!dropdown || !button) return;
+          if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+            dropdown.classList.remove("show");
+          }
+        });
+      });
+  </script>
+</body>
+</html>
