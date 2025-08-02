@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.pdc-aesthetics.co.uk/sitemap.xml
