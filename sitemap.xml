@@ -1,38 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Main Pages -->
-  <url><loc>https://www.pdc-aesthetics.co.uk/index.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/about.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/contact.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/areas-we-cover.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/privacy-policy.html</loc></url>
+  <url>
+    <loc>https://www.pdc-aesthetics.co.uk/</loc>
+    <lastmod>2025-08-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+<url><loc>https://www.pdc-aesthetics.co.uk/index.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/about.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/contact.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/areas-we-cover.html</loc><lastmod>2025-08-04</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/privacy-policy.html</loc><lastmod>2025-08-04</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
-  <!-- Treatments -->
-  <url><loc>https://www.pdc-aesthetics.co.uk/b12.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/botox.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/dermaplaning.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/fat-dissolving.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/lip-filler.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/microneedling.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/skin-boosters.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/skin-peels.html</loc></url>
+<!-- Treatments -->
+<url><loc>https://www.pdc-aesthetics.co.uk/b12.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/botox.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/dermaplaning.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/fat-dissolving.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/lip-filler.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/microneedling.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/skin-boosters.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/skin-peels.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <!-- Location Pages (Local SEO) -->
-  <url><loc>https://www.pdc-aesthetics.co.uk/alsager.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/baldwins-gate.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/barlaston.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/blurton.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/cheadle.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/eccleshall.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/madeley.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/meir.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/newcastle-under-lyme.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/rough-close.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/stafford.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/stone.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/trentham.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/walton.html</loc></url>
-  <url><loc>https://www.pdc-aesthetics.co.uk/cheadlehulme.html</loc></url>
+<!-- Local SEO Pages -->
+<url><loc>https://www.pdc-aesthetics.co.uk/alsager.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/baldwins-gate.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/barlaston.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/blurton.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/cheadle.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/eccleshall.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/madeley.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/meir.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/newcastle-under-lyme.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/rough-close.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/stafford.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/stone.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/trentham.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/walton.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/cheadlehulme.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.pdc-aesthetics.co.uk/botox-newcastle-under-lyme.html</loc><lastmod>2025-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
 
 </urlset>
