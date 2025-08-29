@@ -394,22 +394,30 @@
   <a href="https://wa.me/447368923639" class="whatsapp-button" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
 
   <!-- FAQ accordion -->
-  <script>
-    document.querySelectorAll('.faq-q').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const item = btn.closest('.faq-item');
-        const open = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach(i=>{
-          i.classList.remove('open');
-          i.querySelector('.faq-q').setAttribute('aria-expanded','false');
-        });
-        if(!open){
-          item.classList.add('open');
-          btn.setAttribute('aria-expanded','true');
-        }
+<script>
+  document.querySelectorAll('.faq-q').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const item = btn.closest('.faq-item');
+      const panel = item.querySelector('.faq-a');
+      const isOpen = item.classList.contains('open');
+
+      // Close all FAQs first
+      document.querySelectorAll('.faq-item').forEach(i=>{
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+        i.querySelector('.faq-a').style.maxHeight = null;
       });
+
+      // Open the clicked one smoothly
+      if(!isOpen){
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
     });
-  </script>
+  });
+</script>
+
 
   <!-- Menu toggle (click to open, closes on outside/Escape) -->
   <script>

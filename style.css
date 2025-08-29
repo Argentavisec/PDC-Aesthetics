@@ -196,3 +196,19 @@ footer{background:var(--brand-deep);color:#fff;text-align:center;padding:18px;fo
   .section{margin:16px auto 0;padding:18px}
   .dropdown-panel{width:94vw}
 }
+
+.faq-a{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.35s ease;
+}
+
+/* optional: fade text in too */
+.faq-a p{
+  opacity:0;
+  transition:opacity 0.25s ease;
+}
+.faq-item.open .faq-a p{
+  opacity:1;
+}
+
