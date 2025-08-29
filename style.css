@@ -1,76 +1,133 @@
-/* WhatsApp Floating Button */
-.whatsapp-button{
-  position:fixed;bottom:20px;right:20px;background:#7b30ff;color:#fff;
-  font-weight:bold;padding:12px 16px;border-radius:50px;font-size:16px;
-  z-index:999;text-decoration:none;box-shadow:0 4px 10px rgba(0,0,0,.25);
-  transition:background .3s ease
+/* ================================
+   RESET & BASE
+================================ */
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%}
+img,video{max-width:100%;height:auto}
+:root{
+  --brand-1:#7b30ff;
+  --brand-1-deep:#4b16d0;
+  --brand-deep:#1a1136;
+  --card:#efe6ff;          /* lavender sections you already use */
+  --ink:#111;
+  --bg:#000;               /* NEW: site background behind cards is black */
+  --text:#e9e9ee;
 }
-.whatsapp-button:hover{background:#6a21ef}
 
-/* Base */
+/* Page base (black background behind the divs) */
 body{
-  margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f4f9;color:#333;
-  display:flex;flex-direction:column;min-height:100vh
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);          /* <- black */
+  color:#333;
+  display:flex;flex-direction:column;min-height:100vh;
+  -webkit-text-size-adjust:100%;
 }
-.container{padding:20px;max-width:900px;margin:auto;flex:1}
-.section{
-  background:#efe6ff;border-radius:12px;padding:20px;margin-top:20px;
-  box-shadow:0 2px 4px rgba(0,0,0,.08)
-}
-h1,h2{color:#5a1fe0}
-.small{font-size:14px;color:#555}
+a{color:#5a1fe0;text-decoration:none}
+a:hover{color:#3a1b86}
+.nowrap{white-space:nowrap}
+.small{font-size:.9rem;color:#555}
 
-/* Banner – match hero vibe (purple gradient) */
+/* Fluid type (same feel, scales well) */
+h1{font-size:clamp(28px,5.2vw,42px);line-height:1.15;margin:0 0 .4em}
+h2{font-size:clamp(22px,4.2vw,32px);line-height:1.2;margin:.2em 0 .5em}
+h3{font-size:clamp(18px,3.4vw,24px);line-height:1.25;margin:.2em 0 .5em}
+
+/* Layout containers */
+.container{max-width:900px;margin:0 auto;flex:1;padding:20px 16px}
+.section{
+  background:var(--card);        /* keep your lavender cards */
+  color:var(--ink);
+  border-radius:12px;padding:20px;margin:20px auto 0;
+  box-shadow:0 2px 4px rgba(0,0,0,.18)
+}
+
+/* ================================
+   BANNER (matches hero vibe)
+================================ */
 .banner{
   background:linear-gradient(135deg,#5d2cff 0%,#7b30ff 50%,#491dc2 100%);
-  color:#fff;padding:15px;display:flex;flex-direction:column;align-items:center;justify-content:center
+  color:#fff;
+  padding:14px 16px 10px;
+  text-align:center;
 }
 .top-bar{display:flex;align-items:center;justify-content:center;gap:10px}
 .logo{height:50px}
-.site-name{color:#fff;font-size:24px;font-weight:bold}
+.site-name{font-weight:700;font-size:24px}
 
-/* Menu button and dropdown (same pattern as debt site) */
-.btn-menu{
-  margin-top:10px;background:#7b30ff;color:#fff;border:none;padding:10px 20px;
-  font-size:16px;border-radius:999px;cursor:pointer;font-weight:bold;
-  box-shadow:0 2px 4px rgba(0,0,0,.2)
+/* ================================
+   HERO (same look; fills phone)
+================================ */
+.landing-hero{
+  background:linear-gradient(135deg,#5d2cff 0%,#7b30ff 50%,#491dc2 100%);
+  color:#fff;text-align:center;
+  padding:clamp(28px,6vw,72px) 16px;
 }
-.btn-menu:hover{background:#6a21ef}
+.hero-inner{max-width:900px;margin:0 auto}
+.hero-title{color:#fff;margin:0 0 10px}
+.hero-sub{font-size:clamp(16px,3.5vw,20px);margin:0 0 18px}
+.hero-cta{
+  display:inline-block;border:0;border-radius:999px;
+  padding:14px 22px;font-size:clamp(16px,3.5vw,20px);font-weight:800;
+  background:#fff;color:#2b1466;box-shadow:0 6px 0 rgba(0,0,0,.2)
+}
+.hero-cta:hover{background:#f5f1ff}
+.hero-cta:active{transform:translateY(2px);box-shadow:0 4px 0 rgba(0,0,0,.2)}
+.hero-trust{margin-top:10px;font-size:14px;opacity:.95}
 
-.menu-content{
-  display:none; /* toggled to flex by JS */
-  flex-direction:column;background:#3a1b86;color:#fff;padding:12px;margin:6px auto 0;
-  width:fit-content;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.25)
+/* Fill the viewport on phones (without overflow) */
+@media (max-width:768px){
+  .landing-hero{
+    min-height:100vh;display:flex;align-items:center;justify-content:center;
+    padding:40px 16px;
+  }
+  .hero-inner{width:100%}
 }
-.menu-sections{display:flex;gap:14px;justify-content:center}
-.menu-section{padding:10px 16px;border-top:1px solid #ffffff33;display:flex;flex-direction:column;min-width:150px}
-.menu-section h4{color:#fff;font-size:14px;margin:0 0 6px 10px;font-weight:900;text-transform:uppercase;letter-spacing:.5px}
-.menu-content a{
-  display:block;color:#fff;text-decoration:none;padding:6px 10px;font-size:15px;border-radius:8px
-}
-.menu-content a:hover{background:#5221c9}
-.menu-cta{
-  background:#dac4ff;color:#1a0c44 !important;font-weight:bold;padding:10px 16px;margin:12px auto;
-  border-radius:999px;width:220px;font-size:16px;text-align:center;display:block;text-decoration:none;
-  box-shadow:0 2px 6px rgba(0,0,0,.25)
-}
-.menu-cta:hover{background:#cdb7ff}
 
-/* Cards / solutions */
-.solutions-vertical{display:flex;flex-direction:column;gap:16px}
-.solution-vertical{
-  background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px;
-  box-shadow:0 1px 3px rgba(0,0,0,.1)
+/* ================================
+   INLINE MENU UNDER HERO
+   (push-down panel below the Menu button)
+================================ */
+.menu-wrapper{max-width:1100px;margin:14px auto 0;padding:0 16px;text-align:center}
+.menu-button{
+  background:linear-gradient(180deg,var(--brand-1) 0%,var(--brand-1-deep) 100%);
+  color:#fff;border:1px solid rgba(255,255,255,.18);
+  padding:11px 20px;border-radius:999px;font-weight:900;letter-spacing:.2px;
+  cursor:pointer;box-shadow:0 10px 18px rgba(123,48,255,.35);
+  transition:transform .08s ease,filter .12s ease,box-shadow .12s ease;
 }
-.solution-vertical h3{margin-top:0;color:#5a1fe0}
-.solution-vertical h4{margin:4px 0 8px;color:#3a1b86}
-.solution-vertical h5{color:#7b30ff;margin:8px 0 0}
-.solution-link{
-  display:inline-block;font-weight:bold;text-decoration:none;color:#5a1fe0;border-bottom:2px solid rgba(90,31,224,.2);padding-bottom:2px
-}
-.solution-link:hover{border-bottom-color:rgba(90,31,224,.5)}
+.menu-button:hover{transform:translateY(-1px);filter:saturate(1.05)}
+.menu-button:focus-visible{outline:3px solid #fff;outline-offset:3px}
 
-/* TOC chips */
+/* Collapsible panel (smooth max-height transition) */
+.dropdown-panel{
+  margin:10px auto 0;width:min(980px,94vw);
+  background:var(--brand-deep);color:#fff;border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;box-shadow:0 18px 40px rgba(0,0,0,.35),0 1px 0 rgba(255,255,255,.04) inset;
+  overflow:hidden;max-height:0;opacity:0;transform:translateY(-6px);
+  transition:max-height .35s ease,opacity .25s ease,transform .25s ease;
+}
+.dropdown-panel.open{max-height:520px;opacity:1;transform:translateY(0)}
+
+.menu-sections{display:flex;gap:14px;justify-content:center;padding:12px 12px 4px;flex-wrap:wrap}
+.menu-section{min-width:160px;padding:8px 10px;border-top:1px solid #ffffff26;display:flex;flex-direction:column}
+.menu-section h4{color:#fff;font-size:14px;margin:0 0 6px 6px;font-weight:800;text-transform:uppercase;letter-spacing:.5px}
+.dropdown-panel a{
+  display:block;color:#fff;padding:8px 10px;font-size:15px;border-radius:10px;border:1px solid transparent
+}
+.dropdown-panel a:hover{background:#2a1a5a;border-color:#ffffff22}
+.dropdown-panel .menu-cta{
+  display:block;width:220px;margin:10px auto 14px;background:#dac4ff;color:#1a1136 !important;
+  font-weight:900;padding:10px 14px;border-radius:999px;box-shadow:0 6px 14px rgba(0,0,0,.25)
+}
+.dropdown-panel .menu-cta:hover{background:#cdb7ff}
+
+@media (max-width:740px){ .menu-section{min-width:unset;width:calc(50% - 14px)} }
+@media (max-width:520px){ .menu-section{width:100%} }
+
+/* ================================
+   TOC chips
+================================ */
 .toc{margin-top:16px}
 .toc ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:0}
 .toc a{
@@ -79,28 +136,68 @@ h1,h2{color:#5a1fe0}
 }
 .toc a:hover{background:#f5efff}
 
-/* FAQ */
+/* ================================
+   SERVICE / BUNDLE CARDS
+   (dark cards instead of white)
+================================ */
+.solutions-vertical{display:flex;flex-direction:column;gap:16px}
+.solution-vertical{
+  background:#0f0f14;                 /* was #fff -> now black-ish */
+  color:#eee;                          /* readable on dark */
+  border:1px solid #2a2250;
+  border-radius:12px;padding:16px;
+  box-shadow:0 1px 3px rgba(0,0,0,.35)
+}
+.solution-vertical h3{margin-top:0;color:#cdb7ff}
+.solution-vertical h4{margin:4px 0 8px;color:#dac4ff}
+.solution-vertical h5{color:#b08cff;margin:8px 0 0}
+.solution-link{
+  display:inline-block;font-weight:bold;text-decoration:none;color:#cdb7ff;
+  border-bottom:2px solid rgba(205,183,255,.35);padding-bottom:2px
+}
+.solution-link:hover{border-bottom-color:rgba(205,183,255,.7)}
+
+/* ================================
+   FAQ (dark panels where white was used)
+================================ */
 .faq-list{max-width:900px;margin:0 auto}
-.faq-item{border:1px solid #e2e8f0;border-radius:12px;margin:10px 0;background:#fff;overflow:hidden}
-.faq-q{width:100%;text-align:left;padding:14px 16px;border:0;background:#f7fafc;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
-.faq-q:focus{outline:3px solid #7b30ff}
-.faq-a{display:none;padding:14px 16px;background:#fff;color:#111}
+.faq-item{border:1px solid #2a2250;border-radius:12px;margin:10px 0;background:#0f0f14;color:#eee;overflow:hidden}
+.faq-q{
+  width:100%;text-align:left;padding:14px 16px;border:0;
+  background:#151526;color:#fff;font-weight:700;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center
+}
+.faq-q:focus{outline:3px solid var(--brand-1)}
+.faq-a{display:none;padding:14px 16px;background:#0f0f14;color:#eee}
 .faq-item.open .faq-a{display:block}
 .faq-item.open .faq-q .toggle{transform:rotate(180deg)}
 .toggle{transition:transform .2s ease}
 
-/* Footer */
-footer{background:#1a1136;color:#fff;text-align:center;padding:18px;font-size:14px}
+/* ================================
+   FOOTER
+================================ */
+footer{
+  background:var(--brand-deep);
+  color:#fff;text-align:center;padding:18px;font-size:14px
+}
 
-/* Links */
-a{color:#5a1fe0}
-a:hover{color:#3a1b86}
+/* ================================
+   WhatsApp Floating Button
+================================ */
+.whatsapp-button{
+  position:fixed;right:20px;bottom:20px;
+  background:var(--brand-1);color:#fff;font-weight:700;
+  padding:12px 16px;border-radius:50px;font-size:16px;z-index:999;
+  text-decoration:none;box-shadow:0 4px 10px rgba(0,0,0,.35);
+  transition:background .25s ease
+}
+.whatsapp-button:hover{background:#6a21ef}
 
-/* Responsive */
+/* ================================
+   RESPONSIVE TWEAKS
+================================ */
 @media (max-width:768px){
-  .menu-content{width:90vw !important}
-  .menu-sections{flex-direction:column;align-items:stretch}
-  .menu-section{min-width:auto;padding:10px 12px;border-top:1px solid #ffffff33}
-  .menu-content a{padding-left:16px}
-  .menu-cta{width:180px}
+  .container{padding:18px 14px}
+  .section{margin:16px auto 0;padding:18px}
+  .dropdown-panel{width:94vw}
 }
