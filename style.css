@@ -1,4 +1,6 @@
-/* ===== Reset & Base ===== */
+/* =========================
+   RESET & BASE
+========================= */
 *,*::before,*::after{box-sizing:border-box}
 html,body{height:100%}
 img,video{max-width:100%;height:auto}
@@ -7,9 +9,9 @@ img,video{max-width:100%;height:auto}
   --brand-1:#7b30ff;
   --brand-1-deep:#4b16d0;
   --brand-deep:#1a1136;
-  --bg:#000;               /* site background around sections */
-  --card:#efe6ff;          /* light purple cards */
-  --ink:#111;              /* black text inside sections */
+  --bg:#000;               /* page background (outside cards) */
+  --card:#efe6ff;          /* section/card background (light purple) */
+  --ink:#111;              /* text inside sections */
   --hero-grad:linear-gradient(135deg,#5d2cff 0%,#7b30ff 50%,#491dc2 100%);
 }
 
@@ -29,7 +31,9 @@ h1{font-size:clamp(28px,5.2vw,42px);line-height:1.15;margin:0 0 .4em}
 h2{font-size:clamp(22px,4.2vw,32px);line-height:1.2;margin:.2em 0 .5em}
 h3{font-size:clamp(18px,3.4vw,24px);line-height:1.25;margin:.2em 0 .5em}
 
-/* ===== Banner (BLACK with white text) ===== */
+/* =========================
+   BANNER (BLACK)
+========================= */
 .banner{
   background:#000;
   color:#fff;
@@ -40,10 +44,13 @@ h3{font-size:clamp(18px,3.4vw,24px);line-height:1.25;margin:.2em 0 .5em}
 .logo{height:50px}
 .site-name{font-weight:700;font-size:24px;color:#fff}
 
-/* ===== Hero (purple, white text) ===== */
+/* =========================
+   HERO (PURPLE, WHITE TEXT)
+========================= */
 .landing-hero{
   background:var(--hero-grad);
-  color:#fff;text-align:center;
+  color:#fff;
+  text-align:center;
   padding:clamp(28px,6vw,72px) 16px;
 }
 .hero-inner{max-width:900px;margin:0 auto}
@@ -66,8 +73,11 @@ h3{font-size:clamp(18px,3.4vw,24px);line-height:1.25;margin:.2em 0 .5em}
   .hero-inner{width:100%}
 }
 
-/* ===== Menu under hero ===== */
+/* =========================
+   MENU UNDER HERO
+========================= */
 .menu-wrapper{max-width:1100px;margin:14px auto 0;padding:0 16px;text-align:center}
+
 .menu-button{
   background:linear-gradient(180deg,var(--brand-1) 0%,var(--brand-1-deep) 100%);
   color:#fff;border:1px solid rgba(255,255,255,.18);
@@ -78,15 +88,29 @@ h3{font-size:clamp(18px,3.4vw,24px);line-height:1.25;margin:.2em 0 .5em}
 .menu-button:hover{transform:translateY(-1px);filter:saturate(1.05)}
 .menu-button:focus-visible{outline:3px solid #fff;outline-offset:3px}
 
-/* Dropdown panel */
+/* Dropdown panel – mobile safe (opens fully) */
 .dropdown-panel{
-  margin:10px auto 0;width:min(980px,94vw);
-  background:var(--brand-deep);color:#fff;border:1px solid rgba(255,255,255,.12);
-  border-radius:14px;box-shadow:0 18px 40px rgba(0,0,0,.35),0 1px 0 rgba(255,255,255,.04) inset;
-  overflow:hidden;max-height:0;opacity:0;transform:translateY(-6px);
-  transition:max-height .35s ease,opacity .25s ease,transform .25s ease;
+  margin:10px auto 0;
+  width:min(980px,94vw);
+  background:var(--brand-deep);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;
+  box-shadow:0 18px 40px rgba(0,0,0,.35),0 1px 0 rgba(255,255,255,.04) inset;
+
+  overflow:hidden;
+  max-height:0;                 /* closed */
+  opacity:0;
+  transform:translateY(-6px);
+  transition:max-height .35s ease, opacity .25s ease, transform .25s ease;
 }
-.dropdown-panel.open{max-height:520px;opacity:1;transform:translateY(0)}
+.dropdown-panel.open{
+  max-height:calc(100dvh - 140px); /* cap to viewport height */
+  opacity:1;
+  transform:translateY(0);
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+}
 
 .menu-sections{display:flex;gap:14px;justify-content:center;padding:12px 12px 4px;flex-wrap:wrap}
 .menu-section{min-width:160px;padding:8px 10px;border-top:1px solid #ffffff26;display:flex;flex-direction:column}
@@ -96,42 +120,31 @@ h3{font-size:clamp(18px,3.4vw,24px);line-height:1.25;margin:.2em 0 .5em}
 }
 .dropdown-panel a:hover{background:#2a1a5a;border-color:#ffffff22}
 
-/* ===== CTA buttons (match menu button & centered) ===== */
+/* =========================
+   CTA BUTTONS (centered)
+========================= */
 .menu-cta{
-  display:inline-block;
   background:linear-gradient(180deg,var(--brand-1) 0%,var(--brand-1-deep) 100%);
   color:#fff !important;
   border:1px solid rgba(255,255,255,.18);
-  padding:12px 22px;
-  border-radius:999px;
-  font-weight:900;
-  letter-spacing:.2px;
-  text-decoration:none;
-  box-shadow:0 10px 18px rgba(123,48,255,.35);
+  padding:12px 22px;border-radius:999px;font-weight:900;letter-spacing:.2px;
+  text-decoration:none;box-shadow:0 10px 18px rgba(123,48,255,.35);
   transition:transform .08s ease,filter .12s ease,box-shadow .12s ease;
-
-  /* NEW for centering */
-  margin:20px auto 0;   /* centers horizontally */
-  display:block;        /* makes it behave like a block element */
-  text-align:center;    /* keeps text centered inside */
-  max-width:fit-content;/* shrinks to button width */
+  display:block;max-width:fit-content;margin:20px auto 0;text-align:center;
 }
 .menu-cta:hover{transform:translateY(-1px);filter:saturate(1.05)}
 .menu-cta:active{transform:translateY(0)}
 .menu-cta:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.dropdown-panel .menu-cta{margin:10px auto 14px}
 
-
-/* Make CTAs inside dropdown also match */
-.dropdown-panel .menu-cta{
-  margin:10px auto 14px;
-}
-
-/* ===== Sections (light purple with black text) ===== */
+/* =========================
+   CONTENT SECTIONS
+========================= */
 .container{max-width:900px;margin:0 auto;flex:1;padding:20px 16px}
 
 .section{
-  background:var(--card);      /* light purple background */
-  color:var(--ink);            /* black text inside */
+  background:var(--card);     /* light purple cards */
+  color:var(--ink);           /* black text */
   border-radius:12px;
   padding:20px;
   margin:20px auto 0;
@@ -151,14 +164,11 @@ h3{font-size:clamp(18px,3.4vw,24px);line-height:1.25;margin:.2em 0 .5em}
 }
 .toc a:hover{background:#f5efff}
 
-/* ===== Cards inside sections ===== */
+/* Cards inside sections */
 .solutions-vertical{display:flex;flex-direction:column;gap:16px}
 .solution-vertical{
-  background:#fff;
-  color:#111;
-  border:1px solid #e5e7eb;
-  border-radius:12px;padding:16px;
-  box-shadow:0 1px 3px rgba(0,0,0,.15)
+  background:#fff;color:#111;border:1px solid #e5e7eb;
+  border-radius:12px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.15)
 }
 .solution-vertical h3{margin-top:0;color:#5a1fe0}
 .solution-vertical h4{margin:4px 0 8px;color:#3a1b86}
@@ -169,20 +179,35 @@ h3{font-size:clamp(18px,3.4vw,24px);line-height:1.25;margin:.2em 0 .5em}
 }
 .solution-link:hover{border-bottom-color:rgba(90,31,224,.6)}
 
-/* ===== FAQ ===== */
+/* =========================
+   FAQ (smooth accordion)
+========================= */
 .faq-list{max-width:900px;margin:0 auto}
 .faq-item{border:1px solid #e2e8f0;border-radius:12px;margin:10px 0;background:#fff;color:#111;overflow:hidden}
-.faq-q{width:100%;text-align:left;padding:14px 16px;border:0;background:#f7fafc;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q{
+  width:100%;text-align:left;padding:14px 16px;border:0;background:#f7fafc;
+  font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center
+}
 .faq-q:focus{outline:3px solid var(--brand-1)}
-.faq-a{display:none;padding:14px 16px;background:#fff;color:#111}
-.faq-item.open .faq-a{display:block}
-.faq-item.open .faq-q .toggle{transform:rotate(180deg)}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .35s ease, opacity .25s ease;
+  opacity:0;padding:0 16px;background:#fff;color:#111;
+}
+.faq-item.open .faq-a{
+  max-height:600px; /* large enough for most answers; adjust if needed */
+  opacity:1;padding:14px 16px;
+}
 .toggle{transition:transform .2s ease}
+.faq-item.open .toggle{transform:rotate(180deg)}
 
-/* ===== Footer ===== */
+/* =========================
+   FOOTER
+========================= */
 footer{background:var(--brand-deep);color:#fff;text-align:center;padding:18px;font-size:14px}
 
-/* ===== WhatsApp Floating Button ===== */
+/* =========================
+   WHATSAPP FAB
+========================= */
 .whatsapp-button{
   position:fixed;right:20px;bottom:20px;background:var(--brand-1);color:#fff;font-weight:700;
   padding:12px 16px;border-radius:50px;font-size:16px;z-index:999;text-decoration:none;
@@ -190,25 +215,16 @@ footer{background:var(--brand-deep);color:#fff;text-align:center;padding:18px;fo
 }
 .whatsapp-button:hover{background:#6a21ef}
 
-/* ===== Responsive ===== */
+/* =========================
+   RESPONSIVE TWEAKS
+========================= */
 @media (max-width:768px){
   .container{padding:18px 14px}
   .section{margin:16px auto 0;padding:18px}
   .dropdown-panel{width:94vw}
 }
 
-.faq-a{
-  max-height:0;
-  overflow:hidden;
-  transition:max-height 0.35s ease;
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{transition:none !important;scroll-behavior:auto !important}
 }
-
-/* optional: fade text in too */
-.faq-a p{
-  opacity:0;
-  transition:opacity 0.25s ease;
-}
-.faq-item.open .faq-a p{
-  opacity:1;
-}
-
