@@ -99,7 +99,6 @@ h3{font-size:clamp(18px,3.4vw,24px);line-height:1.25;margin:.2em 0 .5em}
 /* ===== CTA buttons (match menu button & centered) ===== */
 .menu-cta{
   display:inline-block;
-  margin:12px auto 0;                 /* center */
   background:linear-gradient(180deg,var(--brand-1) 0%,var(--brand-1-deep) 100%);
   color:#fff !important;
   border:1px solid rgba(255,255,255,.18);
@@ -110,10 +109,17 @@ h3{font-size:clamp(18px,3.4vw,24px);line-height:1.25;margin:.2em 0 .5em}
   text-decoration:none;
   box-shadow:0 10px 18px rgba(123,48,255,.35);
   transition:transform .08s ease,filter .12s ease,box-shadow .12s ease;
+
+  /* NEW for centering */
+  margin:20px auto 0;   /* centers horizontally */
+  display:block;        /* makes it behave like a block element */
+  text-align:center;    /* keeps text centered inside */
+  max-width:fit-content;/* shrinks to button width */
 }
 .menu-cta:hover{transform:translateY(-1px);filter:saturate(1.05)}
 .menu-cta:active{transform:translateY(0)}
 .menu-cta:focus-visible{outline:3px solid #fff;outline-offset:3px}
+
 
 /* Make CTAs inside dropdown also match */
 .dropdown-panel .menu-cta{
