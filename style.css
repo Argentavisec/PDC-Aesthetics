@@ -1,318 +1,204 @@
 /* =========================================
    Reset & Base
 ========================================= */
-*{ margin:0; padding:0; box-sizing:border-box; }
+*{margin:0;padding:0;box-sizing:border-box}
 
 :root{
-  --bg-dark:#222;
+  --bg-dark:#222;          /* page & hero background */
   --text-light:#fff;
-  --brand-deep:#12002f;   /* header/footer */
-  --brand-1:#7b30ff;      /* primary CTA */
+  --brand-deep:#0d0720;    /* banner/footer */
+  --brand-1:#7b30ff;       /* primary CTA */
   --brand-1-hover:#a570ff;
-  --ink:#111;             /* body ink on light cards */
-  --card:#dac4ff;         /* section bg */
+  --ink:#111;              /* text on light cards */
+  --card:#dac4ff;          /* section bg */
   --h2:#2e0066;
   --h3:#3b0a88;
   --h4:#4e19a8;
   --h5:#5c2cc6;
-
-  /* Hero gradient (PDC) */
-  --hero-1:#77d1ff;
-  --hero-2:#4aa3e2;
-  --hero-3:#2b78b8;
 }
 
-html,body{ height:100%; }
+html,body{height:100%}
 body{
   background:var(--bg-dark);
   color:var(--text-light);
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
   line-height:1.5;
+  text-align:center; /* center everything by default */
 }
 
-/* Default links sit on dark bg; override inside .section below */
-a{
-  color:#efe6ff;
-  text-decoration:underline;
-  font-weight:700;
-}
-a:hover{ color:#cdb7ff; }
+a{color:#efe6ff;text-decoration:underline;font-weight:700}
+a:hover{color:#cdb7ff}
 
 /* =========================================
-   Layout: container & sections (match debt)
+   Banner / Top Bar
 ========================================= */
-.container{
-  max-width:1100px;
-  margin:0 auto;
-  padding:20px 16px;
+.banner{
+  background:var(--brand-deep);
+  padding:30px 0; /* taller */
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.top-bar{
+  max-width:1100px;margin:0 auto;
+  padding:0 16px;
+  display:flex;align-items:center;justify-content:center;gap:14px;
+}
+.logo{
+  height:64px;width:64px;border-radius:50%;
+  object-fit:cover;box-shadow:0 0 0 3px rgba(255,255,255,.08);
+}
+.site-name{
+  font-size:24px;font-weight:900;letter-spacing:.3px;
+  padding:6px 12px;border-radius:999px;
+  background:rgba(255,255,255,.08);
 }
 
+/* =========================================
+   Layout: container & sections
+========================================= */
+.container{max-width:1100px;margin:0 auto;padding:20px 16px}
+
 .section{
-  background:var(--card);
-  color:var(--ink);
-  padding:30px 20px;
-  margin:22px auto;
-  border-radius:20px;
-  max-width:900px;
+  background:var(--card);color:var(--ink);
+  padding:30px 20px;margin:22px auto;
+  border-radius:20px;max-width:900px;
   box-shadow:0 4px 10px rgba(0,0,0,.3);
 }
 
-.section h2{ color:var(--h2); margin:0 0 12px; }
-.section h3{ color:var(--h3); margin:14px 0 8px; }
-.section h4{ color:var(--h4); margin:10px 0 6px; font-weight:700; }
-.section h5{ color:var(--h5); margin:8px 0 6px; }
+.section h2{color:var(--h2);margin:0 0 12px}
+.section h3{color:var(--h3);margin:14px 0 8px}
+.section h4{color:var(--h4);margin:10px 0 6px;font-weight:700}
+.section h5{color:var(--h5);margin:8px 0 6px}
 
-/* Body text in sections */
-.section p,
-.section ul li,
-.section ol li{ font-size:16px; line-height:1.6; }
+.section p,.section ul li,.section ol li{font-size:16px;line-height:1.6}
 
-/* Lists spacing like debt site */
-.section ul, .section ol{ padding-left:18px; margin:8px 0; }
-
-/* Links inside light sections use PDC purple */
-.section a{
-  color:var(--h5);
-  text-decoration:underline;
-  font-weight:700;
+/* Center lists; keep bullets */
+.section ul,.section ol{
+  list-style-position:inside;
+  padding-left:0;margin:8px 0;text-align:center
 }
-.section a:hover{ color:var(--h3); }
+
+.section a{color:var(--h5)}
+.section a:hover{color:var(--h3)}
 
 /* =========================================
-   Banner / Top Bar (like debt header)
-========================================= */
-.banner{ background:var(--brand-deep); color:#fff; }
-.top-bar{
-  max-width:1100px;
-  margin:0 auto;
-  padding:14px 16px;
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-.logo{ height:40px; width:auto; }
-.site-name{ font-weight:800; letter-spacing:.3px; font-size:18px; }
-
-/* If you also use a <header> elsewhere, keep it themed */
-header{
-  background:var(--brand-deep);
-  padding:20px 0 10px;
-  text-align:center;
-}
-header img{ max-width:120px; margin:0 auto 10px; display:block; }
-header h1{ font-size:28px; color:#fff; }
-
-/* =========================================
-   Menu Button & Dropdown (if used)
-========================================= */
-.menu-wrapper{ position:relative; text-align:center; margin-top:10px; }
-.menu-button{
-  padding:10px 20px; background:#fff; color:#000; font-weight:700;
-  border:none; border-radius:12px; cursor:pointer; z-index:1000;
-}
-.dropdown-content{
-  max-height:0; overflow:hidden; background:#1a083d; border-radius:12px;
-  transition:max-height .5s ease; margin:10px auto 0; width:fit-content;
-}
-.dropdown-content.show{ max-height:500px; }
-.dropdown-content a{
-  display:block; padding:12px 20px; color:#fff; text-decoration:none; font-weight:700;
-}
-.dropdown-content a:hover{ background:#2f1c66; }
-
-/* =========================================
-   Hero (PDC colours; spacing like debt)
+   HERO — full height on mobile
 ========================================= */
 .landing-hero{
-  background:linear-gradient(135deg,var(--hero-1) 0%,var(--hero-2) 50%,var(--hero-3) 100%);
+  background:var(--bg-dark);
   color:#fff;
-  padding:clamp(28px,6vw,72px) 16px;
-  box-shadow:inset 0 -1px 0 rgba(255,255,255,.08);
-  margin-bottom:12px;
+  padding:clamp(38px,7vw,96px) 16px;
+  margin:0 0 14px 0;
+  box-shadow:none;
+  min-height:70vh; /* desktop/tablet default */
+  display:flex;align-items:center;justify-content:center;
 }
-.hero-inner{
-  max-width:1000px; margin:0 auto;
-  display:flex; align-items:center; justify-content:center;
-}
-.hero-copy{ text-align:center; }
-.hero-title{
-  margin:0 0 8px;
-  font-size:clamp(28px,6vw,44px);
-  line-height:1.1; color:#fff;
-}
-.hero-sub{ margin:0 0 18px; font-size:clamp(16px,2.5vw,18px); }
+.hero-inner{max-width:1000px;margin:0 auto}
+.hero-copy{text-align:center}
+.hero-title{margin:0 0 10px;font-size:clamp(30px,6.2vw,48px);line-height:1.1}
+.hero-sub{margin:0 0 20px;font-size:clamp(16px,2.5vw,18px);opacity:.95}
+.hero-trust{margin-top:12px;font-size:14px;opacity:.95}
 .hero-cta{
-  display:inline-block; border:0; border-radius:999px; padding:14px 22px;
-  font-size:clamp(16px,2.8vw,18px); font-weight:800; text-decoration:none;
-  background:#fff; color:#0f4a74; box-shadow:0 6px 0 rgba(0,0,0,.2);
-  transition:transform .06s ease, box-shadow .06s ease, background .2s ease, color .2s ease;
+  display:inline-block;border:0;border-radius:999px;padding:14px 22px;
+  font-size:clamp(16px,2.8vw,18px);font-weight:800;text-decoration:none;
+  background:#fff;color:#0f4a74;box-shadow:0 6px 0 rgba(0,0,0,.2);
+  transition:transform .06s ease,box-shadow .06s ease,background .2s ease,color .2s ease
 }
-.hero-cta:hover{ background:#f2f8ff; color:#0a3858; }
-.hero-cta:active{ transform:translateY(2px); box-shadow:0 4px 0 rgba(0,0,0,.2); }
-.hero-trust{ margin-top:10px; font-size:14px; opacity:.95; }
+.hero-cta:hover{background:#f2f8ff;color:#0a3858}
+.hero-cta:active{transform:translateY(2px);box-shadow:0 4px 0 rgba(0,0,0,.2)}
+
+/* Hero mobile full screen */
+@media (max-width:768px){
+  .landing-hero{
+    min-height:100vh; /* fill full viewport */
+    padding:60px 20px; /* extra breathing room */
+  }
+}
 
 /* =========================================
-   TOC chips (mini menu)
+   TOC chips
 ========================================= */
-.toc{ margin-top:16px; }
-.toc ul{
-  list-style:none; display:flex; flex-wrap:wrap; gap:8px;
-}
+.toc{margin-top:16px}
+.toc ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
 .toc a{
-  display:inline-block; background:#efe6ff; border:1px solid #d9c9ff;
-  color:var(--h3); padding:8px 12px; border-radius:999px; text-decoration:none;
-  font-weight:700; font-size:14px;
+  display:inline-block;background:#efe6ff;border:1px solid #d9c9ff;
+  color:var(--h3);padding:8px 12px;border-radius:999px;text-decoration:none;
+  font-weight:700;font-size:14px
 }
-.toc a:hover{ background:#f5efff; }
+.toc a:hover{background:#f5efff}
 
 /* =========================================
-   Services / Bundles cards (vertical grid)
+   Services / Bundles cards
 ========================================= */
 .solutions-vertical{
-  display:grid; grid-template-columns:repeat(2, minmax(0,1fr));
-  gap:16px; margin-top:12px;
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;margin-top:12px
 }
 .solution-vertical{
-  background:#fff; color:#111;
-  border:1px solid #e9e2ff; border-radius:16px; padding:16px;
-  box-shadow:0 4px 10px rgba(0,0,0,.06);
+  background:#fff;color:#111;border:1px solid #e9e2ff;border-radius:16px;
+  padding:16px;box-shadow:0 4px 10px rgba(0,0,0,.06)
 }
-.solution-vertical h3{ margin:0 0 6px; color:var(--h2); }
-.solution-vertical h4{ margin:0 0 8px; color:var(--h4); font-weight:600; }
-.solution-vertical h5{ margin:10px 0 0; color:var(--brand-1); }
-.solution-vertical p{ margin:0 0 8px; }
-.solution-vertical .solution-link{
-  display:inline-block; margin-top:8px; font-weight:800; color:var(--h5);
-}
-.solution-vertical .solution-link:hover{ color:var(--h3); }
+.solution-vertical h3{margin:0 0 6px;color:var(--h2)}
+.solution-vertical h4{margin:0 0 8px;color:var(--h4);font-weight:600}
+.solution-vertical h5{margin:10px 0 0;color:var(--brand-1)}
+.solution-vertical p{margin:0 0 8px}
+.solution-vertical .solution-link{display:inline-block;margin-top:8px;font-weight:800;color:var(--h5)}
+.solution-vertical .solution-link:hover{color:var(--h3)}
 
 /* =========================================
    CTAs (shared)
 ========================================= */
-.cta-button,
-.menu-cta{
-  display:inline-block; margin-top:10px; background:var(--brand-1); color:#fff;
-  padding:12px 18px; border-radius:12px; text-decoration:none; font-weight:800; border:0;
+.cta-button,.menu-cta{
+  display:inline-block;margin-top:10px;background:var(--brand-1);color:#fff;
+  padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:800;border:0;
   box-shadow:0 4px 10px rgba(0,0,0,.15);
-  transition:transform .06s ease, box-shadow .06s ease, background .2s ease;
+  transition:transform .06s ease,box-shadow .06s ease,background .2s ease
 }
-.cta-button:hover, .menu-cta:hover{ background:var(--brand-1-hover); }
-.cta-button:active, .menu-cta:active{ transform:translateY(1px); box-shadow:0 3px 8px rgba(0,0,0,.12); }
+.cta-button:hover,.menu-cta:hover{background:var(--brand-1-hover)}
+.cta-button:active,.menu-cta:active{transform:translateY(1px);box-shadow:0 3px 8px rgba(0,0,0,.12)}
 
 /* =========================================
-   Meta line ("Reviewed by…")
+   Meta line
 ========================================= */
-.meta{
-  max-width:900px; margin:0 auto 12px; color:#c9c9d6;
-}
-.meta strong{ color:#fff; }
+.meta{max-width:900px;margin:0 auto 12px;color:#c9c9d6}
+.meta strong{color:#fff}
 
 /* =========================================
-   FAQ accordion (moved from inline CSS)
+   FAQ
 ========================================= */
-.faq-list{ max-width:900px; margin:0 auto; }
-.faq-item{
-  border:1px solid #e2e8f0; border-radius:12px; margin:10px 0; background:#fff; overflow:hidden;
-}
-.faq-q{
-  width:100%; text-align:left; padding:14px 16px; border:0; background:#f7fafc;
-  font-weight:700; cursor:pointer; display:flex; justify-content:space-between; align-items:center;
-}
-.faq-q:focus{ outline:2px solid #4aa3e2; }
-.faq-a{ display:none; padding:14px 16px; background:#fff; color:#111; }
-.faq-item.open .faq-a{ display:block; }
-.faq-item.open .faq-q .toggle{ transform:rotate(180deg); }
-.toggle{ transition:transform .2s ease; }
+.faq-list{max-width:900px;margin:0 auto}
+.faq-item{border:1px solid #e2e8f0;border-radius:12px;margin:10px 0;background:#fff;overflow:hidden}
+.faq-q{width:100%;text-align:left;padding:14px 16px;border:0;background:#f7fafc;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q:focus{outline:2px solid #4aa3e2}
+.faq-a{display:none;padding:14px 16px;background:#fff;color:#111}
+.faq-item.open .faq-a{display:block}
+.faq-item.open .faq-q .toggle{transform:rotate(180deg)}
+.toggle{transition:transform .2s ease}
 
 /* =========================================
    Footer
 ========================================= */
-footer{
-  text-align:center; padding:25px 20px; background:var(--brand-deep);
-  color:#aaa; font-size:14px;
-}
-footer a{ color:#efe6ff; }
-footer a:hover{ color:#cdb7ff; }
+footer{text-align:center;padding:28px 20px;background:var(--brand-deep);color:#aaa;font-size:14px}
+footer a{color:#efe6ff}
+footer a:hover{color:#cdb7ff}
 
 /* =========================================
-   WhatsApp Floating Button (PDC theme)
+   WhatsApp Floating Button
 ========================================= */
 .whatsapp-float{
-  position:fixed; bottom:20px; right:20px; background:var(--brand-1); color:#fff;
-  padding:12px 16px; border-radius:30px; font-weight:700; font-size:14px; text-decoration:none;
-  z-index:9999; display:flex; align-items:center; box-shadow:0 4px 10px rgba(0,0,0,.3);
-  transition:background-color .3s ease;
+  position:fixed;bottom:20px;right:20px;background:var(--brand-1);color:#fff;
+  padding:12px 16px;border-radius:30px;font-weight:700;font-size:14px;text-decoration:none;
+  z-index:9999;display:flex;align-items:center;box-shadow:0 4px 10px rgba(0,0,0,.3);
+  transition:background-color .3s ease
 }
-.whatsapp-float:hover{ background:var(--brand-1-hover); }
-.whatsapp-float img{ width:20px; margin-right:10px; }
+.whatsapp-float:hover{background:var(--brand-1-hover)}
+.whatsapp-float img{width:20px;margin-right:10px}
 
 /* =========================================
    Responsive
 ========================================= */
-@media (max-width:1100px){
-  .top-bar{ padding:12px 16px; }
-}
-@media (max-width:900px){
-  .section{ margin:18px 12px; }
-}
 @media (max-width:800px){
-  .solutions-vertical{ grid-template-columns:1fr; }
+  .solutions-vertical{grid-template-columns:1fr}
 }
 @media (max-width:768px){
-  .section{ padding:25px 15px; margin:15px 10px; }
-  .dropdown-content{ width:90%; }
+  .section{padding:25px 15px;margin:15px 10px}
 }
-
-/* ===== Center everything ===== */
-body,
-.banner,
-.top-bar,
-.landing-hero,
-.container,
-.section,
-.meta,
-footer,
-.faq-list,
-.solution-vertical { 
-  text-align: center;
-}
-
-/* Center lists too (bullets kept inside) */
-.section ul,
-.section ol{
-  list-style-position: inside;
-  padding-left: 0;
-  margin-left: 0;
-  text-align: center;
-}
-
-/* ===== Make the banner taller (match debt feel) ===== */
-.banner{
-  padding: 28px 0;                 /* taller bar */
-  border-bottom: 1px solid rgba(255,255,255,.08);
-}
-.top-bar{
-  justify-content: center;         /* center logo + name */
-  padding: 20px 16px;              /* more vertical space */
-  gap: 14px;
-}
-.logo{ height: 56px; }             /* bigger logo */
-.site-name{ font-size: 22px; font-weight: 800; }
-
-/* ===== Make hero same colour as surrounding page ===== */
-.landing-hero{
-  background: var(--bg-dark);      /* same as page background (#222) */
-  box-shadow: none;                 /* remove inner highlight */
-  margin-bottom: 12px;
-  padding: clamp(36px, 7vw, 88px) 16px; /* a touch taller so it breathes */
-}
-.hero-title, .hero-sub, .hero-trust{ color:#fff; }  /* keep contrast */
-
-/* Keep the CTA readable on dark hero */
-.hero-cta{
-  background:#fff;
-  color:#0f4a74;
-}
-
-/* Optional: round the intro section top corners more like debt pages */
-#intro.section{ border-top-left-radius: 24px; border-top-right-radius: 24px; }
