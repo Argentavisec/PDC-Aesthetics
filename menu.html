@@ -1,17 +1,24 @@
 <div class="menu-wrapper">
-  <button class="menu-button" onclick="toggleDropdown()">Menu</button>
-  <div id="dropdown" class="dropdown-content">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="pricing.html">Our prices</a>
-    <a href="b12.html">B12 Injections</a>
-    <a href="lip-filler.html">Lip Filler</a>
-    <a href="fat-dissolving.html">Fat Dissolving</a>
-    <a href="botox.html">Botox</a>
-    <a href="microneedling.html">Microneedling</a>
-    <a href="dermaplaning.html">Dermaplaning</a>
-    <a href="skin-peel.html">Skin Peel</a>
-    <a href="skin-boosters.html">Skin Booster</a>
-    <a href="areas-we-cover.html">Areas We Cover</a>
-  </div>
+  <button id="menuButton"
+          class="menu-button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="menuPanel">
+    ☰ Menu
+  </button>
+
+  <nav id="menuPanel" class="dropdown-panel" role="menu">
+    <a role="menuitem" href="index.html">Home</a>
+    <a role="menuitem" href="about.html">About Us</a>
+    <a role="menuitem" href="pricing.html">Our Prices</a>
+    <a role="menuitem" href="b12.html">B12 Injections</a>
+    <a role="menuitem" href="lip-filler.html">Lip Filler</a>
+    <a role="menuitem" href="fat-dissolving.html">Fat Dissolving</a>
+    <a role="menuitem" href="botox.html">Botox</a>
+    <a role="menuitem" href="microneedling.html">Microneedling</a>
+    <a role="menuitem" href="dermaplaning.html">Dermaplaning</a>
+    <a role="menuitem" href="skin-peel.html">Skin Peel</a>
+    <a role="menuitem" href="skin-boosters.html">Skin Booster</a>
+    <a role="menuitem" href="areas-we-cover.html">Areas We Cover</a>
+  </nav>
 </div>

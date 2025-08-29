@@ -219,7 +219,8 @@
           <p>Quick intramuscular B12 as part of a holistic plan.</p>
           <h5>From £40*</h5>
           <a class="solution-link" href="https://www.pdcaesthetics.co.uk/b12.html">Read the B12 guide →</a>
-        </div>
+        </div>  
+
 
         <div class="solution-vertical">
           <h3>Fat-Dissolving Injections</h3>
@@ -389,26 +390,37 @@
   </script>
 
   <script>
-  fetch('menu.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('menu-placeholder').innerHTML = data;
+  (function(){
+    const btn = document.getElementById('menuButton');
+    const panel = document.getElementById('menuPanel');
 
-      window.toggleDropdown = function () {
-        const dropdown = document.getElementById("dropdown");
-        dropdown.classList.toggle("show");
-      };
+    function openPanel(){
+      panel.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    }
+    function closePanel(){
+      panel.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    }
+    function togglePanel(){
+      panel.classList.contains('open') ? closePanel() : openPanel();
+    }
 
-      window.addEventListener("click", function (e) {
-        const dropdown = document.getElementById("dropdown");
-        const button = document.querySelector(".menu-button");
-        if (!dropdown || !button) return;
-        if (!dropdown.contains(e.target) && !button.contains(e.target)) {
-          dropdown.classList.remove("show");
-        }
-      });
+    btn.addEventListener('click', togglePanel);
+
+    // Close on outside click
+    document.addEventListener('click', (e)=>{
+      if(!panel.contains(e.target) && !btn.contains(e.target)) closePanel();
     });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape') closePanel();
+    });
+  })();
 </script>
+
+
 
 </body>
 </html>
