@@ -7,8 +7,9 @@ img,video{max-width:100%;height:auto}
   --brand-1:#7b30ff;
   --brand-1-deep:#4b16d0;
   --brand-deep:#1a1136;
-  --bg:#000;               /* site background around sections (black) */
-  --ink:#111;
+  --bg:#000;               /* site background around sections */
+  --card:#efe6ff;          /* light purple cards */
+  --ink:#111;              /* black text inside sections */
   --hero-grad:linear-gradient(135deg,#5d2cff 0%,#7b30ff 50%,#491dc2 100%);
 }
 
@@ -65,7 +66,7 @@ h3{font-size:clamp(18px,3.4vw,24px);line-height:1.25;margin:.2em 0 .5em}
   .hero-inner{width:100%}
 }
 
-/* ===== Menu under hero (click to open) ===== */
+/* ===== Menu under hero ===== */
 .menu-wrapper{max-width:1100px;margin:14px auto 0;padding:0 16px;text-align:center}
 .menu-button{
   background:linear-gradient(180deg,var(--brand-1) 0%,var(--brand-1-deep) 100%);
@@ -77,7 +78,7 @@ h3{font-size:clamp(18px,3.4vw,24px);line-height:1.25;margin:.2em 0 .5em}
 .menu-button:hover{transform:translateY(-1px);filter:saturate(1.05)}
 .menu-button:focus-visible{outline:3px solid #fff;outline-offset:3px}
 
-/* Smooth push-down panel */
+/* Dropdown panel */
 .dropdown-panel{
   margin:10px auto 0;width:min(980px,94vw);
   background:var(--brand-deep);color:#fff;border:1px solid rgba(255,255,255,.12);
@@ -94,81 +95,80 @@ h3{font-size:clamp(18px,3.4vw,24px);line-height:1.25;margin:.2em 0 .5em}
   display:block;color:#fff;padding:8px 10px;font-size:15px;border-radius:10px;border:1px solid transparent
 }
 .dropdown-panel a:hover{background:#2a1a5a;border-color:#ffffff22}
-.dropdown-panel .menu-cta{
-  display:block;width:220px;margin:10px auto 14px;background:#dac4ff;color:#1a1136 !important;
-  font-weight:900;padding:10px 14px;border-radius:999px;box-shadow:0 6px 14px rgba(0,0,0,.25)
+
+/* ===== CTA buttons (match menu button & centered) ===== */
+.menu-cta{
+  display:inline-block;
+  margin:12px auto 0;                 /* center */
+  background:linear-gradient(180deg,var(--brand-1) 0%,var(--brand-1-deep) 100%);
+  color:#fff !important;
+  border:1px solid rgba(255,255,255,.18);
+  padding:12px 22px;
+  border-radius:999px;
+  font-weight:900;
+  letter-spacing:.2px;
+  text-decoration:none;
+  box-shadow:0 10px 18px rgba(123,48,255,.35);
+  transition:transform .08s ease,filter .12s ease,box-shadow .12s ease;
 }
-.dropdown-panel .menu-cta:hover{background:#cdb7ff}
+.menu-cta:hover{transform:translateY(-1px);filter:saturate(1.05)}
+.menu-cta:active{transform:translateY(0)}
+.menu-cta:focus-visible{outline:3px solid #fff;outline-offset:3px}
 
-@media (max-width:740px){ .menu-section{min-width:unset;width:calc(50% - 14px)} }
-@media (max-width:520px){ .menu-section{width:100%} }
+/* Make CTAs inside dropdown also match */
+.dropdown-panel .menu-cta{
+  margin:10px auto 14px;
+}
 
-/* ===== Content sections (match HERO gradient, white text) ===== */
+/* ===== Sections (light purple with black text) ===== */
 .container{max-width:900px;margin:0 auto;flex:1;padding:20px 16px}
 
 .section{
-  background:var(--hero-grad);            /* same look as hero */
-  color:#fff;                             /* white copy in each div */
+  background:var(--card);      /* light purple background */
+  color:var(--ink);            /* black text inside */
   border-radius:12px;
   padding:20px;
   margin:20px auto 0;
-  box-shadow:0 2px 10px rgba(0,0,0,.35);
-  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 2px 6px rgba(0,0,0,.25);
 }
 
-/* make links readable on the gradient */
-.section a{
-  color:#fff;
-  border-bottom:2px solid rgba(255,255,255,.35);
-  font-weight:700;
-}
-.section a:hover{border-bottom-color:#fff}
+/* Links inside sections */
+.section a{color:#5a1fe0;font-weight:700}
+.section a:hover{color:#3a1b86}
 
-/* Chips / TOC restyled for gradient */
+/* TOC chips */
 .toc{margin-top:16px}
 .toc ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:0}
 .toc a{
-  display:inline-block;
-  background:transparent;
-  border:1px solid rgba(255,255,255,.5);
-  color:#fff;
+  display:inline-block;background:#fff;border:1px solid #d9c9ff;color:#3a1b86;
   padding:8px 12px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14px
 }
-.toc a:hover{background:rgba(255,255,255,.12)}
+.toc a:hover{background:#f5efff}
 
-/* ===== Cards inside sections (slightly translucent on gradient) ===== */
+/* ===== Cards inside sections ===== */
 .solutions-vertical{display:flex;flex-direction:column;gap:16px}
 .solution-vertical{
-  background:rgba(0,0,0,.25);
-  color:#fff;
-  border:1px solid rgba(255,255,255,.18);
+  background:#fff;
+  color:#111;
+  border:1px solid #e5e7eb;
   border-radius:12px;padding:16px;
-  box-shadow:0 1px 3px rgba(0,0,0,.35);
-  backdrop-filter:saturate(1.1);
+  box-shadow:0 1px 3px rgba(0,0,0,.15)
 }
-.solution-vertical h3{margin-top:0;color:#fff}
-.solution-vertical h4{margin:4px 0 8px;color:#f2ecff}
-.solution-vertical h5{color:#fff;margin:8px 0 0}
+.solution-vertical h3{margin-top:0;color:#5a1fe0}
+.solution-vertical h4{margin:4px 0 8px;color:#3a1b86}
+.solution-vertical h5{color:#7b30ff;margin:8px 0 0}
 .solution-link{
-  display:inline-block;font-weight:bold;text-decoration:none;color:#fff;
-  border-bottom:2px solid rgba(255,255,255,.35);padding-bottom:2px
+  display:inline-block;font-weight:bold;text-decoration:none;color:#5a1fe0;
+  border-bottom:2px solid rgba(90,31,224,.25);padding-bottom:2px
 }
-.solution-link:hover{border-bottom-color:#fff}
+.solution-link:hover{border-bottom-color:rgba(90,31,224,.6)}
 
-/* ===== FAQ (translucent on gradient) ===== */
+/* ===== FAQ ===== */
 .faq-list{max-width:900px;margin:0 auto}
-.faq-item{
-  border:1px solid rgba(255,255,255,.18);
-  border-radius:12px;margin:10px 0;
-  background:rgba(0,0,0,.25);color:#fff;overflow:hidden
-}
-.faq-q{
-  width:100%;text-align:left;padding:14px 16px;border:0;
-  background:rgba(0,0,0,.35);color:#fff;font-weight:700;cursor:pointer;
-  display:flex;justify-content:space-between;align-items:center
-}
-.faq-q:focus{outline:3px solid rgba(255,255,255,.85)}
-.faq-a{display:none;padding:14px 16px;background:transparent;color:#fff}
+.faq-item{border:1px solid #e2e8f0;border-radius:12px;margin:10px 0;background:#fff;color:#111;overflow:hidden}
+.faq-q{width:100%;text-align:left;padding:14px 16px;border:0;background:#f7fafc;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q:focus{outline:3px solid var(--brand-1)}
+.faq-a{display:none;padding:14px 16px;background:#fff;color:#111}
 .faq-item.open .faq-a{display:block}
 .faq-item.open .faq-q .toggle{transform:rotate(180deg)}
 .toggle{transition:transform .2s ease}
@@ -184,7 +184,7 @@ footer{background:var(--brand-deep);color:#fff;text-align:center;padding:18px;fo
 }
 .whatsapp-button:hover{background:#6a21ef}
 
-/* ===== Responsive tweaks ===== */
+/* ===== Responsive ===== */
 @media (max-width:768px){
   .container{padding:18px 14px}
   .section{margin:16px auto 0;padding:18px}
