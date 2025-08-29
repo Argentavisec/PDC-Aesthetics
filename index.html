@@ -60,25 +60,99 @@
     ]
   }
   </script>
+
+  <!-- Inline critical CSS for the hero (kept minimal; full styles live in style.css) -->
+  <style>
+    .landing-hero{
+      background:linear-gradient(135deg,#5d2cff 0%,#7b30ff 50%,#491dc2 100%);
+      color:#fff;
+      text-align:center;
+      padding:60px 20px;
+      box-sizing:border-box;
+    }
+    .hero-inner{max-width:900px;margin:0 auto}
+    .hero-title{font-size:clamp(32px,5vw,44px);margin-bottom:15px}
+    .hero-sub{font-size:clamp(16px,3.5vw,20px);margin-bottom:25px}
+    .hero-cta{
+      display:inline-block;border:0;border-radius:999px;
+      padding:14px 28px;font-size:clamp(16px,3.5vw,20px);font-weight:800;
+      background:#fff;color:#2b1466;box-shadow:0 6px 0 rgba(0,0,0,.2);text-decoration:none
+    }
+    .hero-cta:hover{background:#f5f1ff}
+    .hero-cta:active{transform:translateY(2px);box-shadow:0 4px 0 rgba(0,0,0,.2)}
+    .hero-trust{margin-top:12px;font-size:14px;font-style:italic;opacity:.9}
+    @media (max-width:768px){
+      .landing-hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 20px}
+      .hero-inner{width:100%}
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- Banner -->
+  <!-- Header / Banner -->
   <div class="banner" role="banner">
     <div class="top-bar">
-      <img src="logo.png" alt="PDC Aesthetics logo" class="logo" />
+      <img src="logo.png" alt="PDC Aesthetics Logo" class="logo" />
       <div class="site-name">PDC Aesthetics</div>
+    </div>
+
+    <!-- Working Menu (same pattern as debt site) -->
+    <div style="text-align:center;margin-top:8px">
+      <button class="btn-menu" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
+    </div>
+
+    <div class="menu-content" id="menuContent" aria-label="Site navigation">
+      <div class="menu-sections">
+        <div class="menu-section">
+          <h4>About</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="pricing.html">Our Prices</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+
+        <div class="menu-section">
+          <h4>Treatments</h4>
+          <a href="botox.html">Anti-Wrinkle (Botox)</a>
+          <a href="lip-filler.html">Lip Filler</a>
+          <a href="microneedling.html">Microneedling</a>
+          <a href="dermaplaning.html">Dermaplaning</a>
+          <a href="skin-peel.html">Chemical Peels</a>
+          <a href="skin-boosters.html">Skin Boosters</a>
+          <a href="b12.html">B12 Injections</a>
+          <a href="fat-dissolving.html">Fat Dissolving</a>
+        </div>
+
+        <div class="menu-section">
+          <h4>Areas</h4>
+          <a href="mobile-aesthetics-stone.html">Stone (Home Visits)</a>
+          <a href="mobile-aesthetics-stafford.html">Stafford</a>
+          <a href="mobile-aesthetics-newcastle-under-lyme.html">Newcastle-under-Lyme</a>
+          <a href="areas-we-cover.html">All Areas We Cover</a>
+        </div>
+
+        <div class="menu-section">
+          <h4>Popular</h4>
+          <a href="botox.html#faq">Botox FAQs</a>
+          <a href="lip-filler.html#before-after">Before & After</a>
+          <a href="skin-boosters.html#profhilo">Profhilo</a>
+          <a href="microneedling.html#acne-scars">Acne Scars</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <a href="https://form.jotform.com/252145549960059" class="menu-cta">Book a Free Consultation</a>
     </div>
   </div>
 
-  <!-- HERO (same colour as page background) -->
+  <!-- HERO -->
   <section class="landing-hero" role="region" aria-label="Mobile aesthetic treatments in Stone">
     <div class="hero-inner">
       <div class="hero-copy">
         <h1 class="hero-title">Mobile Aesthetics in Stone, Staffordshire (Home Visits)</h1>
         <p class="hero-sub">
-          <strong>Nurse-led care:</strong> anti-wrinkle injections, lip fillers, microneedling, dermaplaning, chemical peels, skin boosters, B12 and fat-dissolving—delivered discreetly at home across Stone and nearby towns.
+          <strong>Nurse-led care:</strong> anti-wrinkle injections, lip fillers, microneedling, dermaplaning, chemical peels, skin boosters, B12 and fat-dissolving — delivered discreetly at home across Stone and nearby towns.
         </p>
         <a href="https://form.jotform.com/252145549960059" class="hero-cta" aria-label="Book a free consultation">✨ Book a Free Consultation</a>
         <div class="hero-trust">Discreet • Convenient • 29+ years’ clinical experience</div>
@@ -86,32 +160,11 @@
     </div>
   </section>
 
-  <!-- Optional: include your menu markup here if you use one -->
-  <div id="menu-placeholder"></div>
-  <script>
-    fetch("menu.html")
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("menu-placeholder").innerHTML = html;
-        const menu = document.getElementById("menuContent");
-        if (menu) menu.style.display = "none";
-      });
-    function toggleMenu(){
-      const menu = document.getElementById("menuContent");
-      if (menu) menu.style.display = (menu.style.display === "flex" ? "none" : "flex");
-    }
-    window.addEventListener("click", function(e) {
-      const menu = document.getElementById("menuContent");
-      const btn  = document.getElementById("menuButton");
-      if (menu && !menu.contains(e.target) && e.target !== btn) menu.style.display = "none";
-    });
-  </script>
-
   <!-- Main Content -->
   <div class="container">
 
     <!-- E-E-A-T / Freshness -->
-    <div class="meta small" aria-label="Page review and freshness">
+    <div class="section meta small" aria-label="Page review and freshness">
       <p><strong>Reviewed by:</strong> PDC Aesthetics clinical team • <span id="updated">Last updated</span></p>
       <script>
         const now = new Date();
@@ -125,7 +178,7 @@
       <h2>Mobile Aesthetic Nurse Near Stone</h2>
       <p><strong>Searching for “Botox near me”, “lip fillers Stone” or “mobile microneedling Staffordshire”?</strong> You’re in the right place. We deliver regulated, nurse-led treatments to your door with clear pricing, honest advice and premium aftercare.</p>
 
-      <a href="https://form.jotform.com/252145549960059" class="menu-cta cta-button">Start Your Journey</a>
+      <a href="https://form.jotform.com/252145549960059" class="menu-cta">Start Your Journey</a>
 
       <nav class="toc" aria-label="Table of contents">
         <ul>
@@ -139,36 +192,35 @@
       </nav>
     </div>
 
-<!-- Local SEO Areas -->
-<div class="section" id="areas">
-  <h2>Areas We Cover (≈20-mile Radius)</h2>
-  <p>
-    We provide discreet home visits in <strong>Stone</strong> and nearby towns including 
-    Stafford, Newcastle-under-Lyme, Stoke-on-Trent, Trentham, Barlaston, Eccleshall, Uttoxeter, 
-    Cheadle (Staffs), Blythe Bridge, Meir, Longton, Leek, Penkridge, Hixon, Gnosall, Madeley, 
-    Audley and Alsager.
-  </p>
-</div>
+    <!-- Local SEO Areas -->
+    <div class="section" id="areas">
+      <h2>Areas We Cover (≈20-mile Radius)</h2>
+      <p>
+        We provide discreet home visits in <strong>Stone</strong> and nearby towns including
+        Stafford, Newcastle-under-Lyme, Stoke-on-Trent, Trentham, Barlaston, Eccleshall, Uttoxeter,
+        Cheadle (Staffs), Blythe Bridge, Meir, Longton, Leek, Penkridge, Hixon, Gnosall, Madeley,
+        Audley and Alsager.
+      </p>
 
-
-      <h3>Common Local Services</h3>
-      <ul>
-        <li><strong>Botox Stone Staffordshire</strong>, <strong>lip filler Stone</strong>, <strong>mobile Botox near me</strong></li>
-        <li><strong>Microneedling Stone</strong>, <strong>dermaplaning at home</strong>, <strong>skin boosters Staffordshire</strong></li>
-      </ul>
-      <p><em>Evening and weekend appointments are available.</em></p>
+      <h3>Popular Local Searches</h3>
+      <p class="small">
+        People nearby often look for: <em>Botox Stone</em>, <em>anti-wrinkle injections Staffordshire</em>,
+        <em>lip filler near me</em>, <em>mobile microneedling Stone</em>, <em>dermaplaning at home</em>,
+        <em>skin boosters Stafford</em>, <em>Profhilo Stone</em>, <em>chin fat dissolving</em>, and
+        <em>nurse injector Stone</em>. Targeting these terms helps you find us fast.
+      </p>
     </div>
 
     <!-- Services -->
     <div class="section" id="services">
       <h2>Treatments & Prices (Nurse-Led)</h2>
-      <p class="small">Guide prices shown; confirmed after assessment. We use medical-grade products and evidence-based techniques.</p>
+      <p class="small">Guide prices shown; final pricing is confirmed after your clinical assessment. We use medical-grade products and evidence-based techniques.</p>
 
       <div class="solutions-vertical">
         <div class="solution-vertical">
           <h3>Anti-Wrinkle Injections</h3>
           <h4>Natural softening of frown lines, crow’s feet & forehead</h4>
-          <p>Precise dosing tailored to your goals—refreshed, not frozen.</p>
+          <p>Precise dosing tailored to your goals — refreshed, not frozen.</p>
           <h5>From £200*</h5>
           <a class="solution-link" href="botox.html">Read the Botox guide →</a>
         </div>
@@ -218,9 +270,8 @@
           <h4>Simple energy support</h4>
           <p>Quick intramuscular B12 as part of a holistic plan.</p>
           <h5>From £40*</h5>
-          <a class="solution-link" href="https://www.pdcaesthetics.co.uk/b12.html">Read the B12 guide →</a>
-        </div>  
-
+          <a class="solution-link" href="b12.html">Read the B12 guide →</a>
+        </div>
 
         <div class="solution-vertical">
           <h3>Fat-Dissolving Injections</h3>
@@ -232,7 +283,7 @@
       </div>
 
       <p class="small">*Guide prices. Your nurse confirms the exact cost after assessment.</p>
-      <a href="https://form.jotform.com/252145549960059" class="menu-cta cta-button">Book Your Home Visit</a>
+      <a href="https://form.jotform.com/252145549960059" class="menu-cta">Book Your Home Visit</a>
     </div>
 
     <!-- Bundles & Discounts -->
@@ -244,7 +295,7 @@
         <div class="solution-vertical">
           <h3>Glow Duo</h3>
           <h4>Dermaplaning + Chemical Peel</h4>
-          <p>Instant radiance plus deeper resurfacing—great before events.</p>
+          <p>Instant radiance plus deeper resurfacing — great before events.</p>
           <h5>Save ~10%</h5>
         </div>
 
@@ -258,7 +309,7 @@
         <div class="solution-vertical">
           <h3>Refresh & Define</h3>
           <h4>Anti-wrinkle (2 areas) + Lip Hydrate (0.5ml)</h4>
-          <p>Subtle softening with gentle lip rejuvenation—fresh, not overdone.</p>
+          <p>Subtle softening with gentle lip rejuvenation — fresh, not overdone.</p>
           <h5>Save ~10%</h5>
         </div>
 
@@ -277,7 +328,7 @@
         </div>
       </div>
 
-      <a href="https://form.jotform.com/252145549960059" class="menu-cta cta-button">Ask About Bundles</a>
+      <a href="https://form.jotform.com/252145549960059" class="menu-cta">Ask About Bundles</a>
     </div>
 
     <!-- Why Mobile -->
@@ -285,13 +336,13 @@
       <h2>Why Choose a Mobile Aesthetic Practitioner?</h2>
       <h3>Discreet • Flexible • Comfortable</h3>
       <ul>
-        <li><strong>Home comfort:</strong> no travel or waiting rooms—ideal for privacy and busy lives.</li>
+        <li><strong>Home comfort:</strong> no travel or waiting rooms — ideal for privacy and busy lives.</li>
         <li><strong>Nurse-led care:</strong> 29+ years’ clinical experience, sterile protocols and medical-grade products.</li>
         <li><strong>Personalised plans:</strong> subtle, natural-looking results guided by your anatomy and goals.</li>
         <li><strong>Clear aftercare:</strong> step-by-step instructions and follow-up support.</li>
       </ul>
       <p>New to aesthetics? We take a conservative, anatomy-led approach and build gradually. You’re always in control.</p>
-      <a href="https://form.jotform.com/252145549960059" class="menu-cta cta-button">Request a Home Appointment</a>
+      <a href="https://form.jotform.com/252145549960059" class="menu-cta">Request a Home Appointment</a>
     </div>
 
     <!-- Process -->
@@ -304,7 +355,7 @@
         <li><strong>Aftercare & Follow-Up</strong> — clear instructions and check-ins to support healing and results.</li>
       </ol>
       <p><em>Evening and weekend appointments available across Stone and nearby towns.</em></p>
-      <a href="https://form.jotform.com/252145549960059" class="menu-cta cta-button">Book Your Free Consultation</a>
+      <a href="https://form.jotform.com/252145549960059" class="menu-cta">Book Your Free Consultation</a>
     </div>
 
     <!-- FAQ -->
@@ -343,13 +394,13 @@
             <span>Do you offer bundles or group discounts?</span><span class="toggle">▾</span>
           </button>
           <div class="faq-a">
-            <p>Yes—see <a href="#bundles">Bundles & Group Discounts</a>. We can tailor packages for events, weddings or friendship groups at the same address.</p>
+            <p>Yes — see <a href="#bundles">Bundles & Group Discounts</a>. We can tailor packages for events, weddings or friendship groups at the same address.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
-            <span>I’m new to injectables—will it look natural?</span><span class="toggle">▾</span>
+            <span>I’m new to injectables — will it look natural?</span><span class="toggle">▾</span>
           </button>
           <div class="faq-a">
             <p>Our approach is conservative and anatomy-led. We aim for subtle, refreshed results and adjust gradually based on your feedback.</p>
@@ -357,7 +408,7 @@
         </div>
       </div>
 
-      <a href="https://form.jotform.com/252145549960059" class="menu-cta cta-button">Ask a Question</a>
+      <a href="https://form.jotform.com/252145549960059" class="menu-cta">Ask a Question</a>
     </div>
 
   </div><!-- /container -->
@@ -369,7 +420,7 @@
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/447368923639" class="whatsapp-button whatsapp-float" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+  <a href="https://wa.me/447368923639" class="whatsapp-button" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
 
   <!-- FAQ accordion script -->
   <script>
@@ -389,38 +440,22 @@
     });
   </script>
 
+  <!-- Menu toggle (same behavior as debt site) -->
   <script>
-  (function(){
-    const btn = document.getElementById('menuButton');
-    const panel = document.getElementById('menuPanel');
-
-    function openPanel(){
-      panel.classList.add('open');
-      btn.setAttribute('aria-expanded','true');
+    function toggleMenu(){
+      const menu = document.getElementById("menuContent");
+      if(!menu) return;
+      menu.style.display = (menu.style.display === "flex" ? "none" : "flex");
     }
-    function closePanel(){
-      panel.classList.remove('open');
-      btn.setAttribute('aria-expanded','false');
-    }
-    function togglePanel(){
-      panel.classList.contains('open') ? closePanel() : openPanel();
-    }
-
-    btn.addEventListener('click', togglePanel);
-
     // Close on outside click
-    document.addEventListener('click', (e)=>{
-      if(!panel.contains(e.target) && !btn.contains(e.target)) closePanel();
+    window.addEventListener("click",(e)=>{
+      const menu = document.getElementById("menuContent");
+      const btn = document.getElementById("menuButton");
+      if(!menu || !btn) return;
+      if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.style.display = "none";
+      }
     });
-
-    // Close on Escape
-    document.addEventListener('keydown', (e)=>{
-      if(e.key === 'Escape') closePanel();
-    });
-  })();
-</script>
-
-
-
+  </script>
 </body>
 </html>
