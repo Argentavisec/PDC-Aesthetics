@@ -2,13 +2,14 @@
 *,*::before,*::after{box-sizing:border-box}
 html,body{height:100%}
 img,video{max-width:100%;height:auto}
+
 :root{
   --brand-1:#7b30ff;
   --brand-1-deep:#4b16d0;
   --brand-deep:#1a1136;
-  --bg:#000;         /* page background (around cards) */
-  --card:#ffffff;    /* section cards background (white) */
-  --ink:#111;        /* text inside sections (black) */
+  --bg:#000;               /* site background around sections (black) */
+  --ink:#111;
+  --hero-grad:linear-gradient(135deg,#5d2cff 0%,#7b30ff 50%,#491dc2 100%);
 }
 
 body{
@@ -27,9 +28,9 @@ h1{font-size:clamp(28px,5.2vw,42px);line-height:1.15;margin:0 0 .4em}
 h2{font-size:clamp(22px,4.2vw,32px);line-height:1.2;margin:.2em 0 .5em}
 h3{font-size:clamp(18px,3.4vw,24px);line-height:1.25;margin:.2em 0 .5em}
 
-/* ===== Banner (BLACK) ===== */
+/* ===== Banner (BLACK with white text) ===== */
 .banner{
-  background:#000;     /* black bar */
+  background:#000;
   color:#fff;
   padding:14px 16px 10px;
   text-align:center;
@@ -40,7 +41,7 @@ h3{font-size:clamp(18px,3.4vw,24px);line-height:1.25;margin:.2em 0 .5em}
 
 /* ===== Hero (purple, white text) ===== */
 .landing-hero{
-  background:linear-gradient(135deg,#5d2cff 0%,#7b30ff 50%,#491dc2 100%);
+  background:var(--hero-grad);
   color:#fff;text-align:center;
   padding:clamp(28px,6vw,72px) 16px;
 }
@@ -102,50 +103,80 @@ h3{font-size:clamp(18px,3.4vw,24px);line-height:1.25;margin:.2em 0 .5em}
 @media (max-width:740px){ .menu-section{min-width:unset;width:calc(50% - 14px)} }
 @media (max-width:520px){ .menu-section{width:100%} }
 
-/* ===== Content cards (WHITE with BLACK text) ===== */
+/* ===== Content sections (match HERO gradient, white text) ===== */
 .container{max-width:900px;margin:0 auto;flex:1;padding:20px 16px}
+
 .section{
-  background:var(--card);  /* white */
-  color:var(--ink);        /* black text in each div */
-  border-radius:12px;padding:20px;margin:20px auto 0;
-  box-shadow:0 2px 6px rgba(0,0,0,.22)
+  background:var(--hero-grad);            /* same look as hero */
+  color:#fff;                             /* white copy in each div */
+  border-radius:12px;
+  padding:20px;
+  margin:20px auto 0;
+  box-shadow:0 2px 10px rgba(0,0,0,.35);
+  border:1px solid rgba(255,255,255,.12);
 }
 
-/* Chips / TOC */
+/* make links readable on the gradient */
+.section a{
+  color:#fff;
+  border-bottom:2px solid rgba(255,255,255,.35);
+  font-weight:700;
+}
+.section a:hover{border-bottom-color:#fff}
+
+/* Chips / TOC restyled for gradient */
 .toc{margin-top:16px}
 .toc ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:0}
 .toc a{
-  display:inline-block;background:#fff;border:1px solid #d9c9ff;color:#3a1b86;
+  display:inline-block;
+  background:transparent;
+  border:1px solid rgba(255,255,255,.5);
+  color:#fff;
   padding:8px 12px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14px
 }
-.toc a:hover{background:#f5efff}
+.toc a:hover{background:rgba(255,255,255,.12)}
 
-/* Service / bundle cards (still dark for contrast if you like; keep text readable) */
+/* ===== Cards inside sections (slightly translucent on gradient) ===== */
 .solutions-vertical{display:flex;flex-direction:column;gap:16px}
 .solution-vertical{
-  background:#0f0f14;color:#eee;border:1px solid #2a2250;border-radius:12px;padding:16px;
-  box-shadow:0 1px 3px rgba(0,0,0,.35)
+  background:rgba(0,0,0,.25);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:12px;padding:16px;
+  box-shadow:0 1px 3px rgba(0,0,0,.35);
+  backdrop-filter:saturate(1.1);
 }
-.solution-vertical h3{margin-top:0;color:#cdb7ff}
-.solution-vertical h4{margin:4px 0 8px;color:#dac4ff}
-.solution-vertical h5{color:#b08cff;margin:8px 0 0}
-.solution-link{display:inline-block;font-weight:bold;text-decoration:none;color:#cdb7ff;border-bottom:2px solid rgba(205,183,255,.35);padding-bottom:2px}
-.solution-link:hover{border-bottom-color:rgba(205,183,255,.7)}
+.solution-vertical h3{margin-top:0;color:#fff}
+.solution-vertical h4{margin:4px 0 8px;color:#f2ecff}
+.solution-vertical h5{color:#fff;margin:8px 0 0}
+.solution-link{
+  display:inline-block;font-weight:bold;text-decoration:none;color:#fff;
+  border-bottom:2px solid rgba(255,255,255,.35);padding-bottom:2px
+}
+.solution-link:hover{border-bottom-color:#fff}
 
-/* FAQ (dark panels) */
+/* ===== FAQ (translucent on gradient) ===== */
 .faq-list{max-width:900px;margin:0 auto}
-.faq-item{border:1px solid #2a2250;border-radius:12px;margin:10px 0;background:#0f0f14;color:#eee;overflow:hidden}
-.faq-q{width:100%;text-align:left;padding:14px 16px;border:0;background:#151526;color:#fff;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
-.faq-q:focus{outline:3px solid var(--brand-1)}
-.faq-a{display:none;padding:14px 16px;background:#0f0f14;color:#eee}
+.faq-item{
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:12px;margin:10px 0;
+  background:rgba(0,0,0,.25);color:#fff;overflow:hidden
+}
+.faq-q{
+  width:100%;text-align:left;padding:14px 16px;border:0;
+  background:rgba(0,0,0,.35);color:#fff;font-weight:700;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center
+}
+.faq-q:focus{outline:3px solid rgba(255,255,255,.85)}
+.faq-a{display:none;padding:14px 16px;background:transparent;color:#fff}
 .faq-item.open .faq-a{display:block}
 .faq-item.open .faq-q .toggle{transform:rotate(180deg)}
 .toggle{transition:transform .2s ease}
 
-/* Footer */
+/* ===== Footer ===== */
 footer{background:var(--brand-deep);color:#fff;text-align:center;padding:18px;font-size:14px}
 
-/* WhatsApp Floating Button */
+/* ===== WhatsApp Floating Button ===== */
 .whatsapp-button{
   position:fixed;right:20px;bottom:20px;background:var(--brand-1);color:#fff;font-weight:700;
   padding:12px 16px;border-radius:50px;font-size:16px;z-index:999;text-decoration:none;
@@ -153,7 +184,7 @@ footer{background:var(--brand-deep);color:#fff;text-align:center;padding:18px;fo
 }
 .whatsapp-button:hover{background:#6a21ef}
 
-/* Responsive tweaks */
+/* ===== Responsive tweaks ===== */
 @media (max-width:768px){
   .container{padding:18px 14px}
   .section{margin:16px auto 0;padding:18px}
