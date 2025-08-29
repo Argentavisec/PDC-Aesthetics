@@ -60,50 +60,26 @@
     ]
   }
   </script>
-
-  <!-- Inline critical CSS for the hero (kept minimal; full styles live in style.css) -->
-  <style>
-    .landing-hero{
-      background:linear-gradient(135deg,#5d2cff 0%,#7b30ff 50%,#491dc2 100%);
-      color:#fff;
-      text-align:center;
-      padding:60px 20px;
-      box-sizing:border-box;
-    }
-    .hero-inner{max-width:900px;margin:0 auto}
-    .hero-title{font-size:clamp(32px,5vw,44px);margin-bottom:15px}
-    .hero-sub{font-size:clamp(16px,3.5vw,20px);margin-bottom:25px}
-    .hero-cta{
-      display:inline-block;border:0;border-radius:999px;
-      padding:14px 28px;font-size:clamp(16px,3.5vw,20px);font-weight:800;
-      background:#fff;color:#2b1466;box-shadow:0 6px 0 rgba(0,0,0,.2);text-decoration:none
-    }
-    .hero-cta:hover{background:#f5f1ff}
-    .hero-cta:active{transform:translateY(2px);box-shadow:0 4px 0 rgba(0,0,0,.2)}
-    .hero-trust{margin-top:12px;font-size:14px;font-style:italic;opacity:.9}
-    @media (max-width:768px){
-      .landing-hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 20px}
-      .hero-inner{width:100%}
-    }
-  </style>
 </head>
 
 <body>
 
-  <!-- Header / Banner -->
+  <!-- Header / Banner (BLACK with white text) -->
   <div class="banner" role="banner">
     <div class="top-bar">
-      <img src="logo.png" alt="PDC Aesthetics Logo" class="logo" />
+      <img src="logo.png" alt="PDC Aesthetics logo" class="logo" />
       <div class="site-name">PDC Aesthetics</div>
     </div>
+  </div>
 
-  <!-- HERO -->
+  <!-- HERO (purple, white text) -->
   <section class="landing-hero" role="region" aria-label="Mobile aesthetic treatments in Stone">
     <div class="hero-inner">
       <div class="hero-copy">
         <h1 class="hero-title">Mobile Aesthetics in Stone, Staffordshire (Home Visits)</h1>
         <p class="hero-sub">
-          <strong>Nurse-led care:</strong> anti-wrinkle injections, lip fillers, microneedling, dermaplaning, chemical peels, skin boosters, B12 and fat-dissolving — delivered discreetly at home across Stone and nearby towns.
+          <strong>Nurse-led care:</strong> anti-wrinkle injections, lip fillers, microneedling, dermaplaning,
+          chemical peels, skin boosters, B12 and fat-dissolving — delivered discreetly at home across Stone and nearby towns.
         </p>
         <a href="https://form.jotform.com/252145549960059" class="hero-cta" aria-label="Book a free consultation">✨ Book a Free Consultation</a>
         <div class="hero-trust">Discreet • Convenient • 29+ years’ clinical experience</div>
@@ -111,61 +87,57 @@
     </div>
   </section>
 
-  <!-- Inline Menu (sits directly under the hero) -->
-<div class="menu-wrapper" id="site-menu">
-  <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="dropdown">
-    ☰ Menu
-  </button>
+  <!-- MENU UNDER HERO (click to open) -->
+  <div class="menu-wrapper" id="site-menu">
+    <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="dropdown">☰ Menu</button>
 
-  <div class="dropdown-panel" id="dropdown" aria-hidden="true" role="region" aria-label="Site navigation">
-    <div class="menu-sections">
-      <div class="menu-section">
-        <h4>About</h4>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="pricing.html">Our Prices</a>
-        <a href="privacy.html">Privacy Policy</a>
+    <nav class="dropdown-panel" id="dropdown" aria-hidden="true" role="region" aria-label="Site navigation">
+      <div class="menu-sections">
+        <div class="menu-section">
+          <h4>About</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="pricing.html">Our Prices</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+
+        <div class="menu-section">
+          <h4>Treatments</h4>
+          <a href="botox.html">Anti-Wrinkle (Botox)</a>
+          <a href="lip-filler.html">Lip Filler</a>
+          <a href="microneedling.html">Microneedling</a>
+          <a href="dermaplaning.html">Dermaplaning</a>
+          <a href="skin-peel.html">Chemical Peels</a>
+          <a href="skin-boosters.html">Skin Boosters</a>
+          <a href="b12.html">B12 Injections</a>
+          <a href="fat-dissolving.html">Fat Dissolving</a>
+        </div>
+
+        <div class="menu-section">
+          <h4>Areas</h4>
+          <a href="mobile-aesthetics-stone.html">Stone (Home Visits)</a>
+          <a href="mobile-aesthetics-stafford.html">Stafford</a>
+          <a href="mobile-aesthetics-newcastle-under-lyme.html">Newcastle-under-Lyme</a>
+          <a href="areas-we-cover.html">All Areas We Cover</a>
+        </div>
+
+        <div class="menu-section">
+          <h4>Popular</h4>
+          <a href="botox.html#faq">Botox FAQs</a>
+          <a href="lip-filler.html#before-after">Before & After</a>
+          <a href="skin-boosters.html#profhilo">Profhilo</a>
+          <a href="microneedling.html#acne-scars">Acne Scars</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
 
-      <div class="menu-section">
-        <h4>Treatments</h4>
-        <a href="botox.html">Anti-Wrinkle (Botox)</a>
-        <a href="lip-filler.html">Lip Filler</a>
-        <a href="microneedling.html">Microneedling</a>
-        <a href="dermaplaning.html">Dermaplaning</a>
-        <a href="skin-peel.html">Chemical Peels</a>
-        <a href="skin-boosters.html">Skin Boosters</a>
-        <a href="b12.html">B12 Injections</a>
-        <a href="fat-dissolving.html">Fat Dissolving</a>
-      </div>
-
-      <div class="menu-section">
-        <h4>Areas</h4>
-        <a href="mobile-aesthetics-stone.html">Stone (Home Visits)</a>
-        <a href="mobile-aesthetics-stafford.html">Stafford</a>
-        <a href="mobile-aesthetics-newcastle-under-lyme.html">Newcastle-under-Lyme</a>
-        <a href="areas-we-cover.html">All Areas We Cover</a>
-      </div>
-
-      <div class="menu-section">
-        <h4>Popular</h4>
-        <a href="botox.html#faq">Botox FAQs</a>
-        <a href="lip-filler.html#before-after">Before & After</a>
-        <a href="skin-boosters.html#profhilo">Profhilo</a>
-        <a href="microneedling.html#acne-scars">Acne Scars</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-
-    <a href="https://form.jotform.com/252145549960059" class="menu-cta">Book a Free Consultation</a>
+      <a href="https://form.jotform.com/252145549960059" class="menu-cta">Book a Free Consultation</a>
+    </nav>
   </div>
-</div>
 
-
-  <!-- Main Content -->
+  <!-- Main Content (white cards with black text; page background stays black) -->
   <div class="container">
 
-    <!-- E-E-A-T / Freshness -->
     <div class="section meta small" aria-label="Page review and freshness">
       <p><strong>Reviewed by:</strong> PDC Aesthetics clinical team • <span id="updated">Last updated</span></p>
       <script>
@@ -175,11 +147,11 @@
       </script>
     </div>
 
-    <!-- Intro + TOC -->
     <div class="section" id="intro">
       <h2>Mobile Aesthetic Nurse Near Stone</h2>
-      <p><strong>Searching for “Botox near me”, “lip fillers Stone” or “mobile microneedling Staffordshire”?</strong> You’re in the right place. We deliver regulated, nurse-led treatments to your door with clear pricing, honest advice and premium aftercare.</p>
-
+      <p><strong>Searching for “Botox near me”, “lip fillers Stone” or “mobile microneedling Staffordshire”?</strong>
+        You’re in the right place. We deliver regulated, nurse-led treatments to your door with clear pricing,
+        honest advice and premium aftercare.</p>
       <a href="https://form.jotform.com/252145549960059" class="menu-cta">Start Your Journey</a>
 
       <nav class="toc" aria-label="Table of contents">
@@ -194,26 +166,20 @@
       </nav>
     </div>
 
-    <!-- Local SEO Areas -->
     <div class="section" id="areas">
       <h2>Areas We Cover (≈20-mile Radius)</h2>
-      <p>
-        We provide discreet home visits in <strong>Stone</strong> and nearby towns including
+      <p>We provide discreet home visits in <strong>Stone</strong> and nearby towns including
         Stafford, Newcastle-under-Lyme, Stoke-on-Trent, Trentham, Barlaston, Eccleshall, Uttoxeter,
         Cheadle (Staffs), Blythe Bridge, Meir, Longton, Leek, Penkridge, Hixon, Gnosall, Madeley,
-        Audley and Alsager.
-      </p>
+        Audley and Alsager.</p>
 
       <h3>Popular Local Searches</h3>
-      <p class="small">
-        People nearby often look for: <em>Botox Stone</em>, <em>anti-wrinkle injections Staffordshire</em>,
+      <p class="small">People nearby often look for: <em>Botox Stone</em>, <em>anti-wrinkle injections Staffordshire</em>,
         <em>lip filler near me</em>, <em>mobile microneedling Stone</em>, <em>dermaplaning at home</em>,
         <em>skin boosters Stafford</em>, <em>Profhilo Stone</em>, <em>chin fat dissolving</em>, and
-        <em>nurse injector Stone</em>. Targeting these terms helps you find us fast.
-      </p>
+        <em>nurse injector Stone</em>.</p>
     </div>
 
-    <!-- Services -->
     <div class="section" id="services">
       <h2>Treatments & Prices (Nurse-Led)</h2>
       <p class="small">Guide prices shown; final pricing is confirmed after your clinical assessment. We use medical-grade products and evidence-based techniques.</p>
@@ -288,7 +254,6 @@
       <a href="https://form.jotform.com/252145549960059" class="menu-cta">Book Your Home Visit</a>
     </div>
 
-    <!-- Bundles & Discounts -->
     <div class="section" id="bundles">
       <h2>Bundles & Group Discounts</h2>
       <p>Combine complementary services for value and enhanced results. Ask about limited-time promotions.</p>
@@ -333,7 +298,6 @@
       <a href="https://form.jotform.com/252145549960059" class="menu-cta">Ask About Bundles</a>
     </div>
 
-    <!-- Why Mobile -->
     <div class="section" id="benefits">
       <h2>Why Choose a Mobile Aesthetic Practitioner?</h2>
       <h3>Discreet • Flexible • Comfortable</h3>
@@ -347,7 +311,6 @@
       <a href="https://form.jotform.com/252145549960059" class="menu-cta">Request a Home Appointment</a>
     </div>
 
-    <!-- Process -->
     <div class="section" id="process">
       <h2>What to Expect</h2>
       <ol>
@@ -360,7 +323,6 @@
       <a href="https://form.jotform.com/252145549960059" class="menu-cta">Book Your Free Consultation</a>
     </div>
 
-    <!-- FAQ -->
     <div class="section" id="faq">
       <h2>FAQs</h2>
       <div class="faq-list" role="region" aria-label="Frequently asked questions">
@@ -369,7 +331,8 @@
             <span>Is a home visit as safe as a clinic?</span><span class="toggle">▾</span>
           </button>
           <div class="faq-a">
-            <p>Yes. As a qualified nurse with <strong>29+ years</strong> of clinical experience, we follow strict standards: sterile equipment, PPE, medical-grade products and comprehensive aftercare.</p>
+            <p>Yes. As a qualified nurse with <strong>29+ years</strong> of clinical experience, we follow strict standards:
+              sterile equipment, PPE, medical-grade products and comprehensive aftercare.</p>
           </div>
         </div>
 
@@ -378,7 +341,9 @@
             <span>Do you cover my area near Stone?</span><span class="toggle">▾</span>
           </button>
           <div class="faq-a">
-            <p>We cover Stone and towns within ~20 miles, including Stafford, Stoke-on-Trent, Newcastle-under-Lyme, Trentham, Barlaston, Eccleshall, Uttoxeter, Cheadle (Staffs), Blythe Bridge, Meir, Longton, Leek, Penkridge, Hixon, Gnosall, Madeley, Audley and Alsager.</p>
+            <p>We cover Stone and towns within ~20 miles, including Stafford, Stoke-on-Trent, Newcastle-under-Lyme,
+              Trentham, Barlaston, Eccleshall, Uttoxeter, Cheadle (Staffs), Blythe Bridge, Meir, Longton, Leek,
+              Penkridge, Hixon, Gnosall, Madeley, Audley and Alsager.</p>
           </div>
         </div>
 
@@ -387,7 +352,9 @@
             <span>What treatments do you offer and how much do they cost?</span><span class="toggle">▾</span>
           </button>
           <div class="faq-a">
-            <p>Anti-wrinkle (from £200), lip fillers (from £150), microneedling (from £120), dermaplaning (from £25), chemical peels (from £70), skin boosters (from £150), B12 injections (from £40) and fat dissolving (from £125). Final pricing is confirmed after consultation.</p>
+            <p>Anti-wrinkle (from £200), lip fillers (from £150), microneedling (from £120),
+              dermaplaning (from £25), chemical peels (from £70), skin boosters (from £150),
+              B12 injections (from £40) and fat dissolving (from £125). Final pricing is confirmed after consultation.</p>
           </div>
         </div>
 
@@ -396,7 +363,8 @@
             <span>Do you offer bundles or group discounts?</span><span class="toggle">▾</span>
           </button>
           <div class="faq-a">
-            <p>Yes — see <a href="#bundles">Bundles & Group Discounts</a>. We can tailor packages for events, weddings or friendship groups at the same address.</p>
+            <p>Yes — see <a href="#bundles">Bundles & Group Discounts</a>. We can tailor packages for events,
+              weddings or friendship groups at the same address.</p>
           </div>
         </div>
 
@@ -405,7 +373,8 @@
             <span>I’m new to injectables — will it look natural?</span><span class="toggle">▾</span>
           </button>
           <div class="faq-a">
-            <p>Our approach is conservative and anatomy-led. We aim for subtle, refreshed results and adjust gradually based on your feedback.</p>
+            <p>Our approach is conservative and anatomy-led. We aim for subtle, refreshed results and adjust gradually
+              based on your feedback.</p>
           </div>
         </div>
       </div>
@@ -424,7 +393,7 @@
   <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/447368923639" class="whatsapp-button" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
 
-  <!-- FAQ accordion script -->
+  <!-- FAQ accordion -->
   <script>
     document.querySelectorAll('.faq-q').forEach(btn=>{
       btn.addEventListener('click', ()=>{
@@ -438,57 +407,34 @@
           item.classList.add('open');
           btn.setAttribute('aria-expanded','true');
         }
-      })
+      });
     });
   </script>
 
-  <!-- Menu toggle (same behavior as debt site) -->
+  <!-- Menu toggle (click to open, closes on outside/Escape) -->
   <script>
-    function toggleMenu(){
-      const menu = document.getElementById("menuContent");
-      if(!menu) return;
-      menu.style.display = (menu.style.display === "flex" ? "none" : "flex");
-    }
-    // Close on outside click
-    window.addEventListener("click",(e)=>{
-      const menu = document.getElementById("menuContent");
-      const btn = document.getElementById("menuButton");
-      if(!menu || !btn) return;
-      if (!menu.contains(e.target) && !btn.contains(e.target)) {
-        menu.style.display = "none";
+    (function(){
+      const btn   = document.getElementById('menuButton');
+      const panel = document.getElementById('dropdown');
+      if(!btn || !panel) return;
+
+      function openPanel(){
+        panel.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        panel.setAttribute('aria-hidden','false');
       }
-    });
+      function closePanel(){
+        panel.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+        panel.setAttribute('aria-hidden','true');
+      }
+      function togglePanel(){ panel.classList.contains('open') ? closePanel() : openPanel(); }
+
+      btn.addEventListener('click', (e)=>{ e.stopPropagation(); togglePanel(); });
+      panel.addEventListener('click', (e)=> e.stopPropagation());
+      document.addEventListener('click', closePanel);
+      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closePanel(); });
+    })();
   </script>
-
-  <script>
-  (function(){
-    const btn   = document.getElementById('menuButton');
-    const panel = document.getElementById('dropdown');
-
-    if(!btn || !panel) return;
-
-    function openPanel(){
-      panel.classList.add('open');
-      btn.setAttribute('aria-expanded','true');
-      panel.setAttribute('aria-hidden','false');
-    }
-    function closePanel(){
-      panel.classList.remove('open');
-      btn.setAttribute('aria-expanded','false');
-      panel.setAttribute('aria-hidden','true');
-    }
-    function togglePanel(){
-      panel.classList.contains('open') ? closePanel() : openPanel();
-    }
-
-    btn.addEventListener('click', (e)=>{ e.stopPropagation(); togglePanel(); });
-    panel.addEventListener('click', (e)=> e.stopPropagation());
-
-    // Close on outside click or Escape
-    document.addEventListener('click', closePanel);
-    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closePanel(); });
-  })();
-</script>
-
 </body>
 </html>
