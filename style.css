@@ -262,3 +262,57 @@ footer a:hover{ color:#cdb7ff; }
   .section{ padding:25px 15px; margin:15px 10px; }
   .dropdown-content{ width:90%; }
 }
+
+/* ===== Center everything ===== */
+body,
+.banner,
+.top-bar,
+.landing-hero,
+.container,
+.section,
+.meta,
+footer,
+.faq-list,
+.solution-vertical { 
+  text-align: center;
+}
+
+/* Center lists too (bullets kept inside) */
+.section ul,
+.section ol{
+  list-style-position: inside;
+  padding-left: 0;
+  margin-left: 0;
+  text-align: center;
+}
+
+/* ===== Make the banner taller (match debt feel) ===== */
+.banner{
+  padding: 28px 0;                 /* taller bar */
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.top-bar{
+  justify-content: center;         /* center logo + name */
+  padding: 20px 16px;              /* more vertical space */
+  gap: 14px;
+}
+.logo{ height: 56px; }             /* bigger logo */
+.site-name{ font-size: 22px; font-weight: 800; }
+
+/* ===== Make hero same colour as surrounding page ===== */
+.landing-hero{
+  background: var(--bg-dark);      /* same as page background (#222) */
+  box-shadow: none;                 /* remove inner highlight */
+  margin-bottom: 12px;
+  padding: clamp(36px, 7vw, 88px) 16px; /* a touch taller so it breathes */
+}
+.hero-title, .hero-sub, .hero-trust{ color:#fff; }  /* keep contrast */
+
+/* Keep the CTA readable on dark hero */
+.hero-cta{
+  background:#fff;
+  color:#0f4a74;
+}
+
+/* Optional: round the intro section top corners more like debt pages */
+#intro.section{ border-top-left-radius: 24px; border-top-right-radius: 24px; }
