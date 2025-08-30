@@ -29,13 +29,14 @@
     gtag('config', 'G-0PJ0YPPJST');
   </script>
 
-  <!-- Structured Data: single graph with ONE FAQPage (fixes duplication) -->
+  <!-- Structured Data: ONE FAQPage + unique @id anchors (prevents duplication) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Organization",
+        "@id": "https://www.pdcaesthetics.co.uk/#org",
         "name": "PDC Aesthetics",
         "url": "https://www.pdcaesthetics.co.uk/",
         "logo": "https://www.pdcaesthetics.co.uk/logo.png",
@@ -43,6 +44,7 @@
       },
       {
         "@type": "BreadcrumbList",
+        "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#breadcrumbs",
         "itemListElement": [
           {"@type": "ListItem","position": 1,"name": "Home","item": "https://www.pdcaesthetics.co.uk/index.html"},
           {"@type": "ListItem","position": 2,"name": "Mobile Aesthetics Stone","item": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html"}
@@ -50,51 +52,128 @@
       },
       {
         "@type": "FAQPage",
+        "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#faqpage",
         "name": "PDC Aesthetics FAQs (Stone, ST15)",
         "mainEntity": [
           {
             "@type": "Question",
+            "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#q-areas",
             "name": "Do you cover my area around Stone?",
-            "acceptedAnswer": {"@type": "Answer","text": "Yes. We cover Stone and towns within ~20 miles including Stafford, Stoke-on-Trent, Newcastle-under-Lyme, Trentham, Barlaston, Eccleshall, Uttoxeter, Cheadle (Staffs), Blythe Bridge, Meir, Longton, Leek, Penkridge, Hixon, Gnosall, Madeley, Audley and Alsager."}
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We cover Stone and towns within ~20 miles including Stafford, Stoke-on-Trent, Newcastle-under-Lyme, Trentham, Barlaston, Eccleshall, Uttoxeter, Cheadle (Staffs), Blythe Bridge, Meir, Longton, Leek, Penkridge, Hixon, Gnosall, Madeley, Audley and Alsager."
+            }
           },
           {
             "@type": "Question",
+            "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#q-safety",
             "name": "Is a home visit as safe as a clinic?",
-            "acceptedAnswer": {"@type": "Answer","text": "Treatments are performed by a qualified nurse using sterile protocols, medical-grade products and clear aftercare. Suitability for home visits is assessed case-by-case."}
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Treatments are performed by a qualified nurse using sterile protocols, medical-grade products and clear aftercare. Suitability for home visits is assessed case-by-case."
+            }
           },
           {
             "@type": "Question",
+            "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#q-prices",
             "name": "What treatments do you offer and how much do they cost?",
-            "acceptedAnswer": {"@type": "Answer","text": "Guide prices: anti-wrinkle from £200; lip fillers from £150; microneedling from £120; dermaplaning from £25; chemical peels from £70; skin boosters from £150; B12 from £40; fat-dissolving from £125. Final pricing is confirmed after consultation."}
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Guide prices: anti-wrinkle from £200; lip fillers from £150; microneedling from £120; dermaplaning from £25; chemical peels from £70; skin boosters from £150; B12 from £40; fat-dissolving from £125. Final pricing is confirmed after consultation."
+            }
           },
           {
             "@type": "Question",
+            "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#q-bundles",
             "name": "Do you offer discounts or bundles?",
-            "acceptedAnswer": {"@type": "Answer","text": "Yes. Glow Duo, Collagen Boost Plan, Refresh & Define, Contour Focus, Friends & Family, Lip Filler Packages, Wedding Glow, Birthday Refresh and Holiday-Ready bundles are available."}
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Glow Duo, Collagen Boost Plan, Refresh & Define, Contour Focus, Friends & Family, Lip Filler Packages, Wedding Glow, Birthday Refresh and Holiday-Ready bundles are available."
+            }
           },
-
-          { "@type": "Question","name": "How long do anti-wrinkle injections last?","acceptedAnswer": {"@type": "Answer","text": "Most people see results last around 3–4 months, with best results visible ~2 weeks after treatment."}},
-          { "@type": "Question","name": "Which areas can be treated with anti-wrinkle injections?","acceptedAnswer": {"@type": "Answer","text": "Forehead lines, glabella (frown), crow’s feet, bunny lines and lip flip. Dosing is tailored conservatively."}},
-          { "@type": "Question","name": "Do you offer reviews or top-ups?","acceptedAnswer": {"@type": "Answer","text": "Yes. We typically review at around 2 weeks and can adjust safely if appropriate."}},
-
-          { "@type": "Question","name": "Should I choose 0.5ml or 1ml lip filler?","acceptedAnswer": {"@type": "Answer","text": "If you’re new or want a subtle change, 0.5ml is common. For more definition or hydration, 1ml may be advised. We match product and volume to your anatomy and goals."}},
-          { "@type": "Question","name": "How long do lip fillers last?","acceptedAnswer": {"@type": "Answer","text": "Typically 6–12 months depending on product and metabolism."}},
-          { "@type": "Question","name": "What should I do after lip filler?","acceptedAnswer": {"@type": "Answer","text": "Expect temporary swelling/tenderness for 24–72 hours. Avoid heavy exercise, alcohol and extreme heat for 24 hours; follow your nurse’s aftercare."}},
-
-          { "@type": "Question","name": "How many skin booster sessions do I need?","acceptedAnswer": {"@type": "Answer","text": "Most plans include two initial sessions 4 weeks apart with maintenance as advised."}},
-          { "@type": "Question","name": "Where can skin boosters be used?","acceptedAnswer": {"@type": "Answer","text": "Face, neck and hands to support hydration, elasticity and glow."}},
-
-          { "@type": "Question","name": "How many fat-dissolving sessions will I need?","acceptedAnswer": {"@type": "Answer","text": "Typically 2–4 sessions depending on the area and goal, spaced a few weeks apart."}},
-          { "@type": "Question","name": "Which areas respond well to fat-dissolving?","acceptedAnswer": {"@type": "Answer","text": "Common sites include the submental area (double chin), abdomen and upper arms for small, stubborn pockets."}},
-
-          { "@type": "Question","name": "How many microneedling sessions do I need for acne scars?","acceptedAnswer": {"@type": "Answer","text": "A course of 3–6 sessions spaced 4–6 weeks apart is typical."}},
-          { "@type": "Question","name": "Is there downtime after microneedling?","acceptedAnswer": {"@type": "Answer","text": "Expect mild redness for 24–48 hours. We provide barrier-friendly product advice and strict SPF guidance."}},
-
-          { "@type": "Question","name": "Do you offer evening or weekend appointments?","acceptedAnswer": {"@type": "Answer","text": "Yes, subject to availability in Stone (ST15) and surrounding areas."}}
+          {
+            "@type": "Question",
+            "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#q-aw-duration",
+            "name": "How long do anti-wrinkle injections last?",
+            "acceptedAnswer": { "@type": "Answer","text": "Most people see results last around 3–4 months, with best results visible ~2 weeks after treatment." }
+          },
+          {
+            "@type": "Question",
+            "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#q-aw-areas",
+            "name": "Which areas can be treated with anti-wrinkle injections?",
+            "acceptedAnswer": { "@type": "Answer","text": "Forehead lines, glabella (frown), crow’s feet, bunny lines and lip flip. Dosing is tailored conservatively." }
+          },
+          {
+            "@type": "Question",
+            "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#q-aw-review",
+            "name": "Do you offer reviews or top-ups?",
+            "acceptedAnswer": { "@type": "Answer","text": "Yes. We typically review at around 2 weeks and can adjust safely if appropriate." }
+          },
+          {
+            "@type": "Question",
+            "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#q-lips-dose",
+            "name": "Should I choose 0.5ml or 1ml lip filler?",
+            "acceptedAnswer": { "@type": "Answer","text": "If you’re new or want a subtle change, 0.5ml is common. For more definition or hydration, 1ml may be advised. We match product and volume to your anatomy and goals." }
+          },
+          {
+            "@type": "Question",
+            "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#q-lips-duration",
+            "name": "How long do lip fillers last?",
+            "acceptedAnswer": { "@type": "Answer","text": "Typically 6–12 months depending on product and metabolism." }
+          },
+          {
+            "@type": "Question",
+            "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#q-lips-aftercare",
+            "name": "What should I do after lip filler?",
+            "acceptedAnswer": { "@type": "Answer","text": "Expect temporary swelling/tenderness for 24–72 hours. Avoid heavy exercise, alcohol and extreme heat for 24 hours; follow your nurse’s aftercare." }
+          },
+          {
+            "@type": "Question",
+            "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#q-boosters-plan",
+            "name": "How many skin booster sessions do I need?",
+            "acceptedAnswer": { "@type": "Answer","text": "Most plans include two initial sessions 4 weeks apart with maintenance as advised." }
+          },
+          {
+            "@type": "Question",
+            "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#q-boosters-areas",
+            "name": "Where can skin boosters be used?",
+            "acceptedAnswer": { "@type": "Answer","text": "Face, neck and hands to support hydration, elasticity and glow." }
+          },
+          {
+            "@type": "Question",
+            "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#q-fat-sessions",
+            "name": "How many fat-dissolving sessions will I need?",
+            "acceptedAnswer": { "@type": "Answer","text": "Typically 2–4 sessions depending on the area and goal, spaced a few weeks apart." }
+          },
+          {
+            "@type": "Question",
+            "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#q-fat-areas",
+            "name": "Which areas respond well to fat-dissolving?",
+            "acceptedAnswer": { "@type": "Answer","text": "Common sites include the submental area (double chin), abdomen and upper arms for small, stubborn pockets." }
+          },
+          {
+            "@type": "Question",
+            "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#q-needle-course",
+            "name": "How many microneedling sessions do I need for acne scars?",
+            "acceptedAnswer": { "@type": "Answer","text": "A course of 3–6 sessions spaced 4–6 weeks apart is typical." }
+          },
+          {
+            "@type": "Question",
+            "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#q-needle-downtime",
+            "name": "Is there downtime after microneedling?",
+            "acceptedAnswer": { "@type": "Answer","text": "Expect mild redness for 24–48 hours. We provide barrier-friendly product advice and strict SPF guidance." }
+          },
+          {
+            "@type": "Question",
+            "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#q-appointments",
+            "name": "Do you offer evening or weekend appointments?",
+            "acceptedAnswer": { "@type": "Answer","text": "Yes, subject to availability in Stone (ST15) and surrounding areas." }
+          }
         ]
       },
       {
         "@type": "HowTo",
+        "@id": "https://www.pdcaesthetics.co.uk/mobile-aesthetics-stone.html#howto-lip-aftercare",
         "name": "Lip Filler Aftercare at Home (Stone, ST15)",
         "description": "Step-by-step aftercare for a comfortable recovery following lip filler treatment performed at home in Stone and nearby towns.",
         "totalTime": "P3D",
@@ -592,7 +671,7 @@
     });
   </script>
 
-  <!-- Menu toggle (full-height on mobile, closes on outside/Escape) -->
+  <!-- Menu toggle -->
   <script>
     (function(){
       const btn   = document.getElementById('menuButton');
